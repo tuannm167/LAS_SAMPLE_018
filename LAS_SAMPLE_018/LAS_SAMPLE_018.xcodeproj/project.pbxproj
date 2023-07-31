@@ -32,6 +32,18 @@
 		844F16212A63E03700D4B197 /* LexendDeca-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 844F16202A63E03600D4B197 /* LexendDeca-VariableFont_wght.ttf */; };
 		A7E42E7D5ECCAF76B534F1A1 /* Pods_LAS_SAMPLE_018.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57C240A29C92D27ABFE62C0E /* Pods_LAS_SAMPLE_018.framework */; };
 		B1E29C859FCEA420EBB1EFB4 /* Pods_LAS_SAMPLE_018Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D0B616889FEEC34E847464F /* Pods_LAS_SAMPLE_018Tests.framework */; };
+		CBB6737E2A77A7EE00DE477E /* GenerateVideoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB6737C2A77A7EE00DE477E /* GenerateVideoVC.swift */; };
+		CBB6737F2A77A7EE00DE477E /* GenerateVideoVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBB6737D2A77A7EE00DE477E /* GenerateVideoVC.xib */; };
+		CBB673832A77A84000DE477E /* NoVideoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB673812A77A84000DE477E /* NoVideoCell.swift */; };
+		CBB673842A77A84000DE477E /* NoVideoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBB673822A77A84000DE477E /* NoVideoCell.xib */; };
+		CBB673872A77AE1400DE477E /* AddPhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB673852A77AE1400DE477E /* AddPhotoCell.swift */; };
+		CBB673882A77AE1400DE477E /* AddPhotoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBB673862A77AE1400DE477E /* AddPhotoCell.xib */; };
+		CBB6738F2A77B40400DE477E /* PhotosVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB6738D2A77B40400DE477E /* PhotosVC.swift */; };
+		CBB673902A77B40400DE477E /* PhotosVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBB6738E2A77B40400DE477E /* PhotosVC.xib */; };
+		CBB673932A77B96E00DE477E /* PhotoSelectedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB673912A77B96E00DE477E /* PhotoSelectedCell.swift */; };
+		CBB673942A77B96E00DE477E /* PhotoSelectedCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBB673922A77B96E00DE477E /* PhotoSelectedCell.xib */; };
+		CBB673972A77BF9A00DE477E /* PhotoItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB673952A77BF9A00DE477E /* PhotoItemCell.swift */; };
+		CBB673982A77BF9A00DE477E /* PhotoItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBB673962A77BF9A00DE477E /* PhotoItemCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,6 +96,18 @@
 		844F161C2A63DFC800D4B197 /* HomeItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeItemCell.xib; sourceTree = "<group>"; };
 		844F16202A63E03600D4B197 /* LexendDeca-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LexendDeca-VariableFont_wght.ttf"; sourceTree = "<group>"; };
 		A19ABE8B4F872EEED75157A0 /* Pods_LAS_SAMPLE_018_LAS_SAMPLE_018UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LAS_SAMPLE_018_LAS_SAMPLE_018UITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CBB6737C2A77A7EE00DE477E /* GenerateVideoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenerateVideoVC.swift; sourceTree = "<group>"; };
+		CBB6737D2A77A7EE00DE477E /* GenerateVideoVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GenerateVideoVC.xib; sourceTree = "<group>"; };
+		CBB673812A77A84000DE477E /* NoVideoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoVideoCell.swift; sourceTree = "<group>"; };
+		CBB673822A77A84000DE477E /* NoVideoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NoVideoCell.xib; sourceTree = "<group>"; };
+		CBB673852A77AE1400DE477E /* AddPhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPhotoCell.swift; sourceTree = "<group>"; };
+		CBB673862A77AE1400DE477E /* AddPhotoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddPhotoCell.xib; sourceTree = "<group>"; };
+		CBB6738D2A77B40400DE477E /* PhotosVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosVC.swift; sourceTree = "<group>"; };
+		CBB6738E2A77B40400DE477E /* PhotosVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotosVC.xib; sourceTree = "<group>"; };
+		CBB673912A77B96E00DE477E /* PhotoSelectedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoSelectedCell.swift; sourceTree = "<group>"; };
+		CBB673922A77B96E00DE477E /* PhotoSelectedCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotoSelectedCell.xib; sourceTree = "<group>"; };
+		CBB673952A77BF9A00DE477E /* PhotoItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoItemCell.swift; sourceTree = "<group>"; };
+		CBB673962A77BF9A00DE477E /* PhotoItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotoItemCell.xib; sourceTree = "<group>"; };
 		EA6CB02A2AEC0A48ED154F78 /* Pods-LAS_SAMPLE_018-LAS_SAMPLE_018UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LAS_SAMPLE_018-LAS_SAMPLE_018UITests.debug.xcconfig"; path = "Target Support Files/Pods-LAS_SAMPLE_018-LAS_SAMPLE_018UITests/Pods-LAS_SAMPLE_018-LAS_SAMPLE_018UITests.debug.xcconfig"; sourceTree = "<group>"; };
 		EF53C95D09BA9DCFD56FB68A /* Pods-LAS_SAMPLE_018.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LAS_SAMPLE_018.debug.xcconfig"; path = "Target Support Files/Pods-LAS_SAMPLE_018/Pods-LAS_SAMPLE_018.debug.xcconfig"; sourceTree = "<group>"; };
 		F757E88880DB035302F6D0B3 /* Pods-LAS_SAMPLE_018Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LAS_SAMPLE_018Tests.release.xcconfig"; path = "Target Support Files/Pods-LAS_SAMPLE_018Tests/Pods-LAS_SAMPLE_018Tests.release.xcconfig"; sourceTree = "<group>"; };
@@ -199,6 +223,10 @@
 				844F160E2A63A2D300D4B197 /* WallpaperVC.xib */,
 				844F16112A63A2E600D4B197 /* MakeVideoVC.swift */,
 				844F16122A63A2E600D4B197 /* MakeVideoVC.xib */,
+				CBB6737C2A77A7EE00DE477E /* GenerateVideoVC.swift */,
+				CBB6737D2A77A7EE00DE477E /* GenerateVideoVC.xib */,
+				CBB6738D2A77B40400DE477E /* PhotosVC.swift */,
+				CBB6738E2A77B40400DE477E /* PhotosVC.xib */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -206,6 +234,7 @@
 		844F16022A63A12B00D4B197 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				CBB673802A77A82400DE477E /* MakeVideo */,
 				844F161B2A63DFC800D4B197 /* HomeItemCell.swift */,
 				844F161C2A63DFC800D4B197 /* HomeItemCell.xib */,
 			);
@@ -234,6 +263,21 @@
 				844F16202A63E03600D4B197 /* LexendDeca-VariableFont_wght.ttf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		CBB673802A77A82400DE477E /* MakeVideo */ = {
+			isa = PBXGroup;
+			children = (
+				CBB673812A77A84000DE477E /* NoVideoCell.swift */,
+				CBB673822A77A84000DE477E /* NoVideoCell.xib */,
+				CBB673852A77AE1400DE477E /* AddPhotoCell.swift */,
+				CBB673862A77AE1400DE477E /* AddPhotoCell.xib */,
+				CBB673912A77B96E00DE477E /* PhotoSelectedCell.swift */,
+				CBB673922A77B96E00DE477E /* PhotoSelectedCell.xib */,
+				CBB673952A77BF9A00DE477E /* PhotoItemCell.swift */,
+				CBB673962A77BF9A00DE477E /* PhotoItemCell.xib */,
+			);
+			path = MakeVideo;
 			sourceTree = "<group>";
 		};
 		E7F0B325ADF22E149F31DE13 /* Frameworks */ = {
@@ -355,12 +399,18 @@
 			files = (
 				844F16212A63E03700D4B197 /* LexendDeca-VariableFont_wght.ttf in Resources */,
 				844F15DE2A63949900D4B197 /* LaunchScreen.storyboard in Resources */,
+				CBB673882A77AE1400DE477E /* AddPhotoCell.xib in Resources */,
 				844F160C2A63A2BD00D4B197 /* HomeVC.xib in Resources */,
 				844F16142A63A2E600D4B197 /* MakeVideoVC.xib in Resources */,
+				CBB673842A77A84000DE477E /* NoVideoCell.xib in Resources */,
 				844F16102A63A2D300D4B197 /* WallpaperVC.xib in Resources */,
 				844F15DB2A63949900D4B197 /* Assets.xcassets in Resources */,
+				CBB673942A77B96E00DE477E /* PhotoSelectedCell.xib in Resources */,
 				844F15D92A63949700D4B197 /* Main.storyboard in Resources */,
+				CBB6737F2A77A7EE00DE477E /* GenerateVideoVC.xib in Resources */,
 				844F161E2A63DFC800D4B197 /* HomeItemCell.xib in Resources */,
+				CBB673902A77B40400DE477E /* PhotosVC.xib in Resources */,
+				CBB673982A77BF9A00DE477E /* PhotoItemCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -456,11 +506,17 @@
 			files = (
 				844F15D22A63949700D4B197 /* AppDelegate.swift in Sources */,
 				844F161A2A63D18300D4B197 /* MusicService.swift in Sources */,
+				CBB673972A77BF9A00DE477E /* PhotoItemCell.swift in Sources */,
+				CBB673872A77AE1400DE477E /* AddPhotoCell.swift in Sources */,
 				844F16132A63A2E600D4B197 /* MakeVideoVC.swift in Sources */,
+				CBB6738F2A77B40400DE477E /* PhotosVC.swift in Sources */,
+				CBB673932A77B96E00DE477E /* PhotoSelectedCell.swift in Sources */,
+				CBB6737E2A77A7EE00DE477E /* GenerateVideoVC.swift in Sources */,
 				844F16182A63D10E00D4B197 /* MusicModel.swift in Sources */,
 				844F160B2A63A2BD00D4B197 /* HomeVC.swift in Sources */,
 				844F16062A63A16600D4B197 /* BaseVC.swift in Sources */,
 				844F160F2A63A2D300D4B197 /* WallpaperVC.swift in Sources */,
+				CBB673832A77A84000DE477E /* NoVideoCell.swift in Sources */,
 				844F16082A63A2AC00D4B197 /* TabbarVC.swift in Sources */,
 				844F161D2A63DFC800D4B197 /* HomeItemCell.swift in Sources */,
 				844F15D42A63949700D4B197 /* SceneDelegate.swift in Sources */,
