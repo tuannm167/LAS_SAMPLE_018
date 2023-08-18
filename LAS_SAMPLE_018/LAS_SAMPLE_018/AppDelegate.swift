@@ -6,10 +6,21 @@
 //
 
 import UIKit
+import AVFAudio
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
+    lazy var mainPlayer: PlayMusicVC = {
+        let player = PlayMusicVC()
+        player.modalPresentationStyle = .fullScreen
+        return player
+    }()
+    
+    static let shared: AppDelegate = {
+        return UIApplication.shared.delegate as! AppDelegate
+    }()
+    
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
@@ -26,6 +37,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             window?.rootViewController = navi
             window?.makeKeyAndVisible()
         }
+        CPlayer.shared.initSession()
         return true
     }
 

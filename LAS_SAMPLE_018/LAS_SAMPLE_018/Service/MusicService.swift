@@ -83,8 +83,18 @@ class MusicService {
         var songInfo: MusicModel?
         
         let items: [MPMediaItem] = query.items! as [MPMediaItem]
+        var list: [String] = []
+        let albumItems: [MPMediaItemCollection] = query.collections! as [MPMediaItemCollection]
+        for album in albumItems {
+            let albumItems: [MPMediaItem] = album.items as [MPMediaItem]
+            // var song: MPMediaItem
+            for song in albumItems {
+                list.append("\(String(describing: song.playbackDuration.timeFormat()))")
+            }
+        }
         if items.count >= 1 {
             let song = items[items.count - 1]
+            let time = list[items.count - 1]
             songInfo = MusicModel(
                 songId: song.persistentID as NSNumber,
                 albumTitle: song.albumTitle,
@@ -92,7 +102,7 @@ class MusicService {
                 songTitle: song.title,
                 artWork: song.artwork,
                 songURL: song.assetURL,
-                mediaType: song.mediaType
+                mediaType: song.mediaType, time: time
             )
         }
         return songInfo
@@ -133,6 +143,23 @@ class MusicService {
         return url as URL
     }
     
+    func getSongTime(songId: String ) -> String? {
+        let property: MPMediaPropertyPredicate = MPMediaPropertyPredicate( value: songId, forProperty: MPMediaItemPropertyPersistentID )
+        
+        let query: MPMediaQuery = MPMediaQuery()
+        query.addFilterPredicate( property )
+        
+        let items: [MPMediaItem] = query.items! as [MPMediaItem]
+        let song: MPMediaItem?
+        var url = ""
+        if items.count >= 1 {
+            song = items[items.count - 1]
+            
+            url = song?.bookmarkTime.timeFormat() ?? ""
+        }
+        return url
+    }
+    
     func getAllMusic() -> [String] {
         
         var musics: [String] = []
@@ -150,4 +177,105 @@ class MusicService {
         
     }
     
+    func getTimeMusic() -> [String] {
+        var musics: [String] = []
+        let albumsQuery: MPMediaQuery
+        albumsQuery = MPMediaQuery.songs()
+        let albumItems: [MPMediaItemCollection] = albumsQuery.collections! as [MPMediaItemCollection]
+        for album in albumItems {
+            let albumItems: [MPMediaItem] = album.items as [MPMediaItem]
+            // var song: MPMediaItem
+            for song in albumItems {
+                musics.append("\(String(describing: song.bookmarkTime.timeFormat()))")
+            }
+        }
+        return musics
+    }
+    
+    func getListTimeID(id: String ) -> String {
+        
+        var songIDs: String?
+        
+        let property: MPMediaPropertyPredicate = MPMediaPropertyPredicate(value: id, forProperty: MPMediaItemPropertyTitle, comparisonType: .contains)
+        
+        let query: MPMediaQuery = MPMediaQuery()
+        query.addFilterPredicate( property )
+        let items: [MPMediaItem] = query.items! as [MPMediaItem]
+        
+        for song in items {
+            songIDs?.append("\(String(describing: song.bookmarkTime.timeFormat()))")
+        }
+        return songIDs ?? ""
+        
+    }
+    
+    func getTimeMusicAll() -> [String] {
+        var musics: [String] = []
+        let albumsQuery: MPMediaQuery
+        albumsQuery = MPMediaQuery.songs()
+        let albumItems: [MPMediaItemCollection] = albumsQuery.collections! as [MPMediaItemCollection]
+        for album in albumItems {
+            let albumItems: [MPMediaItem] = album.items as [MPMediaItem]
+            // var song: MPMediaItem
+            for song in albumItems {
+                musics.append("\(String(describing: song.playbackDuration.timeFormat()))")
+            }
+        }
+        return musics
+    }
+    
+    
+    func getAllArtist() -> [String] {
+        var artists: [String] = []
+        let albumsQuery: MPMediaQuery
+        albumsQuery = MPMediaQuery.artists()
+        let albumItems: [MPMediaItemCollection] = albumsQuery.collections! as [MPMediaItemCollection]
+        for album in albumItems {
+            let albumItems: [MPMediaItem] = album.items as [MPMediaItem]
+            // var song: MPMediaItem
+            for song in albumItems {
+                artists.append( song.persistentID.toString())
+            }
+        }
+        return artists
+    }
+    
+    func getAllPlaylist() -> [String] {
+        
+        var playlists: [String] = []
+        let playlistQuery: MPMediaQuery
+        playlistQuery = MPMediaQuery.playlists()
+        let playlistItems: [MPMediaItemCollection] = playlistQuery.collections! as [MPMediaItemCollection]
+        for playlist in playlistItems {
+            playlists.append(String(playlist.count))
+        }
+        return playlists
+    }
+    
+    func getTitlePlaylist() -> [String] {
+        
+        var playlists: [String] = []
+        let playlistQuery: MPMediaQuery
+        playlistQuery = MPMediaQuery.playlists()
+        let playlistItems: [MPMediaItemCollection] = playlistQuery.collections! as [MPMediaItemCollection]
+        for playlist in playlistItems {
+            playlists.append(playlist.value(forProperty: MPMediaPlaylistPropertyName) as! String)
+        }
+        return playlists
+    }
+    
+    func getAllAlbum() -> [String] {
+        
+        var albums: [String] = []
+        let albumsQuery: MPMediaQuery
+        albumsQuery = MPMediaQuery.albums()
+        let albumItems: [MPMediaItemCollection] = albumsQuery.collections! as [MPMediaItemCollection]
+        for album in albumItems {
+            let albumItems: [MPMediaItem] = album.items as [MPMediaItem]
+            for song in albumItems {
+                albums.append( song.persistentID.toString())
+            }
+        }
+        return albums
+    }
 }

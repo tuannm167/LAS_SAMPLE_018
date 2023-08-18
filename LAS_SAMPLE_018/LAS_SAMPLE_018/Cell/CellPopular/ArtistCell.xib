@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22138.1" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22113"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ArtistCell" id="gTV-IL-0wX" customClass="ArtistCell" customModule="LAS_SAMPLE_018" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="199" height="240"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="199" height="240"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Udn-BU-iat">
+                        <rect key="frame" x="0.0" y="0.0" width="199" height="240"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avatar_default" translatesAutoresizingMaskIntoConstraints="NO" id="ryD-qJ-W9I">
+                                <rect key="frame" x="8" y="7" width="183" height="184"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="184" id="0t4-qR-213"/>
+                                    <constraint firstAttribute="width" constant="183" id="FS1-JN-PeF"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thanh Duy" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bro-ED-dka">
+                                <rect key="frame" x="10" y="208" width="179" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="whc-HX-oq4"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="bro-ED-dka" firstAttribute="top" secondItem="ryD-qJ-W9I" secondAttribute="bottom" constant="17" id="5SW-M3-rmT"/>
+                            <constraint firstItem="ryD-qJ-W9I" firstAttribute="top" secondItem="Udn-BU-iat" secondAttribute="top" constant="7" id="IL4-sS-UDG"/>
+                            <constraint firstAttribute="trailing" secondItem="bro-ED-dka" secondAttribute="trailing" constant="10" id="fw9-eJ-uAf"/>
+                            <constraint firstAttribute="bottom" secondItem="bro-ED-dka" secondAttribute="bottom" constant="11" id="gYb-UB-6Lu"/>
+                            <constraint firstAttribute="trailing" secondItem="ryD-qJ-W9I" secondAttribute="trailing" constant="8" id="gwF-hp-WeX"/>
+                            <constraint firstItem="ryD-qJ-W9I" firstAttribute="leading" secondItem="Udn-BU-iat" secondAttribute="leading" constant="8" id="tkj-e0-aWM"/>
+                            <constraint firstItem="bro-ED-dka" firstAttribute="leading" secondItem="Udn-BU-iat" secondAttribute="leading" constant="10" id="uEu-1H-oKI"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="Udn-BU-iat" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="hlz-YT-fvc"/>
+                <constraint firstAttribute="trailing" secondItem="Udn-BU-iat" secondAttribute="trailing" id="prI-I2-WGv"/>
+                <constraint firstItem="Udn-BU-iat" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="yMN-sE-LJB"/>
+                <constraint firstAttribute="bottom" secondItem="Udn-BU-iat" secondAttribute="bottom" id="zSc-fw-Agw"/>
+            </constraints>
+            <size key="customSize" width="199" height="240"/>
+            <connections>
+                <outlet property="avaterArtist" destination="ryD-qJ-W9I" id="gDO-aT-VeQ"/>
+                <outlet property="lbName" destination="bro-ED-dka" id="bl5-uJ-xch"/>
+            </connections>
+            <point key="canvasLocation" x="240.45801526717557" y="53.521126760563384"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="avatar_default" width="1600" height="2151"/>
+    </resources>
+</document>

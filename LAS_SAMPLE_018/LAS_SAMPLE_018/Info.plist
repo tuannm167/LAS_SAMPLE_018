@@ -4,10 +4,13 @@
 <dict>
 	<key>UIAppFonts</key>
 	<array>
-		<string>LexendDeca-VariableFont_wght.ttf</string>
+		<string>Chillax-Bold</string>
+		<string>Chillax-Extralight</string>
+		<string>Chillax-Light</string>
+		<string>Chillax-Medium</string>
+		<string>Chillax-Regular</string>
+		<string>Chillax-Semibold</string>
 	</array>
-	<key>NSAppleMusicUsageDescription</key>
-	<string>The application need permission to access to the Apple Music to get musics to play.</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
@@ -27,5 +30,9 @@
 			</array>
 		</dict>
 	</dict>
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>audio</string>
+	</array>
 </dict>
 </plist>

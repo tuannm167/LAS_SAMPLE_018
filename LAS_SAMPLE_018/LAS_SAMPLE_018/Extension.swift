@@ -125,3 +125,23 @@ extension UInt64
         return myString
     }
 }
+extension Float64 {
+    func timeFormat() -> String {
+        let countTimeFormat = "%02d:%02d"
+        let countTimeFormatWithHour = "%02d:%02d:%02d"
+        let secondsPerHour = 3600
+        let secondsPerMinute = 60
+        
+        var tmpTime = Int(self)
+        let hours = tmpTime / secondsPerHour
+        tmpTime -= hours * secondsPerHour
+        let minutes = tmpTime / secondsPerMinute
+        tmpTime -= minutes * secondsPerMinute
+        let seconds = tmpTime
+        if hours <= 0 {
+            return String(format: countTimeFormat, minutes, seconds)
+        } else {
+            return String(format: countTimeFormatWithHour, hours, minutes, seconds)
+        }
+    }
+}

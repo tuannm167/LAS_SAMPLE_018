@@ -32,6 +32,36 @@
 		844F16212A63E03700D4B197 /* LexendDeca-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 844F16202A63E03600D4B197 /* LexendDeca-VariableFont_wght.ttf */; };
 		A7E42E7D5ECCAF76B534F1A1 /* Pods_LAS_SAMPLE_018.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57C240A29C92D27ABFE62C0E /* Pods_LAS_SAMPLE_018.framework */; };
 		B1E29C859FCEA420EBB1EFB4 /* Pods_LAS_SAMPLE_018Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D0B616889FEEC34E847464F /* Pods_LAS_SAMPLE_018Tests.framework */; };
+		FA912F052A8A66000036CECD /* SongMusicPlayCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA912F032A8A66000036CECD /* SongMusicPlayCell.swift */; };
+		FA912F062A8A66000036CECD /* SongMusicPlayCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA912F042A8A66000036CECD /* SongMusicPlayCell.xib */; };
+		FA9C93E92A6839840012FA3A /* HomePopularCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9C93E72A6839840012FA3A /* HomePopularCell.swift */; };
+		FA9C93EA2A6839840012FA3A /* HomePopularCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA9C93E82A6839840012FA3A /* HomePopularCell.xib */; };
+		FAA342162A66EF3A00BC102C /* HomeSearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA342142A66EF3A00BC102C /* HomeSearchCell.swift */; };
+		FAA342172A66EF3A00BC102C /* HomeSearchCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAA342152A66EF3A00BC102C /* HomeSearchCell.xib */; };
+		FAA3D65D2A7018B100EF18E0 /* PopularCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA3D65B2A7018B100EF18E0 /* PopularCell.swift */; };
+		FAA3D65E2A7018B100EF18E0 /* PopularCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAA3D65C2A7018B100EF18E0 /* PopularCell.xib */; };
+		FAA3D6612A701DE700EF18E0 /* ArtistCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA3D65F2A701DE700EF18E0 /* ArtistCell.swift */; };
+		FAA3D6622A701DE700EF18E0 /* ArtistCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAA3D6602A701DE700EF18E0 /* ArtistCell.xib */; };
+		FAA3D6652A70248400EF18E0 /* TypeMusicCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA3D6632A70248400EF18E0 /* TypeMusicCell.swift */; };
+		FAA3D6662A70248400EF18E0 /* TypeMusicCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAA3D6642A70248400EF18E0 /* TypeMusicCell.xib */; };
+		FAAE7B432A8FF19300202B3D /* Pods-LAS_SAMPLE_018Tests.debug.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 21940A725FF14D1E6CA58F4C /* Pods-LAS_SAMPLE_018Tests.debug.xcconfig */; };
+		FAAE7B442A8FF19700202B3D /* Pods-LAS_SAMPLE_018-LAS_SAMPLE_018UITests.release.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 56589943E255BFDA9936A86D /* Pods-LAS_SAMPLE_018-LAS_SAMPLE_018UITests.release.xcconfig */; };
+		FAC408992A716D99008AB062 /* MusicCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC408972A716D99008AB062 /* MusicCell.swift */; };
+		FAC4089A2A716D99008AB062 /* MusicCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAC408982A716D99008AB062 /* MusicCell.xib */; };
+		FAC4089D2A7178D9008AB062 /* HomeMusicCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC4089B2A7178D9008AB062 /* HomeMusicCell.swift */; };
+		FAC4089E2A7178D9008AB062 /* HomeMusicCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAC4089C2A7178D9008AB062 /* HomeMusicCell.xib */; };
+		FAC408A22A717B15008AB062 /* MusicPlaylistCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC408A02A717B15008AB062 /* MusicPlaylistCell.swift */; };
+		FAC408A32A717B15008AB062 /* MusicPlaylistCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAC408A12A717B15008AB062 /* MusicPlaylistCell.xib */; };
+		FAC8477A2A8BC31500C93481 /* RealService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC847792A8BC31500C93481 /* RealService.swift */; };
+		FAC8477D2A8BC3C600C93481 /* RealmModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC8477C2A8BC3C600C93481 /* RealmModel.swift */; };
+		FAC9771C2A83E7F5008A280E /* SearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC9771A2A83E7F5008A280E /* SearchVC.swift */; };
+		FAC9771D2A83E7F5008A280E /* SearchVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAC9771B2A83E7F5008A280E /* SearchVC.xib */; };
+		FAE009FA2A7DEC72003AF7FA /* AllSongsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE009F82A7DEC72003AF7FA /* AllSongsVC.swift */; };
+		FAE1C40B2A7941AD005120CE /* AlbumCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE1C4092A7941AD005120CE /* AlbumCell.swift */; };
+		FAE1C40C2A7941AD005120CE /* AlbumCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAE1C40A2A7941AD005120CE /* AlbumCell.xib */; };
+		FAE21AD82A7EBC1000469717 /* PlayMusicVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE21AD62A7EBC1000469717 /* PlayMusicVC.swift */; };
+		FAE21AD92A7EBC1000469717 /* PlayMusicVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAE21AD72A7EBC1000469717 /* PlayMusicVC.xib */; };
+		FAFA9C362A7F52D600966DA9 /* PlayerMusic.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFA9C352A7F52D600966DA9 /* PlayerMusic.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +117,34 @@
 		EA6CB02A2AEC0A48ED154F78 /* Pods-LAS_SAMPLE_018-LAS_SAMPLE_018UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LAS_SAMPLE_018-LAS_SAMPLE_018UITests.debug.xcconfig"; path = "Target Support Files/Pods-LAS_SAMPLE_018-LAS_SAMPLE_018UITests/Pods-LAS_SAMPLE_018-LAS_SAMPLE_018UITests.debug.xcconfig"; sourceTree = "<group>"; };
 		EF53C95D09BA9DCFD56FB68A /* Pods-LAS_SAMPLE_018.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LAS_SAMPLE_018.debug.xcconfig"; path = "Target Support Files/Pods-LAS_SAMPLE_018/Pods-LAS_SAMPLE_018.debug.xcconfig"; sourceTree = "<group>"; };
 		F757E88880DB035302F6D0B3 /* Pods-LAS_SAMPLE_018Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LAS_SAMPLE_018Tests.release.xcconfig"; path = "Target Support Files/Pods-LAS_SAMPLE_018Tests/Pods-LAS_SAMPLE_018Tests.release.xcconfig"; sourceTree = "<group>"; };
+		FA912F032A8A66000036CECD /* SongMusicPlayCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongMusicPlayCell.swift; sourceTree = "<group>"; };
+		FA912F042A8A66000036CECD /* SongMusicPlayCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SongMusicPlayCell.xib; sourceTree = "<group>"; };
+		FA9C93E72A6839840012FA3A /* HomePopularCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePopularCell.swift; sourceTree = "<group>"; };
+		FA9C93E82A6839840012FA3A /* HomePopularCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomePopularCell.xib; sourceTree = "<group>"; };
+		FAA342142A66EF3A00BC102C /* HomeSearchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSearchCell.swift; sourceTree = "<group>"; };
+		FAA342152A66EF3A00BC102C /* HomeSearchCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeSearchCell.xib; sourceTree = "<group>"; };
+		FAA3D65B2A7018B100EF18E0 /* PopularCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularCell.swift; sourceTree = "<group>"; };
+		FAA3D65C2A7018B100EF18E0 /* PopularCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PopularCell.xib; sourceTree = "<group>"; };
+		FAA3D65F2A701DE700EF18E0 /* ArtistCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistCell.swift; sourceTree = "<group>"; };
+		FAA3D6602A701DE700EF18E0 /* ArtistCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ArtistCell.xib; sourceTree = "<group>"; };
+		FAA3D6632A70248400EF18E0 /* TypeMusicCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeMusicCell.swift; sourceTree = "<group>"; };
+		FAA3D6642A70248400EF18E0 /* TypeMusicCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TypeMusicCell.xib; sourceTree = "<group>"; };
+		FAC408972A716D99008AB062 /* MusicCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicCell.swift; sourceTree = "<group>"; };
+		FAC408982A716D99008AB062 /* MusicCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MusicCell.xib; sourceTree = "<group>"; };
+		FAC4089B2A7178D9008AB062 /* HomeMusicCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeMusicCell.swift; sourceTree = "<group>"; };
+		FAC4089C2A7178D9008AB062 /* HomeMusicCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeMusicCell.xib; sourceTree = "<group>"; };
+		FAC408A02A717B15008AB062 /* MusicPlaylistCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPlaylistCell.swift; sourceTree = "<group>"; };
+		FAC408A12A717B15008AB062 /* MusicPlaylistCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MusicPlaylistCell.xib; sourceTree = "<group>"; };
+		FAC847792A8BC31500C93481 /* RealService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealService.swift; sourceTree = "<group>"; };
+		FAC8477C2A8BC3C600C93481 /* RealmModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmModel.swift; sourceTree = "<group>"; };
+		FAC9771A2A83E7F5008A280E /* SearchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchVC.swift; sourceTree = "<group>"; };
+		FAC9771B2A83E7F5008A280E /* SearchVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchVC.xib; sourceTree = "<group>"; };
+		FAE009F82A7DEC72003AF7FA /* AllSongsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllSongsVC.swift; sourceTree = "<group>"; };
+		FAE1C4092A7941AD005120CE /* AlbumCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumCell.swift; sourceTree = "<group>"; };
+		FAE1C40A2A7941AD005120CE /* AlbumCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlbumCell.xib; sourceTree = "<group>"; };
+		FAE21AD62A7EBC1000469717 /* PlayMusicVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayMusicVC.swift; sourceTree = "<group>"; };
+		FAE21AD72A7EBC1000469717 /* PlayMusicVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlayMusicVC.xib; sourceTree = "<group>"; };
+		FAFA9C352A7F52D600966DA9 /* PlayerMusic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerMusic.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,6 +213,8 @@
 		844F15D02A63949700D4B197 /* LAS_SAMPLE_018 */ = {
 			isa = PBXGroup;
 			children = (
+				FAC8477B2A8BC3AA00C93481 /* RealmModel */,
+				FAFA9C342A7F52C200966DA9 /* PlayerMusic */,
 				844F161F2A63E03600D4B197 /* Fonts */,
 				844F16042A63A13900D4B197 /* Service */,
 				844F16032A63A13300D4B197 /* Models */,
@@ -191,6 +251,7 @@
 		844F16012A63A12000D4B197 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				FAE009F82A7DEC72003AF7FA /* AllSongsVC.swift */,
 				844F16052A63A16600D4B197 /* BaseVC.swift */,
 				844F16072A63A2AC00D4B197 /* TabbarVC.swift */,
 				844F16092A63A2BD00D4B197 /* HomeVC.swift */,
@@ -199,6 +260,10 @@
 				844F160E2A63A2D300D4B197 /* WallpaperVC.xib */,
 				844F16112A63A2E600D4B197 /* MakeVideoVC.swift */,
 				844F16122A63A2E600D4B197 /* MakeVideoVC.xib */,
+				FAE21AD62A7EBC1000469717 /* PlayMusicVC.swift */,
+				FAE21AD72A7EBC1000469717 /* PlayMusicVC.xib */,
+				FAC9771A2A83E7F5008A280E /* SearchVC.swift */,
+				FAC9771B2A83E7F5008A280E /* SearchVC.xib */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -206,8 +271,23 @@
 		844F16022A63A12B00D4B197 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				FAE1C4082A7940E8005120CE /* CellAlbum */,
+				FAC4089F2A717ACD008AB062 /* CellMusic */,
+				FA9C93EB2A683A510012FA3A /* CellPopular */,
 				844F161B2A63DFC800D4B197 /* HomeItemCell.swift */,
 				844F161C2A63DFC800D4B197 /* HomeItemCell.xib */,
+				FAA342142A66EF3A00BC102C /* HomeSearchCell.swift */,
+				FAA342152A66EF3A00BC102C /* HomeSearchCell.xib */,
+				FA9C93E72A6839840012FA3A /* HomePopularCell.swift */,
+				FA9C93E82A6839840012FA3A /* HomePopularCell.xib */,
+				FAA3D6632A70248400EF18E0 /* TypeMusicCell.swift */,
+				FAA3D6642A70248400EF18E0 /* TypeMusicCell.xib */,
+				FAC408972A716D99008AB062 /* MusicCell.swift */,
+				FAC408982A716D99008AB062 /* MusicCell.xib */,
+				FAC4089B2A7178D9008AB062 /* HomeMusicCell.swift */,
+				FAC4089C2A7178D9008AB062 /* HomeMusicCell.xib */,
+				FA912F032A8A66000036CECD /* SongMusicPlayCell.swift */,
+				FA912F042A8A66000036CECD /* SongMusicPlayCell.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -224,6 +304,7 @@
 			isa = PBXGroup;
 			children = (
 				844F16192A63D18300D4B197 /* MusicService.swift */,
+				FAC847792A8BC31500C93481 /* RealService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -246,6 +327,51 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		FA9C93EB2A683A510012FA3A /* CellPopular */ = {
+			isa = PBXGroup;
+			children = (
+				FAA3D65B2A7018B100EF18E0 /* PopularCell.swift */,
+				FAA3D65C2A7018B100EF18E0 /* PopularCell.xib */,
+				FAA3D65F2A701DE700EF18E0 /* ArtistCell.swift */,
+				FAA3D6602A701DE700EF18E0 /* ArtistCell.xib */,
+			);
+			path = CellPopular;
+			sourceTree = "<group>";
+		};
+		FAC4089F2A717ACD008AB062 /* CellMusic */ = {
+			isa = PBXGroup;
+			children = (
+				FAC408A02A717B15008AB062 /* MusicPlaylistCell.swift */,
+				FAC408A12A717B15008AB062 /* MusicPlaylistCell.xib */,
+			);
+			path = CellMusic;
+			sourceTree = "<group>";
+		};
+		FAC8477B2A8BC3AA00C93481 /* RealmModel */ = {
+			isa = PBXGroup;
+			children = (
+				FAC8477C2A8BC3C600C93481 /* RealmModel.swift */,
+			);
+			path = RealmModel;
+			sourceTree = "<group>";
+		};
+		FAE1C4082A7940E8005120CE /* CellAlbum */ = {
+			isa = PBXGroup;
+			children = (
+				FAE1C4092A7941AD005120CE /* AlbumCell.swift */,
+				FAE1C40A2A7941AD005120CE /* AlbumCell.xib */,
+			);
+			path = CellAlbum;
+			sourceTree = "<group>";
+		};
+		FAFA9C342A7F52C200966DA9 /* PlayerMusic */ = {
+			isa = PBXGroup;
+			children = (
+				FAFA9C352A7F52D600966DA9 /* PlayerMusic.swift */,
+			);
+			path = PlayerMusic;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -257,6 +383,7 @@
 				844F15CA2A63949700D4B197 /* Sources */,
 				844F15CB2A63949700D4B197 /* Frameworks */,
 				844F15CC2A63949700D4B197 /* Resources */,
+				3D4189E0F99D28570A046B26 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -294,6 +421,7 @@
 				844F15EA2A63949900D4B197 /* Sources */,
 				844F15EB2A63949900D4B197 /* Frameworks */,
 				844F15EC2A63949900D4B197 /* Resources */,
+				F44BF14D0F8144E01CA08C05 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -353,13 +481,27 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA912F062A8A66000036CECD /* SongMusicPlayCell.xib in Resources */,
 				844F16212A63E03700D4B197 /* LexendDeca-VariableFont_wght.ttf in Resources */,
 				844F15DE2A63949900D4B197 /* LaunchScreen.storyboard in Resources */,
 				844F160C2A63A2BD00D4B197 /* HomeVC.xib in Resources */,
 				844F16142A63A2E600D4B197 /* MakeVideoVC.xib in Resources */,
 				844F16102A63A2D300D4B197 /* WallpaperVC.xib in Resources */,
+				FAC4089A2A716D99008AB062 /* MusicCell.xib in Resources */,
+				FAC9771D2A83E7F5008A280E /* SearchVC.xib in Resources */,
+				FAE1C40C2A7941AD005120CE /* AlbumCell.xib in Resources */,
+				FAA3D65E2A7018B100EF18E0 /* PopularCell.xib in Resources */,
+				FAA3D6622A701DE700EF18E0 /* ArtistCell.xib in Resources */,
+				FAAE7B442A8FF19700202B3D /* Pods-LAS_SAMPLE_018-LAS_SAMPLE_018UITests.release.xcconfig in Resources */,
+				FAAE7B432A8FF19300202B3D /* Pods-LAS_SAMPLE_018Tests.debug.xcconfig in Resources */,
+				FAA342172A66EF3A00BC102C /* HomeSearchCell.xib in Resources */,
+				FAC408A32A717B15008AB062 /* MusicPlaylistCell.xib in Resources */,
+				FAC4089E2A7178D9008AB062 /* HomeMusicCell.xib in Resources */,
+				FAA3D6662A70248400EF18E0 /* TypeMusicCell.xib in Resources */,
 				844F15DB2A63949900D4B197 /* Assets.xcassets in Resources */,
+				FAE21AD92A7EBC1000469717 /* PlayMusicVC.xib in Resources */,
 				844F15D92A63949700D4B197 /* Main.storyboard in Resources */,
+				FA9C93EA2A6839840012FA3A /* HomePopularCell.xib in Resources */,
 				844F161E2A63DFC800D4B197 /* HomeItemCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -401,6 +543,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3D4189E0F99D28570A046B26 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LAS_SAMPLE_018/Pods-LAS_SAMPLE_018-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LAS_SAMPLE_018/Pods-LAS_SAMPLE_018-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LAS_SAMPLE_018/Pods-LAS_SAMPLE_018-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		B79D4D0FF0CBC6487D7D0CF5 /* [CP] Check Pods Manifest.lock */ = {
@@ -447,6 +606,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		F44BF14D0F8144E01CA08C05 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LAS_SAMPLE_018-LAS_SAMPLE_018UITests/Pods-LAS_SAMPLE_018-LAS_SAMPLE_018UITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LAS_SAMPLE_018-LAS_SAMPLE_018UITests/Pods-LAS_SAMPLE_018-LAS_SAMPLE_018UITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LAS_SAMPLE_018-LAS_SAMPLE_018UITests/Pods-LAS_SAMPLE_018-LAS_SAMPLE_018UITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -454,17 +630,33 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAC9771C2A83E7F5008A280E /* SearchVC.swift in Sources */,
+				FA912F052A8A66000036CECD /* SongMusicPlayCell.swift in Sources */,
 				844F15D22A63949700D4B197 /* AppDelegate.swift in Sources */,
+				FAA3D6652A70248400EF18E0 /* TypeMusicCell.swift in Sources */,
+				FAC8477D2A8BC3C600C93481 /* RealmModel.swift in Sources */,
+				FA9C93E92A6839840012FA3A /* HomePopularCell.swift in Sources */,
 				844F161A2A63D18300D4B197 /* MusicService.swift in Sources */,
 				844F16132A63A2E600D4B197 /* MakeVideoVC.swift in Sources */,
 				844F16182A63D10E00D4B197 /* MusicModel.swift in Sources */,
 				844F160B2A63A2BD00D4B197 /* HomeVC.swift in Sources */,
+				FAE1C40B2A7941AD005120CE /* AlbumCell.swift in Sources */,
 				844F16062A63A16600D4B197 /* BaseVC.swift in Sources */,
 				844F160F2A63A2D300D4B197 /* WallpaperVC.swift in Sources */,
+				FAA3D6612A701DE700EF18E0 /* ArtistCell.swift in Sources */,
+				FAC408992A716D99008AB062 /* MusicCell.swift in Sources */,
 				844F16082A63A2AC00D4B197 /* TabbarVC.swift in Sources */,
+				FAC8477A2A8BC31500C93481 /* RealService.swift in Sources */,
+				FAC408A22A717B15008AB062 /* MusicPlaylistCell.swift in Sources */,
 				844F161D2A63DFC800D4B197 /* HomeItemCell.swift in Sources */,
 				844F15D42A63949700D4B197 /* SceneDelegate.swift in Sources */,
+				FAE21AD82A7EBC1000469717 /* PlayMusicVC.swift in Sources */,
 				844F16162A63A3AC00D4B197 /* Extension.swift in Sources */,
+				FAA342162A66EF3A00BC102C /* HomeSearchCell.swift in Sources */,
+				FAE009FA2A7DEC72003AF7FA /* AllSongsVC.swift in Sources */,
+				FAC4089D2A7178D9008AB062 /* HomeMusicCell.swift in Sources */,
+				FAA3D65D2A7018B100EF18E0 /* PopularCell.swift in Sources */,
+				FAFA9C362A7F52D600966DA9 /* PlayerMusic.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -642,14 +834,16 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = FAWF54HC53;
+				DEVELOPMENT_TEAM = 22TAW5J3U9;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = LAS_SAMPLE_018/Info.plist;
+				INFOPLIST_KEY_NSAppleMusicUsageDescription = "Play using while you are hiking";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -672,14 +866,16 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = FAWF54HC53;
+				DEVELOPMENT_TEAM = 22TAW5J3U9;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = LAS_SAMPLE_018/Info.plist;
+				INFOPLIST_KEY_NSAppleMusicUsageDescription = "Play using while you are hiking";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -702,7 +898,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = FAWF54HC53;
+				DEVELOPMENT_TEAM = 22TAW5J3U9;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				MARKETING_VERSION = 1.0;
@@ -723,7 +919,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = FAWF54HC53;
+				DEVELOPMENT_TEAM = 22TAW5J3U9;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				MARKETING_VERSION = 1.0;
@@ -743,7 +939,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = FAWF54HC53;
+				DEVELOPMENT_TEAM = 22TAW5J3U9;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.hanhpham.LAS-SAMPLE-018UITests";
@@ -762,7 +958,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = FAWF54HC53;
+				DEVELOPMENT_TEAM = 22TAW5J3U9;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.hanhpham.LAS-SAMPLE-018UITests";

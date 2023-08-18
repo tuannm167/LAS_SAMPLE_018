@@ -23,3 +23,21 @@ class BaseVC: UIViewController {
     }
 
 }
+extension BaseVC {
+    func openAllSong(album: AlbumModel){
+        let allSongVC: AllSongsVC = UIStoryboard.createController()
+        allSongVC.album = album
+        self.navigationController?.pushViewController(allSongVC, animated: true)
+    }
+    
+    func openAllSongF(){
+        let allSongVC: AllSongsVC = UIStoryboard.createController()
+        self.navigationController?.pushViewController(allSongVC, animated: true)
+    }
+    
+    func openPlaySong(){
+        let allSongVC = PlayMusicVC()
+        //allSongVC.album = album
+        self.navigationController?.pushViewController(allSongVC, animated: true)
+    }
+}
