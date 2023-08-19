@@ -252,5 +252,4 @@ extension URL {
     var uti: String {
         return (try? self.resourceValues(forKeys: [.typeIdentifierKey]))?.typeIdentifier ?? "public.data"
     }
-
 }
