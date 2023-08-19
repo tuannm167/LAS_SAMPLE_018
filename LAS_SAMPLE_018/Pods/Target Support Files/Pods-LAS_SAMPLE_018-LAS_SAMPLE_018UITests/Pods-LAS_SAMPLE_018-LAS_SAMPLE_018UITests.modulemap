@@ -1,0 +1,6 @@
+framework module Pods_LAS_SAMPLE_018_LAS_SAMPLE_018UITests {
+  umbrella header "Pods-LAS_SAMPLE_018-LAS_SAMPLE_018UITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
