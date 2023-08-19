@@ -105,11 +105,11 @@ extension UICollectionViewCell {
     }
 }
 
-extension UICollectionReusableView {
-    static var cellID: String {
-        return String(describing: self)
-    }
-}
+//extension UICollectionReusableView {
+//    static var cellID: String {
+//        return String(describing: self)
+//    }
+//}
 
 extension UITableViewCell {
     static var cellId: String {
@@ -125,6 +125,7 @@ extension UInt64
         return myString
     }
 }
+
 extension Float64 {
     func timeFormat() -> String {
         let countTimeFormat = "%02d:%02d"
@@ -145,3 +146,67 @@ extension Float64 {
         }
     }
 }
+
+
+import Photos
+
+extension PHAsset {
+    
+    var getImageMaxSize : UIImage {
+        var thumbnail = UIImage()
+        let imageManager = PHImageManager.default()
+        let option = PHImageRequestOptions()
+        option.isSynchronous = true
+        imageManager.requestImage(for: self, targetSize: CGSize.init(width: 720, height: 1080), contentMode: .aspectFit, options: option, resultHandler: { image, _ in
+            thumbnail = image!
+        })
+        return thumbnail
+    }
+    
+    
+    var getImageThumb : UIImage {
+        var thumbnail = UIImage()
+        let imageManager = PHImageManager.default()
+        let option = PHImageRequestOptions()
+        option.isSynchronous = true
+        imageManager.requestImage(for: self, targetSize: CGSize.init(width: 400, height: 400), contentMode: .aspectFit, options: option, resultHandler: { image, _ in
+            thumbnail = image!
+        })
+        return thumbnail
+    }
+}
+
+extension UIImage {
+    
+    func isEqualToImage(image: UIImage) -> Bool {
+        let data1: NSData = self.pngData()! as NSData
+        let data2: NSData = image.pngData()! as NSData
+        return data1.isEqual(data2)
+    }
+    
+}
+
+extension UIView {
+    func roundCorners(corners: UIRectCorner, radius: CGFloat) {
+        if #available(iOS 11, *) {
+                    self.clipsToBounds = true
+                    self.layer.cornerRadius = radius
+                    var masked = CACornerMask()
+                    if corners.contains(.topLeft) { masked.insert(.layerMinXMinYCorner) }
+                    if corners.contains(.topRight) { masked.insert(.layerMaxXMinYCorner) }
+                    if corners.contains(.bottomLeft) { masked.insert(.layerMinXMaxYCorner) }
+                    if corners.contains(.bottomRight) { masked.insert(.layerMaxXMaxYCorner) }
+                    self.layer.maskedCorners = masked
+                }
+                else {
+                    let path = UIBezierPath(roundedRect: bounds, byRoundingCorners: corners, cornerRadii: CGSize(width: radius, height: radius))
+                    let mask = CAShapeLayer()
+                    mask.path = path.cgPath
+                    layer.mask = mask
+                }
+     }
+ }
+
+
+let columns: CGFloat = UIDevice.current.is_iPhone ? 3 : 5
+let padding: CGFloat = UIDevice.current.is_iPhone ? 16 : 64

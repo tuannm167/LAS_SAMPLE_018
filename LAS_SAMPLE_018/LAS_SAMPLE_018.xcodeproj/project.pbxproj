@@ -62,6 +62,18 @@
 		FAE21AD82A7EBC1000469717 /* PlayMusicVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE21AD62A7EBC1000469717 /* PlayMusicVC.swift */; };
 		FAE21AD92A7EBC1000469717 /* PlayMusicVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAE21AD72A7EBC1000469717 /* PlayMusicVC.xib */; };
 		FAFA9C362A7F52D600966DA9 /* PlayerMusic.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFA9C352A7F52D600966DA9 /* PlayerMusic.swift */; };
+		CBB6737E2A77A7EE00DE477E /* GenerateVideoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB6737C2A77A7EE00DE477E /* GenerateVideoVC.swift */; };
+		CBB6737F2A77A7EE00DE477E /* GenerateVideoVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBB6737D2A77A7EE00DE477E /* GenerateVideoVC.xib */; };
+		CBB673832A77A84000DE477E /* NoVideoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB673812A77A84000DE477E /* NoVideoCell.swift */; };
+		CBB673842A77A84000DE477E /* NoVideoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBB673822A77A84000DE477E /* NoVideoCell.xib */; };
+		CBB673872A77AE1400DE477E /* AddPhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB673852A77AE1400DE477E /* AddPhotoCell.swift */; };
+		CBB673882A77AE1400DE477E /* AddPhotoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBB673862A77AE1400DE477E /* AddPhotoCell.xib */; };
+		CBB6738F2A77B40400DE477E /* PhotosVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB6738D2A77B40400DE477E /* PhotosVC.swift */; };
+		CBB673902A77B40400DE477E /* PhotosVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBB6738E2A77B40400DE477E /* PhotosVC.xib */; };
+		CBB673932A77B96E00DE477E /* PhotoSelectedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB673912A77B96E00DE477E /* PhotoSelectedCell.swift */; };
+		CBB673942A77B96E00DE477E /* PhotoSelectedCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBB673922A77B96E00DE477E /* PhotoSelectedCell.xib */; };
+		CBB673972A77BF9A00DE477E /* PhotoItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB673952A77BF9A00DE477E /* PhotoItemCell.swift */; };
+		CBB673982A77BF9A00DE477E /* PhotoItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBB673962A77BF9A00DE477E /* PhotoItemCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -114,6 +126,18 @@
 		844F161C2A63DFC800D4B197 /* HomeItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeItemCell.xib; sourceTree = "<group>"; };
 		844F16202A63E03600D4B197 /* LexendDeca-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LexendDeca-VariableFont_wght.ttf"; sourceTree = "<group>"; };
 		A19ABE8B4F872EEED75157A0 /* Pods_LAS_SAMPLE_018_LAS_SAMPLE_018UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LAS_SAMPLE_018_LAS_SAMPLE_018UITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CBB6737C2A77A7EE00DE477E /* GenerateVideoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenerateVideoVC.swift; sourceTree = "<group>"; };
+		CBB6737D2A77A7EE00DE477E /* GenerateVideoVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GenerateVideoVC.xib; sourceTree = "<group>"; };
+		CBB673812A77A84000DE477E /* NoVideoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoVideoCell.swift; sourceTree = "<group>"; };
+		CBB673822A77A84000DE477E /* NoVideoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NoVideoCell.xib; sourceTree = "<group>"; };
+		CBB673852A77AE1400DE477E /* AddPhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPhotoCell.swift; sourceTree = "<group>"; };
+		CBB673862A77AE1400DE477E /* AddPhotoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddPhotoCell.xib; sourceTree = "<group>"; };
+		CBB6738D2A77B40400DE477E /* PhotosVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosVC.swift; sourceTree = "<group>"; };
+		CBB6738E2A77B40400DE477E /* PhotosVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotosVC.xib; sourceTree = "<group>"; };
+		CBB673912A77B96E00DE477E /* PhotoSelectedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoSelectedCell.swift; sourceTree = "<group>"; };
+		CBB673922A77B96E00DE477E /* PhotoSelectedCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotoSelectedCell.xib; sourceTree = "<group>"; };
+		CBB673952A77BF9A00DE477E /* PhotoItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoItemCell.swift; sourceTree = "<group>"; };
+		CBB673962A77BF9A00DE477E /* PhotoItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotoItemCell.xib; sourceTree = "<group>"; };
 		EA6CB02A2AEC0A48ED154F78 /* Pods-LAS_SAMPLE_018-LAS_SAMPLE_018UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LAS_SAMPLE_018-LAS_SAMPLE_018UITests.debug.xcconfig"; path = "Target Support Files/Pods-LAS_SAMPLE_018-LAS_SAMPLE_018UITests/Pods-LAS_SAMPLE_018-LAS_SAMPLE_018UITests.debug.xcconfig"; sourceTree = "<group>"; };
 		EF53C95D09BA9DCFD56FB68A /* Pods-LAS_SAMPLE_018.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LAS_SAMPLE_018.debug.xcconfig"; path = "Target Support Files/Pods-LAS_SAMPLE_018/Pods-LAS_SAMPLE_018.debug.xcconfig"; sourceTree = "<group>"; };
 		F757E88880DB035302F6D0B3 /* Pods-LAS_SAMPLE_018Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LAS_SAMPLE_018Tests.release.xcconfig"; path = "Target Support Files/Pods-LAS_SAMPLE_018Tests/Pods-LAS_SAMPLE_018Tests.release.xcconfig"; sourceTree = "<group>"; };
@@ -264,6 +288,10 @@
 				FAE21AD72A7EBC1000469717 /* PlayMusicVC.xib */,
 				FAC9771A2A83E7F5008A280E /* SearchVC.swift */,
 				FAC9771B2A83E7F5008A280E /* SearchVC.xib */,
+				CBB6737C2A77A7EE00DE477E /* GenerateVideoVC.swift */,
+				CBB6737D2A77A7EE00DE477E /* GenerateVideoVC.xib */,
+				CBB6738D2A77B40400DE477E /* PhotosVC.swift */,
+				CBB6738E2A77B40400DE477E /* PhotosVC.xib */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -274,6 +302,7 @@
 				FAE1C4082A7940E8005120CE /* CellAlbum */,
 				FAC4089F2A717ACD008AB062 /* CellMusic */,
 				FA9C93EB2A683A510012FA3A /* CellPopular */,
+				CBB673802A77A82400DE477E /* MakeVideo */,
 				844F161B2A63DFC800D4B197 /* HomeItemCell.swift */,
 				844F161C2A63DFC800D4B197 /* HomeItemCell.xib */,
 				FAA342142A66EF3A00BC102C /* HomeSearchCell.swift */,
@@ -315,6 +344,21 @@
 				844F16202A63E03600D4B197 /* LexendDeca-VariableFont_wght.ttf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		CBB673802A77A82400DE477E /* MakeVideo */ = {
+			isa = PBXGroup;
+			children = (
+				CBB673812A77A84000DE477E /* NoVideoCell.swift */,
+				CBB673822A77A84000DE477E /* NoVideoCell.xib */,
+				CBB673852A77AE1400DE477E /* AddPhotoCell.swift */,
+				CBB673862A77AE1400DE477E /* AddPhotoCell.xib */,
+				CBB673912A77B96E00DE477E /* PhotoSelectedCell.swift */,
+				CBB673922A77B96E00DE477E /* PhotoSelectedCell.xib */,
+				CBB673952A77BF9A00DE477E /* PhotoItemCell.swift */,
+				CBB673962A77BF9A00DE477E /* PhotoItemCell.xib */,
+			);
+			path = MakeVideo;
 			sourceTree = "<group>";
 		};
 		E7F0B325ADF22E149F31DE13 /* Frameworks */ = {
@@ -484,8 +528,10 @@
 				FA912F062A8A66000036CECD /* SongMusicPlayCell.xib in Resources */,
 				844F16212A63E03700D4B197 /* LexendDeca-VariableFont_wght.ttf in Resources */,
 				844F15DE2A63949900D4B197 /* LaunchScreen.storyboard in Resources */,
+				CBB673882A77AE1400DE477E /* AddPhotoCell.xib in Resources */,
 				844F160C2A63A2BD00D4B197 /* HomeVC.xib in Resources */,
 				844F16142A63A2E600D4B197 /* MakeVideoVC.xib in Resources */,
+				CBB673842A77A84000DE477E /* NoVideoCell.xib in Resources */,
 				844F16102A63A2D300D4B197 /* WallpaperVC.xib in Resources */,
 				FAC4089A2A716D99008AB062 /* MusicCell.xib in Resources */,
 				FAC9771D2A83E7F5008A280E /* SearchVC.xib in Resources */,
@@ -502,7 +548,12 @@
 				FAE21AD92A7EBC1000469717 /* PlayMusicVC.xib in Resources */,
 				844F15D92A63949700D4B197 /* Main.storyboard in Resources */,
 				FA9C93EA2A6839840012FA3A /* HomePopularCell.xib in Resources */,
+				CBB673942A77B96E00DE477E /* PhotoSelectedCell.xib in Resources */,
+				844F15D92A63949700D4B197 /* Main.storyboard in Resources */,
+				CBB6737F2A77A7EE00DE477E /* GenerateVideoVC.xib in Resources */,
 				844F161E2A63DFC800D4B197 /* HomeItemCell.xib in Resources */,
+				CBB673902A77B40400DE477E /* PhotosVC.xib in Resources */,
+				CBB673982A77BF9A00DE477E /* PhotoItemCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -637,7 +688,12 @@
 				FAC8477D2A8BC3C600C93481 /* RealmModel.swift in Sources */,
 				FA9C93E92A6839840012FA3A /* HomePopularCell.swift in Sources */,
 				844F161A2A63D18300D4B197 /* MusicService.swift in Sources */,
+				CBB673972A77BF9A00DE477E /* PhotoItemCell.swift in Sources */,
+				CBB673872A77AE1400DE477E /* AddPhotoCell.swift in Sources */,
 				844F16132A63A2E600D4B197 /* MakeVideoVC.swift in Sources */,
+				CBB6738F2A77B40400DE477E /* PhotosVC.swift in Sources */,
+				CBB673932A77B96E00DE477E /* PhotoSelectedCell.swift in Sources */,
+				CBB6737E2A77A7EE00DE477E /* GenerateVideoVC.swift in Sources */,
 				844F16182A63D10E00D4B197 /* MusicModel.swift in Sources */,
 				844F160B2A63A2BD00D4B197 /* HomeVC.swift in Sources */,
 				FAE1C40B2A7941AD005120CE /* AlbumCell.swift in Sources */,
@@ -645,6 +701,7 @@
 				844F160F2A63A2D300D4B197 /* WallpaperVC.swift in Sources */,
 				FAA3D6612A701DE700EF18E0 /* ArtistCell.swift in Sources */,
 				FAC408992A716D99008AB062 /* MusicCell.swift in Sources */,
+				CBB673832A77A84000DE477E /* NoVideoCell.swift in Sources */,
 				844F16082A63A2AC00D4B197 /* TabbarVC.swift in Sources */,
 				FAC8477A2A8BC31500C93481 /* RealService.swift in Sources */,
 				FAC408A22A717B15008AB062 /* MusicPlaylistCell.swift in Sources */,
