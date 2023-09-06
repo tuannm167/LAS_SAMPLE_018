@@ -22,6 +22,8 @@ class HomeMusicCell: UITableViewCell {
     var times: [String] = []
     var url = ""
     var count = 0
+    var cellColors = ["RGBB5BAFA","RGB6E79F4","RGBBFE8FD","RGBC3FDBD"]
+    var cellColors1 = ["RGBC3FDBD","RGBB5BAFA","RGB6E79F4","RGBBFE8FD"]
     
     var source: [AlbumModel] = [] {
         didSet {
@@ -80,6 +82,17 @@ extension HomeMusicCell: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if count == 0 {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MusicPlaylistCell", for: indexPath) as! MusicPlaylistCell
+            cell.viewStyleBorder.backgroundColor = UIColor(named: cellColors[indexPath.row % cellColors.count])
+            if source.count < 5 {
+                cell.viewBackground.backgroundColor = UIColor(named: cellColors[indexPath.row % cellColors.count])
+            } else {
+                if indexPath.row == 0 {
+                    cell.viewBackground.backgroundColor = .clear
+                } else {
+                    cell.viewBackground.backgroundColor = UIColor(named: cellColors1[indexPath.row % cellColors.count])
+                }
+            }
+            cell.viewCenter.backgroundColor = .clear
             cell.data = source[indexPath.row]
             cell.btnFavourite.isHidden = true
             cell.viewFavourite.isHidden = true
@@ -96,6 +109,8 @@ extension HomeMusicCell: UICollectionViewDelegate, UICollectionViewDataSource {
             cell.musicName = sourceSongs[indexPath.row]
             cell.numberSongs.text = "\(times[indexPath.row])"
             cell.viewCenter.backgroundColor = UIColor(named: "RGBE2ECFE")
+            cell.viewBackground.backgroundColor = .clear
+            cell.viewStyleBorder.backgroundColor = .clear
             return cell
         }
     }

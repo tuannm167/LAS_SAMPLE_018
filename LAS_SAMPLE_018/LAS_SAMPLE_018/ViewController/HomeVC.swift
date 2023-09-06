@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import AVFAudio
+import AVFoundation
 import MediaPlayer
 
 class HomeVC: BaseVC, TypeMusicCellDelegate {
@@ -24,6 +26,7 @@ class HomeVC: BaseVC, TypeMusicCellDelegate {
     var musicIDs:[String] = []
     var favouriteFolder: RealmModel?
     var numbers = 0
+    fileprivate var currentItem: String!
     let heightPlaylist = 100
     let heightAlbum = 250
     var data = [HomeSection.HomeTop, HomeSection.HomeSearch, HomeSection.HomeTopArtist,
@@ -34,6 +37,7 @@ class HomeVC: BaseVC, TypeMusicCellDelegate {
     @IBOutlet weak var homeTableView: UITableView!
     @IBOutlet weak var artistsName: UILabel!
     @IBOutlet weak var nameSong: UILabel!
+    var name = ""
     var homevc = AllSongsVC()
     //MARK: - life cycle
     override func viewDidLoad() {
@@ -52,6 +56,10 @@ class HomeVC: BaseVC, TypeMusicCellDelegate {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         if CPlayer.shared.isPlaying() {
+            let song = MusicService().getItem(songId: CPlayer.shared.currentItem ?? "")
+            nameSong.text = song?.songTitle
+            artistsName.text = song?.artistName
+            avatarSongs.image = song?.getThumb
             viewPlayMusic.isHidden = false
         } else {
             viewPlayMusic.isHidden = true
@@ -118,8 +126,7 @@ class HomeVC: BaseVC, TypeMusicCellDelegate {
     }
     
     @IBAction func clickShowPlayMusic(_ sender: UIButton) {
-        AppDelegate.shared.mainPlayer.setPlaylist(self.musics, currentItem: musicName ?? "")
-        UIWindow.keyWindow?.navigationTopMost?.present(AppDelegate.shared.mainPlayer, animated: true)
+        self.present(AppDelegate.shared.mainPlayer, animated: true)
     }
     @IBAction func clickFavourite(_ sender: UIButton) {
         self.openAllSongF()
@@ -185,7 +192,6 @@ extension HomeVC: UITableViewDataSource {
             cell.selectItemSong = { songId in
                 AppDelegate.shared.mainPlayer.setPlaylist(self.musics, currentItem: songId)
                 UIWindow.keyWindow?.navigationTopMost?.present(AppDelegate.shared.mainPlayer, animated: true)
-                self.musicName = songId
             }
             cell.count = numbers
             cell.collectionView.reloadData()

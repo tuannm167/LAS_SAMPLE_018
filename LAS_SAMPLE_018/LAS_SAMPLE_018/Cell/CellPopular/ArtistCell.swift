@@ -9,6 +9,7 @@ import UIKit
 
 class ArtistCell: UICollectionViewCell {
 
+    @IBOutlet weak var viewArtist: UIView!
     @IBOutlet weak var avaterArtist: UIImageView!
     @IBOutlet weak var lbName: UILabel!
     override func awakeFromNib() {

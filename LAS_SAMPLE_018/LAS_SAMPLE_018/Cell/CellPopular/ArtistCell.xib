@@ -61,6 +61,7 @@
             <connections>
                 <outlet property="avaterArtist" destination="ryD-qJ-W9I" id="gDO-aT-VeQ"/>
                 <outlet property="lbName" destination="bro-ED-dka" id="bl5-uJ-xch"/>
+                <outlet property="viewArtist" destination="Udn-BU-iat" id="biS-AI-fPg"/>
             </connections>
             <point key="canvasLocation" x="240.45801526717557" y="53.521126760563384"/>
         </collectionViewCell>
