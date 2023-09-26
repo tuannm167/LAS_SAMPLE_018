@@ -32,6 +32,10 @@
 		844F16212A63E03700D4B197 /* LexendDeca-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 844F16202A63E03600D4B197 /* LexendDeca-VariableFont_wght.ttf */; };
 		A7E42E7D5ECCAF76B534F1A1 /* Pods_LAS_SAMPLE_018.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57C240A29C92D27ABFE62C0E /* Pods_LAS_SAMPLE_018.framework */; };
 		B1E29C859FCEA420EBB1EFB4 /* Pods_LAS_SAMPLE_018Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D0B616889FEEC34E847464F /* Pods_LAS_SAMPLE_018Tests.framework */; };
+		CBA37D022AC2D2E60018AB15 /* CategoryItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBA37D002AC2D2E60018AB15 /* CategoryItemCell.swift */; };
+		CBA37D032AC2D2E60018AB15 /* CategoryItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBA37D012AC2D2E60018AB15 /* CategoryItemCell.xib */; };
+		CBA37D062AC2D95E0018AB15 /* WallpaperItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBA37D042AC2D95E0018AB15 /* WallpaperItemCell.swift */; };
+		CBA37D072AC2D95E0018AB15 /* WallpaperItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBA37D052AC2D95E0018AB15 /* WallpaperItemCell.xib */; };
 		CBAB89122ABBE3730047F3A3 /* MyFileItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBAB89102ABBE3730047F3A3 /* MyFileItemCell.swift */; };
 		CBAB89132ABBE3730047F3A3 /* MyFileItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBAB89112ABBE3730047F3A3 /* MyFileItemCell.xib */; };
 		CBB6737E2A77A7EE00DE477E /* GenerateVideoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB6737C2A77A7EE00DE477E /* GenerateVideoVC.swift */; };
@@ -111,6 +115,10 @@
 		844F161C2A63DFC800D4B197 /* HomeItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeItemCell.xib; sourceTree = "<group>"; };
 		844F16202A63E03600D4B197 /* LexendDeca-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LexendDeca-VariableFont_wght.ttf"; sourceTree = "<group>"; };
 		A19ABE8B4F872EEED75157A0 /* Pods_LAS_SAMPLE_018_LAS_SAMPLE_018UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LAS_SAMPLE_018_LAS_SAMPLE_018UITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CBA37D002AC2D2E60018AB15 /* CategoryItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryItemCell.swift; sourceTree = "<group>"; };
+		CBA37D012AC2D2E60018AB15 /* CategoryItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryItemCell.xib; sourceTree = "<group>"; };
+		CBA37D042AC2D95E0018AB15 /* WallpaperItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WallpaperItemCell.swift; sourceTree = "<group>"; };
+		CBA37D052AC2D95E0018AB15 /* WallpaperItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WallpaperItemCell.xib; sourceTree = "<group>"; };
 		CBAB89102ABBE3730047F3A3 /* MyFileItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFileItemCell.swift; sourceTree = "<group>"; };
 		CBAB89112ABBE3730047F3A3 /* MyFileItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyFileItemCell.xib; sourceTree = "<group>"; };
 		CBB6737C2A77A7EE00DE477E /* GenerateVideoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenerateVideoVC.swift; sourceTree = "<group>"; };
@@ -268,6 +276,7 @@
 		844F16022A63A12B00D4B197 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				CBA37CFF2AC2D2CB0018AB15 /* Wallpaper */,
 				CBB673802A77A82400DE477E /* MakeVideo */,
 				844F161B2A63DFC800D4B197 /* HomeItemCell.swift */,
 				844F161C2A63DFC800D4B197 /* HomeItemCell.xib */,
@@ -297,6 +306,17 @@
 				844F16202A63E03600D4B197 /* LexendDeca-VariableFont_wght.ttf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		CBA37CFF2AC2D2CB0018AB15 /* Wallpaper */ = {
+			isa = PBXGroup;
+			children = (
+				CBA37D002AC2D2E60018AB15 /* CategoryItemCell.swift */,
+				CBA37D012AC2D2E60018AB15 /* CategoryItemCell.xib */,
+				CBA37D042AC2D95E0018AB15 /* WallpaperItemCell.swift */,
+				CBA37D052AC2D95E0018AB15 /* WallpaperItemCell.xib */,
+			);
+			path = Wallpaper;
 			sourceTree = "<group>";
 		};
 		CBB673802A77A82400DE477E /* MakeVideo */ = {
@@ -498,6 +518,8 @@
 				844F15DE2A63949900D4B197 /* LaunchScreen.storyboard in Resources */,
 				CBB673882A77AE1400DE477E /* AddPhotoCell.xib in Resources */,
 				844F160C2A63A2BD00D4B197 /* HomeVC.xib in Resources */,
+				CBA37D032AC2D2E60018AB15 /* CategoryItemCell.xib in Resources */,
+				CBA37D072AC2D95E0018AB15 /* WallpaperItemCell.xib in Resources */,
 				844F16142A63A2E600D4B197 /* MakeVideoVC.xib in Resources */,
 				CBB673842A77A84000DE477E /* NoVideoCell.xib in Resources */,
 				844F16102A63A2D300D4B197 /* WallpaperVC.xib in Resources */,
@@ -640,6 +662,7 @@
 			files = (
 				844F15D22A63949700D4B197 /* AppDelegate.swift in Sources */,
 				844F161A2A63D18300D4B197 /* MusicService.swift in Sources */,
+				CBA37D022AC2D2E60018AB15 /* CategoryItemCell.swift in Sources */,
 				CBBDC0FC2ABAF58900E9270F /* VideoGeneratorError.swift in Sources */,
 				CBB673972A77BF9A00DE477E /* PhotoItemCell.swift in Sources */,
 				CBB673872A77AE1400DE477E /* AddPhotoCell.swift in Sources */,
@@ -653,6 +676,7 @@
 				CBB6737E2A77A7EE00DE477E /* GenerateVideoVC.swift in Sources */,
 				844F16182A63D10E00D4B197 /* MusicModel.swift in Sources */,
 				CBBDC0FF2ABAF5CC00E9270F /* LoadingAnimationView.swift in Sources */,
+				CBA37D062AC2D95E0018AB15 /* WallpaperItemCell.swift in Sources */,
 				844F160B2A63A2BD00D4B197 /* HomeVC.swift in Sources */,
 				844F16062A63A16600D4B197 /* BaseVC.swift in Sources */,
 				844F160F2A63A2D300D4B197 /* WallpaperVC.swift in Sources */,

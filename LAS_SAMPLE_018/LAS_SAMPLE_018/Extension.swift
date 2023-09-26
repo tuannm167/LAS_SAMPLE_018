@@ -242,3 +242,9 @@ extension URL {
         return self.createFolder(folderName: "videoEditor")
     }
 }
+
+extension UIImage {
+    class func original(_ name: String) -> UIImage? {
+        return UIImage(named: name)?.withRenderingMode(.alwaysOriginal)
+    }
+}
