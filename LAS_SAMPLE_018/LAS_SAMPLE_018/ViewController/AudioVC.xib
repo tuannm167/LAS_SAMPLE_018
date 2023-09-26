@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="LexendDeca-VariableFont_wght.ttf">
+            <string>LexendDeca-Bold</string>
+            <string>LexendDeca-Medium</string>
+            <string>LexendDeca-SemiBold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AudioVC" customModule="LAS_SAMPLE_018" customModuleProvider="target">
+            <connections>
+                <outlet property="addAudioButton" destination="oit-3g-xS9" id="RKZ-sn-IE3"/>
+                <outlet property="audioTBView" destination="RSn-qE-uOT" id="Owq-f8-WpE"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yeB-Ti-fBj">
+                    <rect key="frame" x="0.0" y="59" width="393" height="50"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RCB-MT-olo">
+                            <rect key="frame" x="10" y="0.0" width="50" height="50"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="50" id="FrU-H8-HjF"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="LexendDeca-Medium" family="Lexend Deca" pointSize="16"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" title="Back">
+                                <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <connections>
+                                <action selector="backClick:" destination="-1" eventType="touchUpInside" id="cKd-vP-f31"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select music" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ncv-Ga-0a2">
+                            <rect key="frame" x="70" y="0.0" width="228" height="50"/>
+                            <fontDescription key="fontDescription" name="LexendDeca-Bold" family="Lexend Deca" pointSize="20"/>
+                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oit-3g-xS9">
+                            <rect key="frame" x="308" y="0.0" width="75" height="50"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="75" id="usO-Si-ONr"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="LexendDeca-SemiBold" family="Lexend Deca" pointSize="16"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" title="Add">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <connections>
+                                <action selector="addAudioClick:" destination="-1" eventType="touchUpInside" id="c2X-5d-MZ9"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="RCB-MT-olo" firstAttribute="leading" secondItem="yeB-Ti-fBj" secondAttribute="leading" constant="10" id="0II-Nd-uTk"/>
+                        <constraint firstItem="oit-3g-xS9" firstAttribute="leading" secondItem="ncv-Ga-0a2" secondAttribute="trailing" constant="10" id="Ukp-2b-2TL"/>
+                        <constraint firstAttribute="bottom" secondItem="ncv-Ga-0a2" secondAttribute="bottom" id="WvL-w1-eAX"/>
+                        <constraint firstItem="ncv-Ga-0a2" firstAttribute="leading" secondItem="RCB-MT-olo" secondAttribute="trailing" constant="10" id="XuA-tJ-fZw"/>
+                        <constraint firstAttribute="trailing" secondItem="oit-3g-xS9" secondAttribute="trailing" constant="10" id="bje-rD-CBe"/>
+                        <constraint firstItem="ncv-Ga-0a2" firstAttribute="top" secondItem="yeB-Ti-fBj" secondAttribute="top" id="cMS-sa-sSN"/>
+                        <constraint firstItem="RCB-MT-olo" firstAttribute="top" secondItem="yeB-Ti-fBj" secondAttribute="top" id="e9t-Pw-oLB"/>
+                        <constraint firstAttribute="bottom" secondItem="RCB-MT-olo" secondAttribute="bottom" id="nfv-TA-oWL"/>
+                        <constraint firstAttribute="bottom" secondItem="oit-3g-xS9" secondAttribute="bottom" id="nuo-20-uPu"/>
+                        <constraint firstAttribute="height" constant="50" id="wO9-UI-INV"/>
+                        <constraint firstItem="oit-3g-xS9" firstAttribute="top" secondItem="yeB-Ti-fBj" secondAttribute="top" id="xYS-Ej-KPF"/>
+                    </constraints>
+                </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="RSn-qE-uOT">
+                    <rect key="frame" x="0.0" y="109" width="393" height="709"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </tableView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="RSn-qE-uOT" firstAttribute="top" secondItem="yeB-Ti-fBj" secondAttribute="bottom" id="6fi-BC-F6Q"/>
+                <constraint firstItem="yeB-Ti-fBj" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="9tV-NQ-ai0"/>
+                <constraint firstItem="RSn-qE-uOT" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Cpm-JI-jZI"/>
+                <constraint firstItem="RSn-qE-uOT" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="P7h-8z-fcm"/>
+                <constraint firstItem="yeB-Ti-fBj" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="o3t-85-xeH"/>
+                <constraint firstItem="yeB-Ti-fBj" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="r7m-qY-dQl"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="RSn-qE-uOT" secondAttribute="bottom" id="xbA-qZ-OP7"/>
+            </constraints>
+            <point key="canvasLocation" x="9.9236641221374047" y="20.422535211267608"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

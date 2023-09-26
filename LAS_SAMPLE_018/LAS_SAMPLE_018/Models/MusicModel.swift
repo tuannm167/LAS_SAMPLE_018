@@ -21,6 +21,7 @@ struct MusicModel {
     let artWork: MPMediaItemArtwork?
     let songURL: URL?
     let mediaType: MPMediaType
+    let duration: String?
     
     var getThumb: UIImage? {
         guard let artWork = artWork else {return UIImage(named: "ic_thumb")}
@@ -37,7 +38,6 @@ struct MusicModel {
             return .audio
         }
     }
-    
 }
 
 struct AlbumModel {

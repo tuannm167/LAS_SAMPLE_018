@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import AVKit
 
 class MakeVideoVC: UIViewController {
     //MARK: - properties
@@ -20,9 +21,14 @@ class MakeVideoVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
         setupUI()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        loadVideo()
     }
     
     
@@ -35,13 +41,38 @@ class MakeVideoVC: UIViewController {
         bottomView.backgroundColor = UIColor(rgb: 0xF3F8FF)
         
         myFileTableView.register(UINib(nibName: NoVideoCell.cellId, bundle: nil), forCellReuseIdentifier: NoVideoCell.cellId)
+        myFileTableView.register(UINib(nibName: MyFileItemCell.cellId, bundle: nil), forCellReuseIdentifier: MyFileItemCell.cellId)
+        
         myFileTableView.dataSource = self
         myFileTableView.delegate = self
         myFileTableView.separatorStyle = .none
         
     }
-
-
+    
+    
+    func loadVideo() {
+        
+        guard let imageURL = URL.videoEditorFolder() else { return }
+        do {
+            videos = try FileManager.default.contentsOfDirectory(atPath: imageURL.path)
+            myFileTableView.reloadData()
+        }
+        catch  let error as NSError {
+            print(error.localizedDescription)
+            videos = []
+        }
+    }
+    
+    func playVideo(url: URL) {
+        let player = AVPlayer(url: url)
+        
+        let vc = AVPlayerViewController()
+        vc.player = player
+        
+        self.present(vc, animated: true) { vc.player?.play() }
+    }
+    
+    
     @IBAction func createVideoClick(_ sender: Any) {
         guard let navi = UIWindow.keyWindow?.rootViewController as? UINavigationController else {
             return
@@ -68,11 +99,29 @@ extension MakeVideoVC: UITableViewDataSource {
             cell.selectionStyle = .none
             return cell
         } else {
-            return UITableViewCell()
+            let cell = tableView.dequeueReusableCell(withIdentifier: MyFileItemCell.cellId) as! MyFileItemCell
+            cell.selectionStyle = .none
+            cell.titleVideo = videos[indexPath.row]
+            let videoUrl = URL.videoEditorFolder()!.appendingPathComponent(videos[indexPath.row])
+            cell.onShare = {
+                let textToShare = "Share \(self.videos[indexPath.row]) to"
+                let objectsToShare: [Any] = [textToShare, videoUrl]
+                let activityVC = UIActivityViewController(activityItems: objectsToShare, applicationActivities: nil)
+                activityVC.popoverPresentationController?.sourceView = self.view
+                self.present(activityVC, animated: true, completion: nil)
+            }
+            return cell
         }
     }
     
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        if videos.count != 0 {
+            guard let pathURL = URL.videoEditorFolder()?.appendingPathComponent(videos[indexPath.row]) else {return}
+            self.playVideo(url: pathURL)
+        }
+        
+    }
 }
 
 extension MakeVideoVC: UITableViewDelegate {
@@ -81,7 +130,7 @@ extension MakeVideoVC: UITableViewDelegate {
             return NoVideoCell.height
         }
         else {
-            return 0
+            return MyFileItemCell.height
         }
     }
 }

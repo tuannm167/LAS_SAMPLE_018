@@ -11,20 +11,20 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="PhotoItemCell" customModule="LAS_SAMPLE_018" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="56" height="56"/>
+            <rect key="frame" x="0.0" y="0.0" width="91" height="87"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="56" height="56"/>
+                <rect key="frame" x="0.0" y="0.0" width="91" height="87"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ZU4-kS-osa">
-                        <rect key="frame" x="0.0" y="0.0" width="56" height="56"/>
+                        <rect key="frame" x="5" y="5" width="81" height="77"/>
                     </imageView>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZQp-KL-eQc">
-                        <rect key="frame" x="36" y="-5" width="25" height="25"/>
+                        <rect key="frame" x="71" y="0.0" width="20" height="20"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="25" id="bJc-c9-0wz"/>
-                            <constraint firstAttribute="width" constant="25" id="g8g-x7-zg7"/>
+                            <constraint firstAttribute="height" constant="20" id="Mos-mV-30z"/>
+                            <constraint firstAttribute="width" constant="20" id="pwY-Fi-R03"/>
                         </constraints>
                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                         <state key="normal" image="ic_delete"/>
@@ -36,21 +36,21 @@
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <constraints>
-                <constraint firstItem="ZU4-kS-osa" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="NC4-AB-FfC"/>
-                <constraint firstItem="ZQp-KL-eQc" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="-5" id="a3u-8S-y7g"/>
-                <constraint firstAttribute="trailing" secondItem="ZQp-KL-eQc" secondAttribute="trailing" constant="-5" id="eWS-eq-ONZ"/>
-                <constraint firstAttribute="bottom" secondItem="ZU4-kS-osa" secondAttribute="bottom" id="gQy-Jg-fmZ"/>
-                <constraint firstItem="ZU4-kS-osa" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="kpn-cP-Bu8"/>
-                <constraint firstAttribute="trailing" secondItem="ZU4-kS-osa" secondAttribute="trailing" id="q0K-NL-rec"/>
+                <constraint firstItem="ZU4-kS-osa" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="5" id="NC4-AB-FfC"/>
+                <constraint firstItem="ZQp-KL-eQc" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="VLb-4f-nqM"/>
+                <constraint firstAttribute="trailing" secondItem="ZQp-KL-eQc" secondAttribute="trailing" id="bOB-eL-DZL"/>
+                <constraint firstAttribute="bottom" secondItem="ZU4-kS-osa" secondAttribute="bottom" constant="5" id="gQy-Jg-fmZ"/>
+                <constraint firstItem="ZU4-kS-osa" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="5" id="kpn-cP-Bu8"/>
+                <constraint firstAttribute="trailing" secondItem="ZU4-kS-osa" secondAttribute="trailing" constant="5" id="q0K-NL-rec"/>
             </constraints>
-            <size key="customSize" width="99" height="122"/>
+            <size key="customSize" width="134" height="153"/>
             <connections>
                 <outlet property="photoImage" destination="ZU4-kS-osa" id="Lcy-Ek-VJv"/>
             </connections>
-            <point key="canvasLocation" x="175.57251908396947" y="45.070422535211272"/>
+            <point key="canvasLocation" x="202.29007633587784" y="58.802816901408455"/>
         </collectionViewCell>
     </objects>
     <resources>
-        <image name="ic_delete" width="12" height="12"/>
+        <image name="ic_delete" width="24" height="24"/>
     </resources>
 </document>
