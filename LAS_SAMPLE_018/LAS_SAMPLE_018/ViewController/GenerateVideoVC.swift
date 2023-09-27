@@ -74,11 +74,11 @@ class GenerateVideoVC: UIViewController {
                 switch result {
                 case .success(let url):
                     loadingView.dismiss()
-                  //  self.view.displayToast("Generated success!")
+                    self.view.displayToast("Generated success!")
                 case .failure(let error):
                     print(error)
                     loadingView.dismiss()
-                  //  self.view.displayToast("Generated error!")
+                    self.view.displayToast("Generated error!")
                 }
             }
         }

@@ -61,6 +61,7 @@ extension UIWindow {
             return appDelegate.window ?? nil
         }
     }
+    
     var navigationTopMost: UINavigationController? {
         return UIWindow.keyWindow?.rootViewController as? UINavigationController
     }
@@ -164,6 +165,8 @@ extension UIImage {
     
 }
 
+import Toast_Swift
+
 extension UIView {
     func roundCorners(corners: UIRectCorner, radius: CGFloat) {
         if #available(iOS 11, *) {
@@ -184,12 +187,12 @@ extension UIView {
         }
     }
     
-//    func displayToast(_ message: String) {
-//        guard let window = UIWindow.keyWindow else { return }
-//        
-//        window.hideAllToasts()
-//        window.makeToast(message, duration: 3.0, position: .top )
-//    }
+    func displayToast(_ message: String) {
+        guard let window = UIWindow.keyWindow else { return }
+        
+        window.hideAllToasts()
+        window.makeToast(message, duration: 3.0, position: .top )
+    }
 }
 
 

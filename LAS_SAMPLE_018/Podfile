@@ -6,8 +6,8 @@ target 'LAS_SAMPLE_018' do
   use_frameworks!
 
   # Pods for LAS_SAMPLE_018
-  pod 'Toast-Swift', '~> 5.0.1'
   pod 'SDWebImage', '~> 5.0'
+  pod 'Toast-Swift', '~> 5.0.1'
 
   target 'LAS_SAMPLE_018Tests' do
     inherit! :search_paths

@@ -78,7 +78,7 @@ class WallpaperVC: UIViewController {
         moonList = []
         naturalList = []
         
-        for i in 1...15 {
+        for i in 1...16 {
             
             let imageStr = "https://github.com/tuannm167/Wallpaper/blob/main/" + category.title() + "/"   + category.title() + "\(i).jpg?raw=true"
             guard let url = URL(string: imageStr) else { return }
@@ -177,6 +177,30 @@ extension WallpaperVC: UICollectionViewDelegate, UICollectionViewDataSource, UIC
             self.typeCollectionView.reloadData()
             
         } else {
+            var url: URL?
+            switch categorySelected {
+                
+            case .animal:
+                url = animalList[indexPath.row]
+            case .beautiful:
+                url = beautifulList[indexPath.row]
+            case .city:
+                url = cityList[indexPath.row]
+            case .galaxy:
+                url = galaxyList[indexPath.row]
+            case .moon:
+                url = moonList[indexPath.row]
+            case .natural:
+                url = naturalList[indexPath.row]
+            }
+            
+            guard let navi = UIWindow.keyWindow?.rootViewController as? UINavigationController else {
+                return
+            }
+            
+            let detail = WallpaperDetailVC()
+            detail.wallpaperUrl = url
+            navi.pushViewController(detail, animated: true)
             
         }
         

@@ -11,12 +11,14 @@ class WallpaperItemCell: UICollectionViewCell {
     
     var imageUrl: URL? {
         didSet {
-           //    posterImage.sd_setImage(with: imageUrl, placeholderImage: .original("image_thumb"), options: .retryFailed, context: nil)
             
-            posterImage.sd_setImage(with: URL(string: imageUrl?.absoluteString ?? "" ), completed: { (image, error, type, url) in
-                self.posterImage.image = image
-                    
-                 })
+            posterImage.sd_setImage(with: imageUrl, placeholderImage: .original("image_thumb"), options: .retryFailed, context: nil)
+            
+            
+//            posterImage.sd_setImage(with: URL(string: imageUrl?.absoluteString ?? "" ), completed: { (image, error, type, url) in
+//                self.posterImage.image = image
+//
+//            })
         }
     }
     @IBOutlet weak var posterImage: UIImageView!
@@ -26,5 +28,5 @@ class WallpaperItemCell: UICollectionViewCell {
         // Initialization code
         posterImage.layer.cornerRadius = 10
     }
-
+    
 }

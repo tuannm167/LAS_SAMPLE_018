@@ -6,10 +6,6 @@
 	<array>
 		<string>LexendDeca-VariableFont_wght.ttf</string>
 	</array>
-	<key>NSAppleMusicUsageDescription</key>
-	<string>The application need permission to access to the Apple Music to get musics to play.</string>
-	<key>NSPhotoLibraryUsageDescription</key>
-	<string>The application needs access to Photos to get Photos and videos then custom them.</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>

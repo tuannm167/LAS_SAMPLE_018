@@ -63,6 +63,8 @@
 		CBBDC0FB2ABAF58900E9270F /* ImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBBDC0F62ABAF58900E9270F /* ImageExtension.swift */; };
 		CBBDC0FC2ABAF58900E9270F /* VideoGeneratorError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBBDC0F82ABAF58900E9270F /* VideoGeneratorError.swift */; };
 		CBBDC0FF2ABAF5CC00E9270F /* LoadingAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBBDC0FE2ABAF5CC00E9270F /* LoadingAnimationView.swift */; };
+		CBD47F882AC3DD1200CD4CE7 /* WallpaperDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD47F862AC3DD1200CD4CE7 /* WallpaperDetailVC.swift */; };
+		CBD47F892AC3DD1200CD4CE7 /* WallpaperDetailVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBD47F872AC3DD1200CD4CE7 /* WallpaperDetailVC.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -146,6 +148,8 @@
 		CBBDC0F62ABAF58900E9270F /* ImageExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageExtension.swift; sourceTree = "<group>"; };
 		CBBDC0F82ABAF58900E9270F /* VideoGeneratorError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoGeneratorError.swift; sourceTree = "<group>"; };
 		CBBDC0FE2ABAF5CC00E9270F /* LoadingAnimationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingAnimationView.swift; sourceTree = "<group>"; };
+		CBD47F862AC3DD1200CD4CE7 /* WallpaperDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WallpaperDetailVC.swift; sourceTree = "<group>"; };
+		CBD47F872AC3DD1200CD4CE7 /* WallpaperDetailVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WallpaperDetailVC.xib; sourceTree = "<group>"; };
 		EA6CB02A2AEC0A48ED154F78 /* Pods-LAS_SAMPLE_018-LAS_SAMPLE_018UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LAS_SAMPLE_018-LAS_SAMPLE_018UITests.debug.xcconfig"; path = "Target Support Files/Pods-LAS_SAMPLE_018-LAS_SAMPLE_018UITests/Pods-LAS_SAMPLE_018-LAS_SAMPLE_018UITests.debug.xcconfig"; sourceTree = "<group>"; };
 		EF53C95D09BA9DCFD56FB68A /* Pods-LAS_SAMPLE_018.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LAS_SAMPLE_018.debug.xcconfig"; path = "Target Support Files/Pods-LAS_SAMPLE_018/Pods-LAS_SAMPLE_018.debug.xcconfig"; sourceTree = "<group>"; };
 		F757E88880DB035302F6D0B3 /* Pods-LAS_SAMPLE_018Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LAS_SAMPLE_018Tests.release.xcconfig"; path = "Target Support Files/Pods-LAS_SAMPLE_018Tests/Pods-LAS_SAMPLE_018Tests.release.xcconfig"; sourceTree = "<group>"; };
@@ -269,6 +273,8 @@
 				CBB6738E2A77B40400DE477E /* PhotosVC.xib */,
 				CBBDC0E92ABAE75500E9270F /* AudioVC.swift */,
 				CBBDC0E82ABAE75500E9270F /* AudioVC.xib */,
+				CBD47F862AC3DD1200CD4CE7 /* WallpaperDetailVC.swift */,
+				CBD47F872AC3DD1200CD4CE7 /* WallpaperDetailVC.xib */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -516,6 +522,7 @@
 				CBBDC0EF2ABAE7B800E9270F /* AudioItemCell.xib in Resources */,
 				844F16212A63E03700D4B197 /* LexendDeca-VariableFont_wght.ttf in Resources */,
 				844F15DE2A63949900D4B197 /* LaunchScreen.storyboard in Resources */,
+				CBD47F892AC3DD1200CD4CE7 /* WallpaperDetailVC.xib in Resources */,
 				CBB673882A77AE1400DE477E /* AddPhotoCell.xib in Resources */,
 				844F160C2A63A2BD00D4B197 /* HomeVC.xib in Resources */,
 				CBA37D032AC2D2E60018AB15 /* CategoryItemCell.xib in Resources */,
@@ -668,6 +675,7 @@
 				CBB673872A77AE1400DE477E /* AddPhotoCell.swift in Sources */,
 				CBBDC0FA2ABAF58900E9270F /* AVAssetExtension.swift in Sources */,
 				844F16132A63A2E600D4B197 /* MakeVideoVC.swift in Sources */,
+				CBD47F882AC3DD1200CD4CE7 /* WallpaperDetailVC.swift in Sources */,
 				CBBDC0F92ABAF58900E9270F /* VideoGenerator.swift in Sources */,
 				CBBDC0FB2ABAF58900E9270F /* ImageExtension.swift in Sources */,
 				CBB6738F2A77B40400DE477E /* PhotosVC.swift in Sources */,
@@ -869,11 +877,13 @@
 				DEVELOPMENT_TEAM = FAWF54HC53;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = LAS_SAMPLE_018/Info.plist;
+				INFOPLIST_KEY_NSAppleMusicUsageDescription = "The application need permission to access to the Apple Music to get musics to play.";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "The application needs access to Photos to get Photos and videos then custom them.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -899,11 +909,13 @@
 				DEVELOPMENT_TEAM = FAWF54HC53;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = LAS_SAMPLE_018/Info.plist;
+				INFOPLIST_KEY_NSAppleMusicUsageDescription = "The application need permission to access to the Apple Music to get musics to play.";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "The application needs access to Photos to get Photos and videos then custom them.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
