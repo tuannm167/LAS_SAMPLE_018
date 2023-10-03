@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "icShufleClick1.png",
+      "filename" : "ic_shuffle_click.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "icShufleClick2.png",
+      "filename" : "ic_shuffle_click@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "icShufleClick3.png",
+      "filename" : "ic_shuffle_click@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

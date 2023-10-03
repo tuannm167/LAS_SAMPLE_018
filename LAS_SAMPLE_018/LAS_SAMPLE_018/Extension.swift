@@ -64,6 +64,15 @@ extension UIWindow {
     var navigationTopMost: UINavigationController? {
         return UIWindow.keyWindow?.rootViewController as? UINavigationController
     }
+    
+    var tabbar: TabbarVC? {
+        for item in navigationTopMost?.viewControllers ?? [] {
+            if let tab = item as? TabbarVC {
+                return tab
+            }
+        }
+        return nil
+    }
 }
 
 extension UIApplication {
@@ -210,3 +219,14 @@ extension UIView {
 
 let columns: CGFloat = UIDevice.current.is_iPhone ? 3 : 5
 let padding: CGFloat = UIDevice.current.is_iPhone ? 16 : 64
+
+
+extension Notification.Name {
+    
+    
+    static let show_mini_player = Notification.Name("show_mini_player")
+    static let hide_mini_player = Notification.Name("hide_mini_player")
+    
+    static let show_main_player = Notification.Name("show_main_player")
+    static let hide_main_player = Notification.Name("hide_main_player")
+}

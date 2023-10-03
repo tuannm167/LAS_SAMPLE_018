@@ -12,9 +12,6 @@ class RealmModel: Object {
     @objc dynamic var id: String = UUID().uuidString
     @objc dynamic var name: String = ""
     
-    /// Icon name
-    @objc dynamic var icon: String = ""
-    
     dynamic var musicIDs: List<String> = List()
     
     override class func primaryKey() -> String? {

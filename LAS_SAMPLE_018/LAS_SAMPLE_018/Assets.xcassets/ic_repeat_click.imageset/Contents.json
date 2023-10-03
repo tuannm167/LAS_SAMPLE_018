@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "icClickRepeat1.png",
+      "filename" : "ic_repeat_click.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "icClickRepeat2.png",
+      "filename" : "ic_repeat_click@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "icClickRepeat3.png",
+      "filename" : "ic_repeat_click@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

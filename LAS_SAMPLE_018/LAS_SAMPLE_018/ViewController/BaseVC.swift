@@ -11,7 +11,7 @@ class BaseVC: UIViewController {
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
         if #available(iOS 13.0, *) {
-            return .lightContent
+            return .darkContent
         }
         return .default
     }
@@ -30,8 +30,9 @@ extension BaseVC {
         self.navigationController?.pushViewController(allSongVC, animated: true)
     }
     
-    func openAllSongF(){
+    func openAllSongF(folderType: AllSongType){
         let allSongVC: AllSongsVC = UIStoryboard.createController()
+        allSongVC.folderType = folderType
         self.navigationController?.pushViewController(allSongVC, animated: true)
     }
     

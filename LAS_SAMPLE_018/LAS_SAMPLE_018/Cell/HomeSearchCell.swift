@@ -11,6 +11,7 @@ class HomeSearchCell: UITableViewCell {
 
     @IBOutlet weak var txtSearch: UITextField!
     @IBOutlet weak var viewSearch: UIView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
        setupUI()

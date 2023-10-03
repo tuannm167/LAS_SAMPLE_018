@@ -60,12 +60,29 @@ class HomeMusicCell: UITableViewCell {
         collectionView.delegate = self
         collectionView.register(UINib(nibName: MusicPlaylistCell.cellId, bundle: nil), forCellWithReuseIdentifier: MusicPlaylistCell.cellId)
         collectionView.register(UINib(nibName: AlbumCell.cellId, bundle: nil), forCellWithReuseIdentifier: AlbumCell.cellId)
+        collectionView.register(UINib(nibName: MusicCollectionCell.cellId, bundle: nil), forCellWithReuseIdentifier: MusicCollectionCell.cellId)
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    
+    private func addSongToFavourite (musicID: String) {
+        guard let realm = RealmService.shared.realmObj() else { return }
+        guard let favouriteFolder = RealmService.shared.favouriteFolder() else { return }
+        if let index = favouriteFolder.musicIDs.firstIndex(where: { $0 == musicID }) {
+            try? realm.write({
+                favouriteFolder.musicIDs.remove(at: index)
+            })
+        }
+        else {
+            try? realm.write({
+                favouriteFolder.musicIDs.append(musicID)
+            })
+        }
+        
     }
     
 }
@@ -103,14 +120,11 @@ extension HomeMusicCell: UICollectionViewDelegate, UICollectionViewDataSource {
             cell.data = sourceAlbum[indexPath.row]
             return cell
         } else {
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MusicPlaylistCell", for: indexPath) as! MusicPlaylistCell
-            cell.btnFavourite.isHidden = false
-            cell.viewFavourite.isHidden = false
-            cell.musicName = sourceSongs[indexPath.row]
-            cell.numberSongs.text = "\(times[indexPath.row])"
-            cell.viewCenter.backgroundColor = UIColor(named: "RGBE2ECFE")
-            cell.viewBackground.backgroundColor = .clear
-            cell.viewStyleBorder.backgroundColor = .clear
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MusicCollectionCell", for: indexPath) as! MusicCollectionCell
+            cell.songID = sourceSongs[indexPath.row]
+            cell.onFavourite = {[weak self] musicID in
+                self?.addSongToFavourite(musicID: musicID)
+            }
             return cell
         }
     }
@@ -125,12 +139,39 @@ extension HomeMusicCell: UICollectionViewDelegate, UICollectionViewDataSource {
     }
 }
 extension HomeMusicCell: UICollectionViewDelegateFlowLayout {
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        return .init(top: 0, left: 20, bottom: 0, right: 20)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        if count == 0 {
+            return 0
+        } else if count == 1 {
+            return 20
+        } else {
+            return 0
+        }
+       
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        if count == 0 {
+            return 0
+        } else if count == 1 {
+            return 20
+        } else {
+            return 0
+        }
+    }
+    
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         if count == 0 || count == 2 {
             return CGSize(width: collectionView.frame.size.width, height: 100)
         }
         
-        let width = (collectionView.frame.size.width - 58) / 2
-        return CGSize(width: width, height: 250)
+        let width = (collectionView.frame.size.width - 60) / 2
+        return CGSize(width: width, height: 215)
     }
 }

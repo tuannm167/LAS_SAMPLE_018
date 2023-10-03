@@ -8,7 +8,7 @@
 import UIKit
 
 class HomePopularCell: UITableViewCell {
-
+    
     @IBOutlet weak var collectionView: UICollectionView!
     var musicService: MusicService = MusicService()
     var artist: [String] = []
@@ -36,7 +36,7 @@ class HomePopularCell: UITableViewCell {
     
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
+        
         // Configure the view for the selected state
     }
     
@@ -55,10 +55,10 @@ extension HomePopularCell: UICollectionViewDelegate, UICollectionViewDataSource 
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if indexPath.section == 0 {
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PopularCell", for: indexPath) as! PopularCell
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PopularCell.cellId, for: indexPath) as! PopularCell
             return cell
         } else {
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ArtistCell", for: indexPath) as! ArtistCell
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ArtistCell.cellId, for: indexPath) as! ArtistCell
             cell.data = source[indexPath.row]
             return cell
         }
@@ -70,6 +70,11 @@ extension HomePopularCell: UICollectionViewDelegate, UICollectionViewDataSource 
 }
 extension HomePopularCell: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 140, height: 180)
+        if indexPath.section == 0 {
+            return CGSize(width: 150, height: 130)
+        } else {
+            return CGSize(width: 85, height: 130)
+        }
+        
     }
 }

@@ -8,7 +8,15 @@
 import UIKit
 import AVFoundation
 
+enum AllSongType: Int {
+    case all = 0
+    case favourite = 1
+}
+
+
 class AllSongsVC: BaseVC {
+    
+    var folderType: AllSongType = .all
     
     var album: AlbumModel? {
         didSet {
@@ -19,14 +27,7 @@ class AllSongsVC: BaseVC {
         }
     }
     
-    var realmModel: RealmModel? {
-        didSet {
-            if tableView != nil {
-                tableView.reloadData()
-            }
-            
-        }
-    }
+    var favouriteFolder: RealmModel?
     
     var musicService: MusicService = MusicService()
     var musicIDs: [String] = []
@@ -34,12 +35,30 @@ class AllSongsVC: BaseVC {
     @IBOutlet weak var viewButton: UIView!
     @IBOutlet weak var tableView: UITableView!
     var time: [String] = []
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         viewButton.layer.cornerRadius = 25
-        musicIDs = album?.songIDs ?? []
+        
         setupUI()
         time = musicService.getTimeMusicAll()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        loadData()
+    }
+    
+    private func loadData() {
+        switch folderType {
+        case .all:
+            musicIDs = album?.songIDs ?? []
+        case .favourite:
+            let favouriteFolder = RealmService.shared.favouriteFolder()
+            musicIDs = Array(favouriteFolder!.musicIDs)
+        }
+        tableView.reloadData()
     }
     
     func setupUI() {
@@ -59,6 +78,23 @@ class AllSongsVC: BaseVC {
     @IBAction func backBtn(_ sender: Any) {
         self.navigationController?.popViewController(animated: true)
     }
+    
+    private func addSongToFavourite (musicID: String) {
+        guard let realm = RealmService.shared.realmObj() else { return }
+        guard let favouriteFolder = RealmService.shared.favouriteFolder() else { return }
+        if let index = favouriteFolder.musicIDs.firstIndex(where: { $0 == musicID }) {
+            try? realm.write({
+                favouriteFolder.musicIDs.remove(at: index)
+            })
+        }
+        else {
+            try? realm.write({
+                favouriteFolder.musicIDs.append(musicID)
+            })
+        }
+        
+    }
+    
 }
 extension AllSongsVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -69,6 +105,9 @@ extension AllSongsVC: UITableViewDelegate, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: MusicCell.cellId) as! MusicCell
         cell.selectionStyle = .none
         cell.songID = musicIDs[indexPath.row]
+        cell.onFavourite = {[weak self] musicID in
+            self?.addSongToFavourite(musicID: musicID)
+        }
         return cell
     }
     

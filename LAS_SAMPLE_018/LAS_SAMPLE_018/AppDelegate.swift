@@ -25,6 +25,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        RealmService.shared.configuration()
+        
         if #available(iOS 13.0, *) {
             // SceneDelegate.swift will config
         }

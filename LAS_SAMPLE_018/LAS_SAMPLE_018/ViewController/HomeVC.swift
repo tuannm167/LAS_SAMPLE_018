@@ -11,6 +11,7 @@ import AVFoundation
 import MediaPlayer
 
 class HomeVC: BaseVC, TypeMusicCellDelegate {
+    
     func typeMusicAction(number: Int) {
         numbers = number
         homeTableView.reloadData()
@@ -25,6 +26,9 @@ class HomeVC: BaseVC, TypeMusicCellDelegate {
     var musics: [String] = []
     var musicIDs:[String] = []
     var favouriteFolder: RealmModel?
+    
+    fileprivate var heightMiniPlayer: CGFloat = 0
+    
     var numbers = 0
     fileprivate var currentItem: String!
     let heightPlaylist = 100
@@ -32,11 +36,8 @@ class HomeVC: BaseVC, TypeMusicCellDelegate {
     var data = [HomeSection.HomeTop, HomeSection.HomeSearch, HomeSection.HomeTopArtist,
                 HomeSection.HomeCate]
     //MARK: - outlets
-    @IBOutlet weak var viewPlayMusic: UIView!
-    @IBOutlet weak var avatarSongs: UIImageView!
     @IBOutlet weak var homeTableView: UITableView!
     @IBOutlet weak var artistsName: UILabel!
-    @IBOutlet weak var nameSong: UILabel!
     var name = ""
     var homevc = AllSongsVC()
     //MARK: - life cycle
@@ -45,25 +46,12 @@ class HomeVC: BaseVC, TypeMusicCellDelegate {
         
         // Do any additional setup after loading the view.
         setupUI()
-        viewPlayMusic.clipsToBounds = true
-        viewPlayMusic.layer.cornerRadius = 25
-        viewPlayMusic.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
-        avatarSongs.layer.cornerRadius = avatarSongs.frame.height/2
-        viewPlayMusic.isHidden = true
+        setupObserver()
         
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        if CPlayer.shared.isPlaying() {
-            let song = MusicService().getItem(songId: CPlayer.shared.currentItem ?? "")
-            nameSong.text = song?.songTitle
-            artistsName.text = song?.artistName
-            avatarSongs.image = song?.getThumb
-            viewPlayMusic.isHidden = false
-        } else {
-            viewPlayMusic.isHidden = true
-        }
         loadData()
     }
     
@@ -78,6 +66,19 @@ class HomeVC: BaseVC, TypeMusicCellDelegate {
         homeTableView.dataSource = self
     }
     
+    private func setupObserver() {
+        NotificationCenter.default.addObserver(forName: .show_mini_player, object: nil, queue: .main) { notification in
+            if let height = notification.object as? CGFloat {
+                self.heightMiniPlayer = height
+                self.homeTableView.reloadData()
+            }
+        }
+        
+        NotificationCenter.default.addObserver(forName: .hide_mini_player, object: nil, queue: .main) { _ in
+            self.heightMiniPlayer = 0
+            self.homeTableView.reloadData()
+        }
+    }
     
     private func loadData() {
         //load music local
@@ -129,16 +130,14 @@ class HomeVC: BaseVC, TypeMusicCellDelegate {
         self.present(AppDelegate.shared.mainPlayer, animated: true)
     }
     @IBAction func clickFavourite(_ sender: UIButton) {
-        self.openAllSongF()
+        self.openAllSongF(folderType:.favourite)
     }
     
     var musicName: String?  {
         didSet {
             if musicName != nil {
                 guard let song = MusicService().getItem(songId: musicName!) else { return }
-                nameSong.text = song.songTitle
-                avatarSongs.image = song.getThumb
-                artistsName.text = song.artistName
+                
             }
         }
     }

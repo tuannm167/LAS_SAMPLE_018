@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "icBackMusic.png",
+      "filename" : "ic_back_music.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "icback1 1.png",
+      "filename" : "ic_back_music@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "icback2.png",
+      "filename" : "ic_back_music@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

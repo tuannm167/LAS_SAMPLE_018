@@ -10,36 +10,55 @@ import AVFAudio
 import AVFoundation
 import MediaPlayer
 
-class PlayMusicVC: UIViewController, UIDocumentInteractionControllerDelegate {
-
-    @IBOutlet weak var imageShuffle: UIImageView!
-    @IBOutlet weak var repeatImg: UIImageView!
-    @IBOutlet weak var imagePlayMusic: UIImageView!
-    @IBOutlet weak var btnPlay: UIButton!
-    @IBOutlet weak var seekSlider: UISlider!
-    @IBOutlet weak var nameArtist: UILabel!
-    @IBOutlet weak var nameSong: UILabel!
-    @IBOutlet weak var btnNext: UIButton!
-    @IBOutlet weak var btnPrevious: UIButton!
-    @IBOutlet weak var shuffleButton: UIButton!
-    @IBOutlet weak var tableViewSongs: UITableView!
+class PlayMusicVC: UIViewController {
+    
+    //MARK: - properties
     var playlist: [String] = []
     fileprivate var currentItem: String!
+    
     fileprivate var isShowing: Bool = false
     fileprivate var isSeeking: Bool = false
+    
+    
     var musicService: MusicService = MusicService()
     var time: [String] = []
     var isPlay: Bool = false
+
+    //MARK: - outlets
+
+    
+    @IBOutlet weak var playerView: UIView!
+    @IBOutlet weak var defaultImageView: UIImageView!
+    
+    
+    @IBOutlet weak var seekSlider: UISlider!
+    @IBOutlet weak var nameArtist: UILabel!
+    @IBOutlet weak var nameSong: UILabel!
+    
+    @IBOutlet weak var btnPlay: UIButton!
+    @IBOutlet weak var btnNext: UIButton!
+    @IBOutlet weak var btnPrevious: UIButton!
+    @IBOutlet weak var shuffleButton: UIButton!
+    @IBOutlet weak var repeartButton: UIButton!
+    
+    @IBOutlet weak var tableViewSongs: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         isShowing = true
+        isPlay = true
+        
         setupUI()
+        
+        setupObservers()
+        
+        CPlayer.shared.setupRemoteTransportControls()
         CPlayer.shared.delegate = self
+        
         if currentItem != nil {
             CPlayer.shared.setPlaylist(playlist, currentItem: currentItem)
+            UIWindow.keyWindow?.tabbar?.showMiniPlayerIfNeed()
         }
-        time = musicService.getTimeMusicAll()
-        isPlay = true
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -52,22 +71,39 @@ class PlayMusicVC: UIViewController, UIDocumentInteractionControllerDelegate {
         self.onConfigAVPlayerTrigger(layer: CPlayer.shared.playerLayer, currentItem: CPlayer.shared.currentItem)
     }
     
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+        for ly in playerView.layer.sublayers ?? [] {
+            if let avlayer = ly as? AVPlayerLayer {
+                avlayer.frame = CGRect(x: 0, y: 0,
+                                       width: playerView.bounds.size.width,
+                                       height: playerView.bounds.height)
+            }
+        }
+    }
+    
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
         self.isShowing = false
     }
     
     func setupUI() {
-        tableViewSongs.register(UINib(nibName: SongMusicPlayCell.cellId, bundle: nil), forCellReuseIdentifier: SongMusicPlayCell.cellId)
-        tableViewSongs.delegate = self
-        tableViewSongs.dataSource = self
-        shuffleButton.isSelected = false
+        defaultImageView.roundCorners(corners: [.topLeft,.topRight], radius: 20)
+        playerView.roundCorners(corners: [.topLeft,.topRight], radius: 20)
+        nameSong.text = ""
+        nameArtist.text = ""
+        
         switch CPlayer.shared.repeatState {
         case .off:
-            repeatImg.image = UIImage(named: "ic_repeat")
+            repeartButton.setImage(UIImage(named: "ic_repeat"), for: .normal)
         case .all:
-            repeatImg.image = UIImage(named: "ic_repeat_click")
+            repeartButton.setImage(UIImage(named: "ic_repeat_click"), for: .normal)
         }
+        
+        shuffleButton.isSelected = false
+        
         let thumbImage = UIImage(named: "ic_slider")
         seekSlider.minimumTrackTintColor = UIColor(rgb: 0x8B5CE6)
         seekSlider.maximumTrackTintColor = UIColor(rgb: 0xD8D8D8)
@@ -78,33 +114,40 @@ class PlayMusicVC: UIViewController, UIDocumentInteractionControllerDelegate {
         seekSlider.addTarget(self, action: #selector(seekingEnd), for: .touchUpInside)
         seekSlider.addTarget(self, action: #selector(seekingEnd), for: .touchUpOutside)
         seekSlider.addTarget(self, action: #selector(seekingStart), for: .touchDown)
+        
+        
+        tableViewSongs.register(UINib(nibName: SongMusicPlayCell.cellId, bundle: nil), forCellReuseIdentifier: SongMusicPlayCell.cellId)
+        tableViewSongs.delegate = self
+        tableViewSongs.dataSource = self
+
     }
     
-    private let documentInteractionController = UIDocumentInteractionController()
-
-        private func showDocumentInteractionController(url: URL) {
-           documentInteractionController.url = url
-           documentInteractionController.presentOptionsMenu(from: view.frame, in: view, animated: true)
-           documentInteractionController.delegate = self
+    private func setupObservers() {
+        NotificationCenter.default.addObserver(forName: .show_main_player, object: nil, queue: .main) { _ in
+            self.isShowing = true
+            self.onConfigAVPlayerTrigger(layer: CPlayer.shared.playerLayer, currentItem: CPlayer.shared.currentItem)
+            
         }
+    }
     
     @IBAction func shareBtnAction(_ sender: UIBarButtonItem) {
-        showDocumentInteractionController(url: CPlayer.shared.getUrl())
+       
     }
     
     @IBAction func backAction(_ sender: UIButton) {
         isShowing = false
         dismiss(animated: true)
+        NotificationCenter.default.post(name: .hide_main_player, object: nil)
     }
 
     @IBAction func btnRepeatAction(_ sender: UIButton) {
         switch CPlayer.shared.repeatState {
         case .off:
             CPlayer.shared.repeatState = .all
-            repeatImg.image = UIImage(named: "ic_repeat_click")
+            repeartButton.setImage(UIImage(named: "ic_repeat_click"), for: .normal)
         case .all:
             CPlayer.shared.repeatState = .off
-            repeatImg.image = UIImage(named: "ic_repeat")
+            repeartButton.setImage(UIImage(named: "ic_repeat"), for: .normal)
         }
     }
     @IBAction func nextBtnAction(_ sender: UIButton) {
@@ -113,6 +156,7 @@ class PlayMusicVC: UIViewController, UIDocumentInteractionControllerDelegate {
     @IBAction func previousBtnAction(_ sender: Any) {
         CPlayer.shared.playPrevious()
     }
+    
     func setPlaylist(_ playlist: [String], currentItem: String) {
         if isViewLoaded {
             self.playlist = playlist
@@ -149,37 +193,35 @@ class PlayMusicVC: UIViewController, UIDocumentInteractionControllerDelegate {
     @IBAction func shuffleAction(_ sender: UIButton) {
         shuffleButton.isSelected = !shuffleButton.isSelected
         if shuffleButton.isSelected {
-            var newPlaylist = self.playlist
-            newPlaylist.shuffle()
-            if let index = newPlaylist.firstIndex(where: { $0 == currentItem }) {
-                newPlaylist.swapAt(0, index)
+            self.playlist.shuffle()
+            if let index = playlist.firstIndex(where: { $0 == currentItem }) {
+                playlist.swapAt(0, index)
             }
-            imageShuffle.image = UIImage(named: "ic_shuffle_click")
-            CPlayer.shared.setPlaylistShuffle(newPlaylist)
+            CPlayer.shared.setPlaylistShuffle(playlist)
         }
         else {
-            imageShuffle.image = UIImage(named: "ic_shuffle")
             CPlayer.shared.setPlaylistShuffle(self.playlist)
         }
+        tableViewSongs.reloadData()
     }
     
     @IBAction func playAction(_ sender: UIButton) {
         if sender.isSelected {
             isPlay = false
             CPlayer.shared.pause()
-            imagePlayMusic.image = UIImage(named: "ic_pause_music")
             sender.isSelected = false
             tableViewSongs.reloadData()
         } else {
             isPlay = true
             CPlayer.shared.play()
-            imagePlayMusic.image = UIImage(named: "ic_play_musics")
             sender.isSelected = true
             tableViewSongs.reloadData()
         }
     }
     
 }
+
+
 extension PlayMusicVC: CPlayerDelegate {
     private func fillDataToView(_ songID: String) {
         guard let song = MusicService().getItem(songId: songID) else { return }
@@ -196,6 +238,12 @@ extension PlayMusicVC: CPlayerDelegate {
         guard let item = currentItem else { return }
         self.currentItem = item
         self.fillDataToView(item)
+        
+        // mini player
+        if let tabbar = UIWindow.keyWindow?.tabbar {
+            tabbar.miniPlayer.musicId = item
+            tabbar.miniPlayer.setProgressBar(0)
+        }
     }
     
     func readyToPlay(currentItem: String?) {
@@ -206,6 +254,37 @@ extension PlayMusicVC: CPlayerDelegate {
     }
     
     func onConfigAVPlayerTrigger(layer: AVPlayerLayer?, currentItem: String?) {
+        if CPlayer.shared.appRunningBackground {
+            return
+        }
+        
+        // handle mini player is showing
+        if !self.isShowing {
+            if let tabbar = UIWindow.keyWindow?.tabbar {
+                tabbar.miniPlayer.hideMainPlayer()
+            }
+            return
+        }
+        
+        guard let playerLayer = layer else { return }
+        guard let item = currentItem else { return }
+        
+        guard let song = MusicService().getItem(songId: item) else { return }
+        
+        if song.songType == .audio {
+            playerView.backgroundColor = UIColor(rgb: 0x181818)
+            defaultImageView.isHidden = false
+        }
+        else {
+            playerView.backgroundColor = .clear
+            defaultImageView.isHidden = true
+        }
+        
+        playerLayer.removeFromSuperlayer()
+        playerView.layer.addSublayer(playerLayer)
+        playerLayer.frame = CGRect(x: 0, y: 0,
+                                   width: playerView.bounds.size.width,
+                                   height: playerView.bounds.height)
         
     }
     
@@ -213,10 +292,18 @@ extension PlayMusicVC: CPlayerDelegate {
         if CPlayer.shared.appRunningBackground {
             return
         }
+        
+        // main player
         btnPlay.isSelected = CPlayer.shared.isPlaying()
         
         if !isSeeking {
             seekSlider.value = Float(currentTime)
+        }
+        
+        // mini player
+        if let tabbar = UIWindow.keyWindow?.tabbar {
+            tabbar.miniPlayer.playButton.isSelected = CPlayer.shared.isPlaying()
+            tabbar.miniPlayer.setProgressBar(CGFloat(currentTime / duration))
         }
     }
     
@@ -246,10 +333,5 @@ extension PlayMusicVC: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 100
-    }
-}
-extension URL {
-    var uti: String {
-        return (try? self.resourceValues(forKeys: [.typeIdentifierKey]))?.typeIdentifier ?? "public.data"
     }
 }

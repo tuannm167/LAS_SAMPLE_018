@@ -18,7 +18,26 @@ class RealmService: NSObject {
     
     override init() { }
     
-    dynamic var musicIDs: List<String> = List()
+    func configuration() {
+        do {
+            let realm = try Realm(configuration: config)
+            
+            /// create favourite folder
+            if realm.objects(RealmModel.self).first(where: { $0.id == idFavouriteFolder }) == nil {
+                let obj = RealmModel()
+                obj.id = idFavouriteFolder
+                obj.name = "Favourite"
+                
+                try? realm.write({
+                    realm.add(obj)
+                    print("added favourite folder")
+                })
+            }
+            
+        } catch (let error) {
+            print("Realm error: \(error.localizedDescription)")
+        }
+    }
     
     func realmObj() -> Realm? {
         let realm = try? Realm(configuration: config)
@@ -30,6 +49,11 @@ class RealmService: NSObject {
         
         return realm.objects(RealmModel.self).first(where: { $0.id == idFavouriteFolder })
     }
+    
+    func dontAllowDeleteFolder(_ id: String) -> Bool {
+        return id == idFavouriteFolder
+    }
+    
+    
 }
-
 

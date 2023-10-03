@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "iconplay1.png",
+      "filename" : "ic_pause_music.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "iconplay2.png",
+      "filename" : "ic_pause_music@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "iconplay3.png",
+      "filename" : "ic_pause_music@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }
