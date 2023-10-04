@@ -61,6 +61,7 @@ extension UIWindow {
             return appDelegate.window ?? nil
         }
     }
+    
     var navigationTopMost: UINavigationController? {
         return UIWindow.keyWindow?.rootViewController as? UINavigationController
     }
@@ -195,26 +196,35 @@ extension UIImage {
     
 }
 
+import Toast_Swift
+
 extension UIView {
     func roundCorners(corners: UIRectCorner, radius: CGFloat) {
         if #available(iOS 11, *) {
-                    self.clipsToBounds = true
-                    self.layer.cornerRadius = radius
-                    var masked = CACornerMask()
-                    if corners.contains(.topLeft) { masked.insert(.layerMinXMinYCorner) }
-                    if corners.contains(.topRight) { masked.insert(.layerMaxXMinYCorner) }
-                    if corners.contains(.bottomLeft) { masked.insert(.layerMinXMaxYCorner) }
-                    if corners.contains(.bottomRight) { masked.insert(.layerMaxXMaxYCorner) }
-                    self.layer.maskedCorners = masked
-                }
-                else {
-                    let path = UIBezierPath(roundedRect: bounds, byRoundingCorners: corners, cornerRadii: CGSize(width: radius, height: radius))
-                    let mask = CAShapeLayer()
-                    mask.path = path.cgPath
-                    layer.mask = mask
-                }
-     }
- }
+            self.clipsToBounds = true
+            self.layer.cornerRadius = radius
+            var masked = CACornerMask()
+            if corners.contains(.topLeft) { masked.insert(.layerMinXMinYCorner) }
+            if corners.contains(.topRight) { masked.insert(.layerMaxXMinYCorner) }
+            if corners.contains(.bottomLeft) { masked.insert(.layerMinXMaxYCorner) }
+            if corners.contains(.bottomRight) { masked.insert(.layerMaxXMaxYCorner) }
+            self.layer.maskedCorners = masked
+        }
+        else {
+            let path = UIBezierPath(roundedRect: bounds, byRoundingCorners: corners, cornerRadii: CGSize(width: radius, height: radius))
+            let mask = CAShapeLayer()
+            mask.path = path.cgPath
+            layer.mask = mask
+        }
+    }
+    
+    func displayToast(_ message: String) {
+        guard let window = UIWindow.keyWindow else { return }
+        
+        window.hideAllToasts()
+        window.makeToast(message, duration: 3.0, position: .top )
+    }
+}
 
 
 let columns: CGFloat = UIDevice.current.is_iPhone ? 3 : 5
@@ -229,4 +239,54 @@ extension Notification.Name {
     
     static let show_main_player = Notification.Name("show_main_player")
     static let hide_main_player = Notification.Name("hide_main_player")
+extension URL {
+    static func cache() -> URL {
+        let paths = FileManager.default.urls(for: .cachesDirectory, in: .userDomainMask)
+        let documentsDirectory = paths[0]
+        return documentsDirectory
+    }
+    
+    static func document() -> URL {
+        let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+        let documentsDirectory = paths[0]
+        return documentsDirectory
+    }
+    
+    static func createFolder(folderName: String) -> URL? {
+        let fileManager = FileManager.default
+        // Get document directory for device, this should succeed
+        if let documentDirectory = fileManager.urls(for: .documentDirectory,
+                                                    in: .userDomainMask).first {
+            // Construct a URL with desired folder name
+            let folderURL = documentDirectory.appendingPathComponent(folderName)
+            // If folder URL does not exist, create it
+            if !fileManager.fileExists(atPath: folderURL.path) {
+                do {
+                    // Attempt to create folder
+                    try fileManager.createDirectory(atPath: folderURL.path,
+                                                    withIntermediateDirectories: true,
+                                                    attributes: nil)
+                } catch {
+                    // Creation failed. Print error & return nil
+                    print(error.localizedDescription)
+                    return nil
+                }
+            }
+            // Folder either exists, or was created. Return URL
+            return folderURL
+        }
+        // Will only be called if document directory not found
+        return nil
+    }
+    
+    
+    static func videoEditorFolder() -> URL? {
+        return self.createFolder(folderName: "videoEditor")
+    }
+}
+
+extension UIImage {
+    class func original(_ name: String) -> UIImage? {
+        return UIImage(named: name)?.withRenderingMode(.alwaysOriginal)
+    }
 }

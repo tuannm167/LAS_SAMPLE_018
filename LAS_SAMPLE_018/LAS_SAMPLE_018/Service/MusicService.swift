@@ -102,7 +102,12 @@ class MusicService {
                 songTitle: song.title,
                 artWork: song.artwork,
                 songURL: song.assetURL,
+<<<<<<< HEAD
                 mediaType: song.mediaType, time: time
+=======
+                mediaType: song.mediaType,
+                duration: audioDuration(time: song.playbackDuration)
+>>>>>>> main
             )
         }
         return songInfo
@@ -278,4 +283,12 @@ class MusicService {
         }
         return albums
     }
+    func audioDuration(time: Double) -> String {
+        let s: Int = Int(time) % 60
+        let m: Int = Int(time) / 60
+        let formattedDuration = String(format: "%02d:%02d", m, s)
+        return formattedDuration
+    }
+    
+    
 }

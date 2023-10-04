@@ -34,6 +34,12 @@
 		B1E29C859FCEA420EBB1EFB4 /* Pods_LAS_SAMPLE_018Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D0B616889FEEC34E847464F /* Pods_LAS_SAMPLE_018Tests.framework */; };
 		CB8F8B2B2ACC02E50037B032 /* MiniPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8F8B292ACC02E50037B032 /* MiniPlayer.swift */; };
 		CB8F8B2C2ACC02E50037B032 /* MiniPlayer.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB8F8B2A2ACC02E50037B032 /* MiniPlayer.xib */; };
+		CBA37D022AC2D2E60018AB15 /* CategoryItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBA37D002AC2D2E60018AB15 /* CategoryItemCell.swift */; };
+		CBA37D032AC2D2E60018AB15 /* CategoryItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBA37D012AC2D2E60018AB15 /* CategoryItemCell.xib */; };
+		CBA37D062AC2D95E0018AB15 /* WallpaperItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBA37D042AC2D95E0018AB15 /* WallpaperItemCell.swift */; };
+		CBA37D072AC2D95E0018AB15 /* WallpaperItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBA37D052AC2D95E0018AB15 /* WallpaperItemCell.xib */; };
+		CBAB89122ABBE3730047F3A3 /* MyFileItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBAB89102ABBE3730047F3A3 /* MyFileItemCell.swift */; };
+		CBAB89132ABBE3730047F3A3 /* MyFileItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBAB89112ABBE3730047F3A3 /* MyFileItemCell.xib */; };
 		CBB6737E2A77A7EE00DE477E /* GenerateVideoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB6737C2A77A7EE00DE477E /* GenerateVideoVC.swift */; };
 		CBB6737F2A77A7EE00DE477E /* GenerateVideoVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBB6737D2A77A7EE00DE477E /* GenerateVideoVC.xib */; };
 		CBB673832A77A84000DE477E /* NoVideoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB673812A77A84000DE477E /* NoVideoCell.swift */; };
@@ -79,6 +85,21 @@
 		FAE21AD92A7EBC1000469717 /* PlayMusicVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAE21AD72A7EBC1000469717 /* PlayMusicVC.xib */; };
 		FAF826FF2A9665D200A54645 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF826FE2A9665D200A54645 /* File.swift */; };
 		FAFA9C362A7F52D600966DA9 /* PlayerMusic.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFA9C352A7F52D600966DA9 /* PlayerMusic.swift */; };
+		CBBDC0DE2ABADC0700E9270F /* AddAudioCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBBDC0DC2ABADC0700E9270F /* AddAudioCell.swift */; };
+		CBBDC0DF2ABADC0700E9270F /* AddAudioCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBBDC0DD2ABADC0700E9270F /* AddAudioCell.xib */; };
+		CBBDC0E22ABADDC900E9270F /* AudioCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBBDC0E02ABADDC900E9270F /* AudioCell.swift */; };
+		CBBDC0E32ABADDC900E9270F /* AudioCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBBDC0E12ABADDC900E9270F /* AudioCell.xib */; };
+		CBBDC0EA2ABAE75500E9270F /* AudioVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBBDC0E82ABAE75500E9270F /* AudioVC.xib */; };
+		CBBDC0EB2ABAE75500E9270F /* AudioVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBBDC0E92ABAE75500E9270F /* AudioVC.swift */; };
+		CBBDC0EE2ABAE7B800E9270F /* AudioItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBBDC0EC2ABAE7B800E9270F /* AudioItemCell.swift */; };
+		CBBDC0EF2ABAE7B800E9270F /* AudioItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBBDC0ED2ABAE7B800E9270F /* AudioItemCell.xib */; };
+		CBBDC0F92ABAF58900E9270F /* VideoGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBBDC0F32ABAF58900E9270F /* VideoGenerator.swift */; };
+		CBBDC0FA2ABAF58900E9270F /* AVAssetExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBBDC0F52ABAF58900E9270F /* AVAssetExtension.swift */; };
+		CBBDC0FB2ABAF58900E9270F /* ImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBBDC0F62ABAF58900E9270F /* ImageExtension.swift */; };
+		CBBDC0FC2ABAF58900E9270F /* VideoGeneratorError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBBDC0F82ABAF58900E9270F /* VideoGeneratorError.swift */; };
+		CBBDC0FF2ABAF5CC00E9270F /* LoadingAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBBDC0FE2ABAF5CC00E9270F /* LoadingAnimationView.swift */; };
+		CBD47F882AC3DD1200CD4CE7 /* WallpaperDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD47F862AC3DD1200CD4CE7 /* WallpaperDetailVC.swift */; };
+		CBD47F892AC3DD1200CD4CE7 /* WallpaperDetailVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBD47F872AC3DD1200CD4CE7 /* WallpaperDetailVC.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -133,6 +154,12 @@
 		A19ABE8B4F872EEED75157A0 /* Pods_LAS_SAMPLE_018_LAS_SAMPLE_018UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LAS_SAMPLE_018_LAS_SAMPLE_018UITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB8F8B292ACC02E50037B032 /* MiniPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MiniPlayer.swift; sourceTree = "<group>"; };
 		CB8F8B2A2ACC02E50037B032 /* MiniPlayer.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MiniPlayer.xib; sourceTree = "<group>"; };
+		CBA37D002AC2D2E60018AB15 /* CategoryItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryItemCell.swift; sourceTree = "<group>"; };
+		CBA37D012AC2D2E60018AB15 /* CategoryItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryItemCell.xib; sourceTree = "<group>"; };
+		CBA37D042AC2D95E0018AB15 /* WallpaperItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WallpaperItemCell.swift; sourceTree = "<group>"; };
+		CBA37D052AC2D95E0018AB15 /* WallpaperItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WallpaperItemCell.xib; sourceTree = "<group>"; };
+		CBAB89102ABBE3730047F3A3 /* MyFileItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFileItemCell.swift; sourceTree = "<group>"; };
+		CBAB89112ABBE3730047F3A3 /* MyFileItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyFileItemCell.xib; sourceTree = "<group>"; };
 		CBB6737C2A77A7EE00DE477E /* GenerateVideoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenerateVideoVC.swift; sourceTree = "<group>"; };
 		CBB6737D2A77A7EE00DE477E /* GenerateVideoVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GenerateVideoVC.xib; sourceTree = "<group>"; };
 		CBB673812A77A84000DE477E /* NoVideoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoVideoCell.swift; sourceTree = "<group>"; };
@@ -147,6 +174,21 @@
 		CBB673962A77BF9A00DE477E /* PhotoItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotoItemCell.xib; sourceTree = "<group>"; };
 		CBD47F8A2AC41FF300CD4CE7 /* MusicCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicCollectionCell.swift; sourceTree = "<group>"; };
 		CBD47F8B2AC41FF300CD4CE7 /* MusicCollectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MusicCollectionCell.xib; sourceTree = "<group>"; };
+		CBBDC0DC2ABADC0700E9270F /* AddAudioCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAudioCell.swift; sourceTree = "<group>"; };
+		CBBDC0DD2ABADC0700E9270F /* AddAudioCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddAudioCell.xib; sourceTree = "<group>"; };
+		CBBDC0E02ABADDC900E9270F /* AudioCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioCell.swift; sourceTree = "<group>"; };
+		CBBDC0E12ABADDC900E9270F /* AudioCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AudioCell.xib; sourceTree = "<group>"; };
+		CBBDC0E82ABAE75500E9270F /* AudioVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AudioVC.xib; sourceTree = "<group>"; };
+		CBBDC0E92ABAE75500E9270F /* AudioVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioVC.swift; sourceTree = "<group>"; };
+		CBBDC0EC2ABAE7B800E9270F /* AudioItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioItemCell.swift; sourceTree = "<group>"; };
+		CBBDC0ED2ABAE7B800E9270F /* AudioItemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AudioItemCell.xib; sourceTree = "<group>"; };
+		CBBDC0F32ABAF58900E9270F /* VideoGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoGenerator.swift; sourceTree = "<group>"; };
+		CBBDC0F52ABAF58900E9270F /* AVAssetExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AVAssetExtension.swift; sourceTree = "<group>"; };
+		CBBDC0F62ABAF58900E9270F /* ImageExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageExtension.swift; sourceTree = "<group>"; };
+		CBBDC0F82ABAF58900E9270F /* VideoGeneratorError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoGeneratorError.swift; sourceTree = "<group>"; };
+		CBBDC0FE2ABAF5CC00E9270F /* LoadingAnimationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingAnimationView.swift; sourceTree = "<group>"; };
+		CBD47F862AC3DD1200CD4CE7 /* WallpaperDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WallpaperDetailVC.swift; sourceTree = "<group>"; };
+		CBD47F872AC3DD1200CD4CE7 /* WallpaperDetailVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WallpaperDetailVC.xib; sourceTree = "<group>"; };
 		EA6CB02A2AEC0A48ED154F78 /* Pods-LAS_SAMPLE_018-LAS_SAMPLE_018UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LAS_SAMPLE_018-LAS_SAMPLE_018UITests.debug.xcconfig"; path = "Target Support Files/Pods-LAS_SAMPLE_018-LAS_SAMPLE_018UITests/Pods-LAS_SAMPLE_018-LAS_SAMPLE_018UITests.debug.xcconfig"; sourceTree = "<group>"; };
 		EF53C95D09BA9DCFD56FB68A /* Pods-LAS_SAMPLE_018.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LAS_SAMPLE_018.debug.xcconfig"; path = "Target Support Files/Pods-LAS_SAMPLE_018/Pods-LAS_SAMPLE_018.debug.xcconfig"; sourceTree = "<group>"; };
 		F757E88880DB035302F6D0B3 /* Pods-LAS_SAMPLE_018Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LAS_SAMPLE_018Tests.release.xcconfig"; path = "Target Support Files/Pods-LAS_SAMPLE_018Tests/Pods-LAS_SAMPLE_018Tests.release.xcconfig"; sourceTree = "<group>"; };
@@ -249,6 +291,8 @@
 			children = (
 				FAC8477B2A8BC3AA00C93481 /* RealmModel */,
 				FAFA9C342A7F52C200966DA9 /* PlayerMusic */,
+				CBBDC0FD2ABAF5B400E9270F /* CustomView */,
+				CBBDC0F02ABAF58900E9270F /* Lib */,
 				844F161F2A63E03600D4B197 /* Fonts */,
 				844F16042A63A13900D4B197 /* Service */,
 				844F16032A63A13300D4B197 /* Models */,
@@ -302,6 +346,10 @@
 				CBB6737D2A77A7EE00DE477E /* GenerateVideoVC.xib */,
 				CBB6738D2A77B40400DE477E /* PhotosVC.swift */,
 				CBB6738E2A77B40400DE477E /* PhotosVC.xib */,
+				CBBDC0E92ABAE75500E9270F /* AudioVC.swift */,
+				CBBDC0E82ABAE75500E9270F /* AudioVC.xib */,
+				CBD47F862AC3DD1200CD4CE7 /* WallpaperDetailVC.swift */,
+				CBD47F872AC3DD1200CD4CE7 /* WallpaperDetailVC.xib */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -312,6 +360,7 @@
 				FAE1C4082A7940E8005120CE /* CellAlbum */,
 				FAC4089F2A717ACD008AB062 /* CellMusic */,
 				FA9C93EB2A683A510012FA3A /* CellPopular */,
+				CBA37CFF2AC2D2CB0018AB15 /* Wallpaper */,
 				CBB673802A77A82400DE477E /* MakeVideo */,
 				844F161B2A63DFC800D4B197 /* HomeItemCell.swift */,
 				844F161C2A63DFC800D4B197 /* HomeItemCell.xib */,
@@ -359,9 +408,22 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
+		CBA37CFF2AC2D2CB0018AB15 /* Wallpaper */ = {
+			isa = PBXGroup;
+			children = (
+				CBA37D002AC2D2E60018AB15 /* CategoryItemCell.swift */,
+				CBA37D012AC2D2E60018AB15 /* CategoryItemCell.xib */,
+				CBA37D042AC2D95E0018AB15 /* WallpaperItemCell.swift */,
+				CBA37D052AC2D95E0018AB15 /* WallpaperItemCell.xib */,
+			);
+			path = Wallpaper;
+			sourceTree = "<group>";
+		};
 		CBB673802A77A82400DE477E /* MakeVideo */ = {
 			isa = PBXGroup;
 			children = (
+				CBBDC0EC2ABAE7B800E9270F /* AudioItemCell.swift */,
+				CBBDC0ED2ABAE7B800E9270F /* AudioItemCell.xib */,
 				CBB673812A77A84000DE477E /* NoVideoCell.swift */,
 				CBB673822A77A84000DE477E /* NoVideoCell.xib */,
 				CBB673852A77AE1400DE477E /* AddPhotoCell.swift */,
@@ -370,8 +432,65 @@
 				CBB673922A77B96E00DE477E /* PhotoSelectedCell.xib */,
 				CBB673952A77BF9A00DE477E /* PhotoItemCell.swift */,
 				CBB673962A77BF9A00DE477E /* PhotoItemCell.xib */,
+				CBBDC0DC2ABADC0700E9270F /* AddAudioCell.swift */,
+				CBBDC0DD2ABADC0700E9270F /* AddAudioCell.xib */,
+				CBBDC0E02ABADDC900E9270F /* AudioCell.swift */,
+				CBBDC0E12ABADDC900E9270F /* AudioCell.xib */,
+				CBAB89102ABBE3730047F3A3 /* MyFileItemCell.swift */,
+				CBAB89112ABBE3730047F3A3 /* MyFileItemCell.xib */,
 			);
 			path = MakeVideo;
+			sourceTree = "<group>";
+		};
+		CBBDC0F02ABAF58900E9270F /* Lib */ = {
+			isa = PBXGroup;
+			children = (
+				CBBDC0F12ABAF58900E9270F /* SwiftVideoGenerator */,
+			);
+			path = Lib;
+			sourceTree = "<group>";
+		};
+		CBBDC0F12ABAF58900E9270F /* SwiftVideoGenerator */ = {
+			isa = PBXGroup;
+			children = (
+				CBBDC0F22ABAF58900E9270F /* Classes */,
+			);
+			path = SwiftVideoGenerator;
+			sourceTree = "<group>";
+		};
+		CBBDC0F22ABAF58900E9270F /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				CBBDC0F32ABAF58900E9270F /* VideoGenerator.swift */,
+				CBBDC0F42ABAF58900E9270F /* Extensions */,
+				CBBDC0F72ABAF58900E9270F /* Error */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		CBBDC0F42ABAF58900E9270F /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				CBBDC0F52ABAF58900E9270F /* AVAssetExtension.swift */,
+				CBBDC0F62ABAF58900E9270F /* ImageExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		CBBDC0F72ABAF58900E9270F /* Error */ = {
+			isa = PBXGroup;
+			children = (
+				CBBDC0F82ABAF58900E9270F /* VideoGeneratorError.swift */,
+			);
+			path = Error;
+			sourceTree = "<group>";
+		};
+		CBBDC0FD2ABAF5B400E9270F /* CustomView */ = {
+			isa = PBXGroup;
+			children = (
+				CBBDC0FE2ABAF5CC00E9270F /* LoadingAnimationView.swift */,
+			);
+			path = CustomView;
 			sourceTree = "<group>";
 		};
 		E7F0B325ADF22E149F31DE13 /* Frameworks */ = {
@@ -442,7 +561,7 @@
 				844F15CA2A63949700D4B197 /* Sources */,
 				844F15CB2A63949700D4B197 /* Frameworks */,
 				844F15CC2A63949700D4B197 /* Resources */,
-				3D4189E0F99D28570A046B26 /* [CP] Embed Pods Frameworks */,
+				6C7B8691E13F7A7976FFE79B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -481,6 +600,7 @@
 				844F15EB2A63949900D4B197 /* Frameworks */,
 				844F15EC2A63949900D4B197 /* Resources */,
 				F44BF14D0F8144E01CA08C05 /* [CP] Embed Pods Frameworks */,
+				1C01E064AB7F21761108C946 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -541,10 +661,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA912F062A8A66000036CECD /* SongMusicPlayCell.xib in Resources */,
+				CBBDC0E32ABADDC900E9270F /* AudioCell.xib in Resources */,
+				CBBDC0EF2ABAE7B800E9270F /* AudioItemCell.xib in Resources */,
 				844F16212A63E03700D4B197 /* LexendDeca-VariableFont_wght.ttf in Resources */,
 				844F15DE2A63949900D4B197 /* LaunchScreen.storyboard in Resources */,
+				CBD47F892AC3DD1200CD4CE7 /* WallpaperDetailVC.xib in Resources */,
 				CBB673882A77AE1400DE477E /* AddPhotoCell.xib in Resources */,
 				844F160C2A63A2BD00D4B197 /* HomeVC.xib in Resources */,
+				CBA37D032AC2D2E60018AB15 /* CategoryItemCell.xib in Resources */,
+				CBA37D072AC2D95E0018AB15 /* WallpaperItemCell.xib in Resources */,
 				844F16142A63A2E600D4B197 /* MakeVideoVC.xib in Resources */,
 				CBB673842A77A84000DE477E /* NoVideoCell.xib in Resources */,
 				844F16102A63A2D300D4B197 /* WallpaperVC.xib in Resources */,
@@ -565,12 +690,15 @@
 				844F15D92A63949700D4B197 /* Main.storyboard in Resources */,
 				FA9C93EA2A6839840012FA3A /* HomePopularCell.xib in Resources */,
 				CBB673942A77B96E00DE477E /* PhotoSelectedCell.xib in Resources */,
+				CBBDC0DF2ABADC0700E9270F /* AddAudioCell.xib in Resources */,
 				844F15D92A63949700D4B197 /* Main.storyboard in Resources */,
 				CBB6737F2A77A7EE00DE477E /* GenerateVideoVC.xib in Resources */,
 				844F161E2A63DFC800D4B197 /* HomeItemCell.xib in Resources */,
 				CBD47F8D2AC41FF300CD4CE7 /* MusicCollectionCell.xib in Resources */,
+				CBBDC0EA2ABAE75500E9270F /* AudioVC.xib in Resources */,
 				CBB673902A77B40400DE477E /* PhotosVC.xib in Resources */,
 				CBB673982A77BF9A00DE477E /* PhotoItemCell.xib in Resources */,
+				CBAB89132ABBE3730047F3A3 /* MyFileItemCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -591,6 +719,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		1C01E064AB7F21761108C946 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LAS_SAMPLE_018-LAS_SAMPLE_018UITests/Pods-LAS_SAMPLE_018-LAS_SAMPLE_018UITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LAS_SAMPLE_018-LAS_SAMPLE_018UITests/Pods-LAS_SAMPLE_018-LAS_SAMPLE_018UITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LAS_SAMPLE_018-LAS_SAMPLE_018UITests/Pods-LAS_SAMPLE_018-LAS_SAMPLE_018UITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		3952A97720935E828B215A75 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -614,6 +759,7 @@
 			showEnvVarsInLog = 0;
 		};
 		3D4189E0F99D28570A046B26 /* [CP] Embed Pods Frameworks */ = {
+		6C7B8691E13F7A7976FFE79B /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -705,27 +851,40 @@
 				FAC8477D2A8BC3C600C93481 /* RealmModel.swift in Sources */,
 				FA9C93E92A6839840012FA3A /* HomePopularCell.swift in Sources */,
 				844F161A2A63D18300D4B197 /* MusicService.swift in Sources */,
+				CBA37D022AC2D2E60018AB15 /* CategoryItemCell.swift in Sources */,
+				CBBDC0FC2ABAF58900E9270F /* VideoGeneratorError.swift in Sources */,
 				CBB673972A77BF9A00DE477E /* PhotoItemCell.swift in Sources */,
 				CBB673872A77AE1400DE477E /* AddPhotoCell.swift in Sources */,
+				CBBDC0FA2ABAF58900E9270F /* AVAssetExtension.swift in Sources */,
 				844F16132A63A2E600D4B197 /* MakeVideoVC.swift in Sources */,
+				CBD47F882AC3DD1200CD4CE7 /* WallpaperDetailVC.swift in Sources */,
+				CBBDC0F92ABAF58900E9270F /* VideoGenerator.swift in Sources */,
+				CBBDC0FB2ABAF58900E9270F /* ImageExtension.swift in Sources */,
 				CBB6738F2A77B40400DE477E /* PhotosVC.swift in Sources */,
 				FAF826FF2A9665D200A54645 /* File.swift in Sources */,
 				CBB673932A77B96E00DE477E /* PhotoSelectedCell.swift in Sources */,
+				CBBDC0EB2ABAE75500E9270F /* AudioVC.swift in Sources */,
 				CBB6737E2A77A7EE00DE477E /* GenerateVideoVC.swift in Sources */,
 				844F16182A63D10E00D4B197 /* MusicModel.swift in Sources */,
+				CBBDC0FF2ABAF5CC00E9270F /* LoadingAnimationView.swift in Sources */,
+				CBA37D062AC2D95E0018AB15 /* WallpaperItemCell.swift in Sources */,
 				844F160B2A63A2BD00D4B197 /* HomeVC.swift in Sources */,
 				FAE1C40B2A7941AD005120CE /* AlbumCell.swift in Sources */,
 				844F16062A63A16600D4B197 /* BaseVC.swift in Sources */,
 				844F160F2A63A2D300D4B197 /* WallpaperVC.swift in Sources */,
 				FAA3D6612A701DE700EF18E0 /* ArtistCell.swift in Sources */,
 				FAC408992A716D99008AB062 /* MusicCell.swift in Sources */,
+				CBAB89122ABBE3730047F3A3 /* MyFileItemCell.swift in Sources */,
 				CBB673832A77A84000DE477E /* NoVideoCell.swift in Sources */,
 				844F16082A63A2AC00D4B197 /* TabbarVC.swift in Sources */,
 				FAC8477A2A8BC31500C93481 /* RealService.swift in Sources */,
 				FAC408A22A717B15008AB062 /* MusicPlaylistCell.swift in Sources */,
 				844F161D2A63DFC800D4B197 /* HomeItemCell.swift in Sources */,
+				CBBDC0EE2ABAE7B800E9270F /* AudioItemCell.swift in Sources */,
 				844F15D42A63949700D4B197 /* SceneDelegate.swift in Sources */,
 				FAE21AD82A7EBC1000469717 /* PlayMusicVC.swift in Sources */,
+				CBBDC0E22ABADDC900E9270F /* AudioCell.swift in Sources */,
+				CBBDC0DE2ABADC0700E9270F /* AddAudioCell.swift in Sources */,
 				844F16162A63A3AC00D4B197 /* Extension.swift in Sources */,
 				FAA342162A66EF3A00BC102C /* HomeSearchCell.swift in Sources */,
 				FAE009FA2A7DEC72003AF7FA /* AllSongsVC.swift in Sources */,
@@ -915,12 +1074,15 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = LAS_SAMPLE_018/Info.plist;
 				INFOPLIST_KEY_NSAppleMusicUsageDescription = "Play using while you are hiking";
+				INFOPLIST_KEY_NSAppleMusicUsageDescription = "The application need permission to access to the Apple Music to get musics to play.";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "The application needs access to Photos to get Photos and videos then custom them.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UIRequiresFullScreen = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -947,12 +1109,15 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = LAS_SAMPLE_018/Info.plist;
 				INFOPLIST_KEY_NSAppleMusicUsageDescription = "Play using while you are hiking";
+				INFOPLIST_KEY_NSAppleMusicUsageDescription = "The application need permission to access to the Apple Music to get musics to play.";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "The application needs access to Photos to get Photos and videos then custom them.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UIRequiresFullScreen = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

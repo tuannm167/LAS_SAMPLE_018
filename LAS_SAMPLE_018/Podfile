@@ -6,6 +6,8 @@ target 'LAS_SAMPLE_018' do
   use_frameworks!
   pod 'RealmSwift'
   # Pods for LAS_SAMPLE_018
+  pod 'SDWebImage', '~> 5.0'
+  pod 'Toast-Swift', '~> 5.0.1'
 
   target 'LAS_SAMPLE_018Tests' do
     inherit! :search_paths
@@ -16,4 +18,14 @@ target 'LAS_SAMPLE_018' do
     # Pods for testing
   end
 
+end
+
+post_install do |installer|
+  installer.generated_projects.each do |project|
+    project.targets.each do |target|
+      target.build_configurations.each do |config|
+        config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '12.0'
+      end
+    end
+  end
 end
