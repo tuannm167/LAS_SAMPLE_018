@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="LexendDeca-VariableFont_wght.ttf">
+            <string>LexendDeca-Bold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="AlbumCell" id="gTV-IL-0wX" customClass="AlbumCell" customModule="LAS_SAMPLE_018" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="163" height="250"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="163" height="250"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4E8-8H-zdQ">
+                        <rect key="frame" x="0.0" y="0.0" width="163" height="250"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zdA-BF-sAq">
+                                <rect key="frame" x="10" y="10" width="143" height="143"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="zdA-BF-sAq" secondAttribute="height" multiplier="1:1" id="nse-ON-crj"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GtQ-Eg-g6u">
+                                <rect key="frame" x="10" y="158" width="143" height="82"/>
+                                <fontDescription key="fontDescription" name="LexendDeca-Bold" family="Lexend Deca" pointSize="16"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.88627451660000001" green="0.92549020049999997" blue="0.99607843159999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="GtQ-Eg-g6u" secondAttribute="trailing" constant="10" id="1dA-OZ-Adv"/>
+                            <constraint firstItem="zdA-BF-sAq" firstAttribute="leading" secondItem="4E8-8H-zdQ" secondAttribute="leading" constant="10" id="4Ml-ZZ-uhV"/>
+                            <constraint firstAttribute="bottom" secondItem="GtQ-Eg-g6u" secondAttribute="bottom" constant="10" id="CJd-mL-8id"/>
+                            <constraint firstAttribute="trailing" secondItem="zdA-BF-sAq" secondAttribute="trailing" constant="10" id="JkV-oG-2Vg"/>
+                            <constraint firstItem="GtQ-Eg-g6u" firstAttribute="top" secondItem="zdA-BF-sAq" secondAttribute="bottom" constant="5" id="LzP-xN-Oc1"/>
+                            <constraint firstItem="GtQ-Eg-g6u" firstAttribute="leading" secondItem="4E8-8H-zdQ" secondAttribute="leading" constant="10" id="fVO-PG-RwB"/>
+                            <constraint firstItem="zdA-BF-sAq" firstAttribute="top" secondItem="4E8-8H-zdQ" secondAttribute="top" constant="10" id="q7M-R8-Fxe"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="4E8-8H-zdQ" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="4U2-OG-E4e"/>
+                <constraint firstItem="4E8-8H-zdQ" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="J96-Sw-zZe"/>
+                <constraint firstAttribute="trailing" secondItem="4E8-8H-zdQ" secondAttribute="trailing" id="bY7-km-tK1"/>
+                <constraint firstAttribute="bottom" secondItem="4E8-8H-zdQ" secondAttribute="bottom" id="rLA-ZS-O3o"/>
+            </constraints>
+            <size key="customSize" width="163" height="205"/>
+            <connections>
+                <outlet property="avatarAlbum" destination="zdA-BF-sAq" id="VbH-Fv-GaC"/>
+                <outlet property="lbNameAlbums" destination="GtQ-Eg-g6u" id="DI0-XP-jcM"/>
+                <outlet property="viewAlbum" destination="4E8-8H-zdQ" id="ani-4R-jkB"/>
+            </connections>
+            <point key="canvasLocation" x="81.679389312977094" y="41.549295774647888"/>
+        </collectionViewCell>
+    </objects>
+</document>

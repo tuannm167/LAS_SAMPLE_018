@@ -10,7 +10,11 @@ import UIKit
 class TabbarVC: UITabBarController {
     
     // MARK: - properties
-    
+    private var miniPlayerShowing: Bool = false
+    lazy var miniPlayer: MiniPlayer = {
+        let player = MiniPlayer.loadFromNib()
+        return player
+    }()
     
     // MARK: - life-cycle view controller
     override func viewDidLoad() {
@@ -36,7 +40,15 @@ class TabbarVC: UITabBarController {
         
         styleTabbar()
         
-        
+        miniPlayerShowing = false
+        miniPlayer.onOpenMainPlayer = { [weak self] in
+            self?.openMainPlayer()
+        }
+        miniPlayer.frame = CGRect(x: 0,
+                                  y: self.view.frame.size.height,
+                                  width: self.tabBar.frame.size.width,
+                                  height: MiniPlayer.height)
+        view.insertSubview(miniPlayer, belowSubview: self.tabBar)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -46,6 +58,40 @@ class TabbarVC: UITabBarController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+    }
+    
+    
+    func showMiniPlayerIfNeed() {
+        if miniPlayerShowing { return }
+        
+        miniPlayerShowing = true
+        UIView.animate(withDuration: 0.3) {
+            self.miniPlayer.frame = CGRect(x: 0,
+                                           y: self.tabBar.frame.origin.y - MiniPlayer.height,
+                                           width: self.tabBar.frame.size.width,
+                                           height: MiniPlayer.height)
+        } completion: { _ in
+            NotificationCenter.default.post(name: .show_mini_player, object: self.miniPlayer.frame.size.height)
+        }
+    }
+    
+    func hideMiniPlayer() {
+        miniPlayerShowing = false
+        UIView.animate(withDuration: 0.3) {
+            self.miniPlayer.frame = CGRect(x: 0,
+                                           y: self.view.frame.size.height,
+                                           width: self.tabBar.frame.size.width,
+                                           height: MiniPlayer.height)
+        } completion: { _ in
+            NotificationCenter.default.post(name: .hide_mini_player, object: nil)
+        }
+    }
+    
+    private func openMainPlayer() {
+        
+        NotificationCenter.default.post(name: .show_main_player, object: nil)
+        self.present(AppDelegate.shared.mainPlayer, animated: true)
+        
     }
     
     private func styleTabbar() {

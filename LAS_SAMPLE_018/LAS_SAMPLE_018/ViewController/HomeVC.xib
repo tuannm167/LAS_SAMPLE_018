@@ -20,23 +20,60 @@
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="NsY-Iz-fZh">
-                    <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HJ2-ZC-R3c">
+                    <rect key="frame" x="0.0" y="59" width="393" height="50"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_home_header" translatesAutoresizingMaskIntoConstraints="NO" id="Szm-ju-uDw">
+                            <rect key="frame" x="20" y="0.0" width="125" height="50"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="125" id="lJi-RO-Efr"/>
+                            </constraints>
+                        </imageView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D6J-GN-zZA">
+                            <rect key="frame" x="333" y="0.0" width="50" height="50"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="50" id="euK-hB-FyS"/>
+                            </constraints>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" image="ic_favourite_black"/>
+                            <connections>
+                                <action selector="clickFavourite:" destination="-1" eventType="touchUpInside" id="KAW-dA-B4e"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="Szm-ju-uDw" firstAttribute="top" secondItem="HJ2-ZC-R3c" secondAttribute="top" id="PuI-F8-IiP"/>
+                        <constraint firstItem="Szm-ju-uDw" firstAttribute="leading" secondItem="HJ2-ZC-R3c" secondAttribute="leading" constant="20" id="bKe-pT-OJz"/>
+                        <constraint firstItem="D6J-GN-zZA" firstAttribute="top" secondItem="HJ2-ZC-R3c" secondAttribute="top" id="eFy-Vn-lTQ"/>
+                        <constraint firstAttribute="bottom" secondItem="D6J-GN-zZA" secondAttribute="bottom" id="egO-yc-hVy"/>
+                        <constraint firstAttribute="bottom" secondItem="Szm-ju-uDw" secondAttribute="bottom" id="gmV-x2-wYa"/>
+                        <constraint firstAttribute="height" constant="50" id="n14-lR-amE"/>
+                        <constraint firstAttribute="trailing" secondItem="D6J-GN-zZA" secondAttribute="trailing" constant="10" id="ufd-KK-87k"/>
+                    </constraints>
+                </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="NsY-Iz-fZh">
+                    <rect key="frame" x="0.0" y="109" width="393" height="743"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                 </tableView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="NsY-Iz-fZh" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="3em-cf-hKu"/>
-                <constraint firstItem="NsY-Iz-fZh" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="AFp-pw-jU6"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="NsY-Iz-fZh" secondAttribute="bottom" id="TWZ-Ir-adO"/>
-                <constraint firstItem="NsY-Iz-fZh" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="vEI-7B-BoH"/>
+                <constraint firstItem="NsY-Iz-fZh" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="F4p-fm-L9n"/>
+                <constraint firstAttribute="bottom" secondItem="NsY-Iz-fZh" secondAttribute="bottom" id="WoI-f4-MTh"/>
+                <constraint firstItem="HJ2-ZC-R3c" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="eMA-6g-2ZY"/>
+                <constraint firstItem="HJ2-ZC-R3c" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="guv-mb-eoP"/>
+                <constraint firstItem="NsY-Iz-fZh" firstAttribute="top" secondItem="HJ2-ZC-R3c" secondAttribute="bottom" id="s5O-Ki-bUi"/>
+                <constraint firstItem="HJ2-ZC-R3c" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="tRt-QH-JjI"/>
+                <constraint firstItem="NsY-Iz-fZh" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="tRv-sO-DCj"/>
             </constraints>
             <point key="canvasLocation" x="136.64122137404578" y="19.718309859154932"/>
         </view>
     </objects>
     <resources>
+        <image name="ic_favourite_black" width="20" height="17.333333969116211"/>
+        <image name="ic_home_header" width="126" height="40"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

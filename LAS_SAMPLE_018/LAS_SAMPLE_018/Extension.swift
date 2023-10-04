@@ -65,6 +65,15 @@ extension UIWindow {
     var navigationTopMost: UINavigationController? {
         return UIWindow.keyWindow?.rootViewController as? UINavigationController
     }
+    
+    var tabbar: TabbarVC? {
+        for item in navigationTopMost?.viewControllers ?? [] {
+            if let tab = item as? TabbarVC {
+                return tab
+            }
+        }
+        return nil
+    }
 }
 
 extension UIApplication {
@@ -126,6 +135,28 @@ extension UInt64
         return myString
     }
 }
+
+extension Float64 {
+    func timeFormat() -> String {
+        let countTimeFormat = "%02d:%02d"
+        let countTimeFormatWithHour = "%02d:%02d:%02d"
+        let secondsPerHour = 3600
+        let secondsPerMinute = 60
+        
+        var tmpTime = Int(self)
+        let hours = tmpTime / secondsPerHour
+        tmpTime -= hours * secondsPerHour
+        let minutes = tmpTime / secondsPerMinute
+        tmpTime -= minutes * secondsPerMinute
+        let seconds = tmpTime
+        if hours <= 0 {
+            return String(format: countTimeFormat, minutes, seconds)
+        } else {
+            return String(format: countTimeFormatWithHour, hours, minutes, seconds)
+        }
+    }
+}
+
 
 import Photos
 
@@ -200,6 +231,14 @@ let columns: CGFloat = UIDevice.current.is_iPhone ? 3 : 5
 let padding: CGFloat = UIDevice.current.is_iPhone ? 16 : 64
 
 
+extension Notification.Name {
+    
+    
+    static let show_mini_player = Notification.Name("show_mini_player")
+    static let hide_mini_player = Notification.Name("hide_mini_player")
+    
+    static let show_main_player = Notification.Name("show_main_player")
+    static let hide_main_player = Notification.Name("hide_main_player")
 extension URL {
     static func cache() -> URL {
         let paths = FileManager.default.urls(for: .cachesDirectory, in: .userDomainMask)
