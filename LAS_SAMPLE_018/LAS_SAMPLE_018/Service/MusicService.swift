@@ -102,12 +102,9 @@ class MusicService {
                 songTitle: song.title,
                 artWork: song.artwork,
                 songURL: song.assetURL,
-<<<<<<< HEAD
-                mediaType: song.mediaType, time: time
-=======
                 mediaType: song.mediaType,
+                time: time,
                 duration: audioDuration(time: song.playbackDuration)
->>>>>>> main
             )
         }
         return songInfo

@@ -239,6 +239,7 @@ extension Notification.Name {
     
     static let show_main_player = Notification.Name("show_main_player")
     static let hide_main_player = Notification.Name("hide_main_player")
+}
 extension URL {
     static func cache() -> URL {
         let paths = FileManager.default.urls(for: .cachesDirectory, in: .userDomainMask)

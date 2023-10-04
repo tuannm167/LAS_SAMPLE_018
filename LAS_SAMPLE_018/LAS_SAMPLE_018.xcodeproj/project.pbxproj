@@ -599,7 +599,6 @@
 				844F15EA2A63949900D4B197 /* Sources */,
 				844F15EB2A63949900D4B197 /* Frameworks */,
 				844F15EC2A63949900D4B197 /* Resources */,
-				F44BF14D0F8144E01CA08C05 /* [CP] Embed Pods Frameworks */,
 				1C01E064AB7F21761108C946 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
@@ -758,7 +757,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		3D4189E0F99D28570A046B26 /* [CP] Embed Pods Frameworks */ = {
 		6C7B8691E13F7A7976FFE79B /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1073,7 +1071,6 @@
 				DEVELOPMENT_TEAM = FAWF54HC53;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = LAS_SAMPLE_018/Info.plist;
-				INFOPLIST_KEY_NSAppleMusicUsageDescription = "Play using while you are hiking";
 				INFOPLIST_KEY_NSAppleMusicUsageDescription = "The application need permission to access to the Apple Music to get musics to play.";
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "The application needs access to Photos to get Photos and videos then custom them.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -1082,7 +1079,6 @@
 				INFOPLIST_KEY_UIRequiresFullScreen = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1108,7 +1104,6 @@
 				DEVELOPMENT_TEAM = FAWF54HC53;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = LAS_SAMPLE_018/Info.plist;
-				INFOPLIST_KEY_NSAppleMusicUsageDescription = "Play using while you are hiking";
 				INFOPLIST_KEY_NSAppleMusicUsageDescription = "The application need permission to access to the Apple Music to get musics to play.";
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "The application needs access to Photos to get Photos and videos then custom them.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -1117,7 +1112,6 @@
 				INFOPLIST_KEY_UIRequiresFullScreen = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
