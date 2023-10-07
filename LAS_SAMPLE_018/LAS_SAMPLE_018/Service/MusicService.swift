@@ -32,7 +32,8 @@ class MusicService {
         }
         
         // let albumsQuery: MPMediaQuery = MPMediaQuery.albums()
-        let albumItems: [MPMediaItemCollection] = albumsQuery.collections! as [MPMediaItemCollection]
+        guard let album = albumsQuery.collections else { return [] }
+        let albumItems: [MPMediaItemCollection] = album as [MPMediaItemCollection]
         //  var album: MPMediaItemCollection
         
         for album in albumItems {
@@ -84,7 +85,8 @@ class MusicService {
         
         let items: [MPMediaItem] = query.items! as [MPMediaItem]
         var list: [String] = []
-        let albumItems: [MPMediaItemCollection] = query.collections! as [MPMediaItemCollection]
+        guard let album = query.collections else { return songInfo }
+        let albumItems: [MPMediaItemCollection] = album as [MPMediaItemCollection]
         for album in albumItems {
             let albumItems: [MPMediaItem] = album.items as [MPMediaItem]
             // var song: MPMediaItem
@@ -167,7 +169,8 @@ class MusicService {
         var musics: [String] = []
         let albumsQuery: MPMediaQuery
         albumsQuery = MPMediaQuery.songs()
-        let albumItems: [MPMediaItemCollection] = albumsQuery.collections! as [MPMediaItemCollection]
+        guard let album = albumsQuery.collections else { return [] }
+        let albumItems: [MPMediaItemCollection] = album as [MPMediaItemCollection]
         for album in albumItems {
             let albumItems: [MPMediaItem] = album.items as [MPMediaItem]
             // var song: MPMediaItem
@@ -179,11 +182,33 @@ class MusicService {
         
     }
     
-    func getTimeMusic() -> [String] {
+    func getAudio() -> [String] {
+        
         var musics: [String] = []
         let albumsQuery: MPMediaQuery
         albumsQuery = MPMediaQuery.songs()
         let albumItems: [MPMediaItemCollection] = albumsQuery.collections! as [MPMediaItemCollection]
+        for album in albumItems {
+            let albumItems: [MPMediaItem] = album.items as [MPMediaItem]
+            // var song: MPMediaItem
+            for song in albumItems {
+                let mediaType = song.mediaType
+                if !(mediaType == .movie || mediaType == .tvShow || mediaType == .videoPodcast || mediaType == .musicVideo || mediaType == .videoITunesU || mediaType == .homeVideo   || mediaType == .anyVideo)    {
+                    musics.append( song.persistentID.toString())
+                }
+            }
+        }
+        return musics
+        
+    }
+    
+    
+    func getTimeMusic() -> [String] {
+        var musics: [String] = []
+        let albumsQuery: MPMediaQuery
+        albumsQuery = MPMediaQuery.songs()
+        guard let album = albumsQuery.collections else { return [] }
+        let albumItems: [MPMediaItemCollection] = album as [MPMediaItemCollection]
         for album in albumItems {
             let albumItems: [MPMediaItem] = album.items as [MPMediaItem]
             // var song: MPMediaItem
@@ -215,7 +240,8 @@ class MusicService {
         var musics: [String] = []
         let albumsQuery: MPMediaQuery
         albumsQuery = MPMediaQuery.songs()
-        let albumItems: [MPMediaItemCollection] = albumsQuery.collections! as [MPMediaItemCollection]
+        guard let album = albumsQuery.collections else { return [] }
+        let albumItems: [MPMediaItemCollection] = album as [MPMediaItemCollection]
         for album in albumItems {
             let albumItems: [MPMediaItem] = album.items as [MPMediaItem]
             // var song: MPMediaItem
@@ -231,7 +257,8 @@ class MusicService {
         var artists: [String] = []
         let albumsQuery: MPMediaQuery
         albumsQuery = MPMediaQuery.artists()
-        let albumItems: [MPMediaItemCollection] = albumsQuery.collections! as [MPMediaItemCollection]
+        guard let album = albumsQuery.collections else { return [] }
+        let albumItems: [MPMediaItemCollection] = album as [MPMediaItemCollection]
         for album in albumItems {
             let albumItems: [MPMediaItem] = album.items as [MPMediaItem]
             // var song: MPMediaItem
@@ -247,7 +274,8 @@ class MusicService {
         var playlists: [String] = []
         let playlistQuery: MPMediaQuery
         playlistQuery = MPMediaQuery.playlists()
-        let playlistItems: [MPMediaItemCollection] = playlistQuery.collections! as [MPMediaItemCollection]
+        guard let playlist = playlistQuery.collections else { return [] }
+        let playlistItems: [MPMediaItemCollection] = playlist as [MPMediaItemCollection]
         for playlist in playlistItems {
             playlists.append(String(playlist.count))
         }
@@ -259,7 +287,8 @@ class MusicService {
         var playlists: [String] = []
         let playlistQuery: MPMediaQuery
         playlistQuery = MPMediaQuery.playlists()
-        let playlistItems: [MPMediaItemCollection] = playlistQuery.collections! as [MPMediaItemCollection]
+        guard let playlist = playlistQuery.collections else { return [] }
+        let playlistItems: [MPMediaItemCollection] = playlist as [MPMediaItemCollection]
         for playlist in playlistItems {
             playlists.append(playlist.value(forProperty: MPMediaPlaylistPropertyName) as! String)
         }
@@ -271,7 +300,8 @@ class MusicService {
         var albums: [String] = []
         let albumsQuery: MPMediaQuery
         albumsQuery = MPMediaQuery.albums()
-        let albumItems: [MPMediaItemCollection] = albumsQuery.collections! as [MPMediaItemCollection]
+        guard let playlist = albumsQuery.collections else { return [] }
+        let albumItems: [MPMediaItemCollection] = playlist as [MPMediaItemCollection]
         for album in albumItems {
             let albumItems: [MPMediaItem] = album.items as [MPMediaItem]
             for song in albumItems {

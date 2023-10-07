@@ -33,14 +33,14 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uHG-8d-Dqp">
                                         <rect key="frame" x="43" y="15" width="361" height="70"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zMb-1c-ORe">
-                                                <rect key="frame" x="62" y="13.000000000000002" width="206" height="22.666666666666671"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zMb-1c-ORe">
+                                                <rect key="frame" x="62" y="13" width="206" height="0.0"/>
                                                 <fontDescription key="fontDescription" name="LexendDeca-Bold" family="Lexend Deca" pointSize="18"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EUv-HT-Wow">
-                                                <rect key="frame" x="62" y="43.666666666666664" width="206" height="20"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EUv-HT-Wow">
+                                                <rect key="frame" x="62" y="21" width="206" height="0.0"/>
                                                 <fontDescription key="fontDescription" name="LexendDeca-Regular" family="Lexend Deca" pointSize="16"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -138,7 +138,7 @@
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="hIX-Ui-ST2" secondAttribute="trailing" id="Tr4-kz-ssB"/>
                             <constraint firstAttribute="bottom" secondItem="hIX-Ui-ST2" secondAttribute="bottom" id="ojp-24-ayU"/>
@@ -149,6 +149,7 @@
                 </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="kpH-Cz-TNa" secondAttribute="trailing" id="1db-KN-zXQ"/>
                 <constraint firstItem="kpH-Cz-TNa" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="O71-9g-nKY"/>
@@ -171,7 +172,7 @@
         </collectionViewCell>
     </objects>
     <resources>
-        <image name="ic_play" width="512" height="512"/>
+        <image name="ic_play" width="20" height="20"/>
         <image name="ico_heart" width="20" height="18"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

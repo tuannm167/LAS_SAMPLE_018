@@ -23,6 +23,7 @@ class MusicCell: UITableViewCell {
         avatarSong.layer.cornerRadius = avatarSong.frame.height/2
         viewCenter.backgroundColor = UIColor(named: "RGBE2ECFE")
         timeOfSong.textColor = UIColor(rgb: 0x9B9B9B)
+        
         guard let songID = songID else { return }
         isSelectFavourite = self.checkFavourite(songID: songID)
     }

@@ -9,7 +9,8 @@ import UIKit
 import MediaPlayer
 
 class MusicPlaylistCell: UICollectionViewCell {
-
+    
+    //MARK: - outlets
     @IBOutlet weak var viewCenter: UIView!
     @IBOutlet weak var viewStyleBorder: UIView!
     @IBOutlet weak var viewBackground: UIView!
@@ -19,7 +20,9 @@ class MusicPlaylistCell: UICollectionViewCell {
     @IBOutlet weak var btnFavourite: UIButton!
     @IBOutlet weak var numberSongs: UILabel!
     @IBOutlet weak var lbNamePlaylist: UILabel!
-    dynamic var musicIDs: [String] = []
+    
+    var musicIDs: [String] = []
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -29,12 +32,13 @@ class MusicPlaylistCell: UICollectionViewCell {
         viewStyleBorder.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
         viewCenter.backgroundColor = .clear
     }
-
+    
     var data: Any? {
         didSet {
             if let album = data as? AlbumModel {
                 lbNamePlaylist.text = album.albumTitle
                 avatarMusic.image = album.getThumb
+                numberSongs.text = album.songTotalStr
             }
         }
     }
@@ -51,6 +55,7 @@ class MusicPlaylistCell: UICollectionViewCell {
     }
     
     var onFavourite:((_ songID: String)-> Void)?
+    
     var isSelectFavourite: Bool = false {
         didSet {
             if isSelectFavourite {

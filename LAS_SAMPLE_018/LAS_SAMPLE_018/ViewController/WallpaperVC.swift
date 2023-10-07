@@ -226,9 +226,17 @@ extension WallpaperVC: UICollectionViewDelegate, UICollectionViewDataSource, UIC
         if collectionView == typeCollectionView {
             return .init(width: 100 , height: 45)
         } else {
-            let w = (UIScreen.main.bounds.width - 60)/2
-            let h = w * 1.5
-            return .init(width: w, height: h)
+            if UIDevice.current.is_iPad {
+                let w = (UIScreen.main.bounds.width - 20 * 4 )/3
+                let h = w * 1.5
+                return .init(width: w, height: h)
+            }
+            else {
+                let w = (UIScreen.main.bounds.width - 60)/2
+                let h = w * 1.5
+                return .init(width: w, height: h)
+            }
+            
         }
         
     }

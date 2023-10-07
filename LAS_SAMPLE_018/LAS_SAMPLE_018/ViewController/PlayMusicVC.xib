@@ -18,6 +18,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PlayMusicVC" customModule="LAS_SAMPLE_018" customModuleProvider="target">
             <connections>
+                <outlet property="btnFavourite" destination="er9-Ds-d4R" id="dip-zA-gLh"/>
                 <outlet property="btnNext" destination="UbU-bq-AIj" id="o3p-mn-4AT"/>
                 <outlet property="btnPlay" destination="0ET-NY-Evf" id="6Kc-dk-043"/>
                 <outlet property="btnPrevious" destination="CLD-GO-BpD" id="BCg-ZB-UDP"/>
@@ -25,6 +26,7 @@
                 <outlet property="nameArtist" destination="kvk-b9-Htz" id="jNc-MS-RYJ"/>
                 <outlet property="nameSong" destination="9I9-ty-wHC" id="odx-uM-SgQ"/>
                 <outlet property="playerView" destination="oPt-f8-Vmw" id="0Py-mL-G9D"/>
+                <outlet property="playlistView" destination="NmY-Hk-7xA" id="Qev-c6-bD3"/>
                 <outlet property="repeartButton" destination="u2M-RT-eYn" id="X10-AB-mMJ"/>
                 <outlet property="seekSlider" destination="1wj-bl-DT2" id="Kp2-fJ-Rpl"/>
                 <outlet property="shuffleButton" destination="DWo-5I-SY9" id="Z6M-Pj-gEz"/>
@@ -37,7 +39,7 @@
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="is5-1Z-Bfc">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="is5-1Z-Bfc">
                     <rect key="frame" x="16" y="59" width="75" height="50"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="75" id="5Zu-iG-MZi"/>
@@ -53,9 +55,9 @@
                     </connections>
                 </button>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oPt-f8-Vmw">
-                    <rect key="frame" x="16" y="119" width="361" height="203"/>
+                    <rect key="frame" x="16" y="109" width="361" height="203"/>
                     <subviews>
-                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hXf-ao-Umx">
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_music_default" translatesAutoresizingMaskIntoConstraints="NO" id="hXf-ao-Umx">
                             <rect key="frame" x="0.0" y="0.0" width="361" height="203"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </imageView>
@@ -70,18 +72,18 @@
                     </constraints>
                 </view>
                 <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="1wj-bl-DT2">
-                    <rect key="frame" x="14" y="342" width="365" height="31"/>
+                    <rect key="frame" x="14" y="332" width="365" height="31"/>
                     <color key="tintColor" red="0.95686274770000002" green="0.97254902119999997" blue="0.99607843159999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="30" id="q5H-hj-yQV"/>
                     </constraints>
                 </slider>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yFO-v5-MOy">
-                    <rect key="frame" x="16" y="382" width="361" height="70"/>
+                    <rect key="frame" x="16" y="362" width="361" height="70"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9I9-ty-wHC">
                             <rect key="frame" x="40" y="0.0" width="281" height="50"/>
-                            <fontDescription key="fontDescription" name="LexendDeca-Bold" family="Lexend Deca" pointSize="20"/>
+                            <fontDescription key="fontDescription" name="LexendDeca-Bold" family="Lexend Deca" pointSize="17"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
@@ -117,6 +119,9 @@
                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                             <state key="normal" image="ico_heart"/>
                             <state key="selected" image="ic_shuffle_click"/>
+                            <connections>
+                                <action selector="favouriteClick:" destination="-1" eventType="touchUpInside" id="wEI-IB-7aq"/>
+                            </connections>
                         </button>
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -136,7 +141,7 @@
                     </constraints>
                 </view>
                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="x18-f2-lOM">
-                    <rect key="frame" x="16" y="462" width="361" height="50"/>
+                    <rect key="frame" x="16" y="442" width="361" height="50"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fen-rI-1XP">
                             <rect key="frame" x="0.0" y="0.0" width="64.333333333333329" height="50"/>
@@ -248,29 +253,37 @@
                         <constraint firstAttribute="height" constant="50" id="0JK-CY-uLP"/>
                     </constraints>
                 </stackView>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="27N-DN-hfS">
-                    <rect key="frame" x="0.0" y="512" width="393" height="340"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NmY-Hk-7xA">
+                    <rect key="frame" x="0.0" y="502" width="393" height="350"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="27N-DN-hfS">
+                    <rect key="frame" x="0.0" y="502" width="393" height="350"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </tableView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="27N-DN-hfS" firstAttribute="top" secondItem="x18-f2-lOM" secondAttribute="bottom" id="0vQ-sF-yfz"/>
-                <constraint firstItem="oPt-f8-Vmw" firstAttribute="top" secondItem="is5-1Z-Bfc" secondAttribute="bottom" constant="10" id="7pf-bk-C3Z"/>
+                <constraint firstItem="27N-DN-hfS" firstAttribute="top" secondItem="x18-f2-lOM" secondAttribute="bottom" constant="10" id="0vQ-sF-yfz"/>
+                <constraint firstItem="NmY-Hk-7xA" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="1Ny-ar-CrJ"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="NmY-Hk-7xA" secondAttribute="trailing" id="6OX-09-asJ"/>
+                <constraint firstItem="oPt-f8-Vmw" firstAttribute="top" secondItem="is5-1Z-Bfc" secondAttribute="bottom" id="7pf-bk-C3Z"/>
                 <constraint firstItem="oPt-f8-Vmw" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="7xq-5R-dqo"/>
                 <constraint firstItem="x18-f2-lOM" firstAttribute="top" secondItem="yFO-v5-MOy" secondAttribute="bottom" constant="10" id="84t-AH-tNR"/>
                 <constraint firstItem="x18-f2-lOM" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="BNV-1B-F0E"/>
                 <constraint firstItem="1wj-bl-DT2" firstAttribute="top" secondItem="oPt-f8-Vmw" secondAttribute="bottom" constant="20" id="BXF-bi-I7d"/>
                 <constraint firstItem="is5-1Z-Bfc" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="CH5-WP-OO1"/>
                 <constraint firstAttribute="trailing" secondItem="oPt-f8-Vmw" secondAttribute="trailing" constant="16" id="NaL-32-5H4"/>
-                <constraint firstItem="yFO-v5-MOy" firstAttribute="top" secondItem="1wj-bl-DT2" secondAttribute="bottom" constant="10" id="NjE-B3-RDD"/>
+                <constraint firstItem="yFO-v5-MOy" firstAttribute="top" secondItem="1wj-bl-DT2" secondAttribute="bottom" id="NjE-B3-RDD"/>
                 <constraint firstAttribute="trailing" secondItem="27N-DN-hfS" secondAttribute="trailing" id="ODI-pu-FjK"/>
                 <constraint firstItem="is5-1Z-Bfc" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="PE9-ih-AyP"/>
                 <constraint firstAttribute="trailing" secondItem="yFO-v5-MOy" secondAttribute="trailing" constant="16" id="VPf-lw-q0x"/>
                 <constraint firstAttribute="bottom" secondItem="27N-DN-hfS" secondAttribute="bottom" id="Vtd-BI-1UK"/>
                 <constraint firstItem="1wj-bl-DT2" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="ZIb-O3-ENH"/>
                 <constraint firstAttribute="trailing" secondItem="x18-f2-lOM" secondAttribute="trailing" constant="16" id="ZkH-6X-MhF"/>
+                <constraint firstItem="NmY-Hk-7xA" firstAttribute="top" secondItem="x18-f2-lOM" secondAttribute="bottom" constant="10" id="iIX-A4-3XH"/>
+                <constraint firstAttribute="bottom" secondItem="NmY-Hk-7xA" secondAttribute="bottom" id="iqE-QD-8sz"/>
                 <constraint firstItem="yFO-v5-MOy" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="jcJ-LE-k3W"/>
                 <constraint firstAttribute="trailing" secondItem="1wj-bl-DT2" secondAttribute="trailing" constant="16" id="r6r-MH-iI6"/>
                 <constraint firstItem="27N-DN-hfS" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="vnQ-2Y-fOZ"/>
@@ -280,6 +293,7 @@
     </objects>
     <resources>
         <image name="ic_back_music" width="15" height="18"/>
+        <image name="ic_music_default" width="356" height="197"/>
         <image name="ic_next_music" width="15" height="18"/>
         <image name="ic_pause_music" width="52" height="52"/>
         <image name="ic_play_musics" width="52" height="52"/>

@@ -38,6 +38,8 @@
 		CBA37D032AC2D2E60018AB15 /* CategoryItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBA37D012AC2D2E60018AB15 /* CategoryItemCell.xib */; };
 		CBA37D062AC2D95E0018AB15 /* WallpaperItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBA37D042AC2D95E0018AB15 /* WallpaperItemCell.swift */; };
 		CBA37D072AC2D95E0018AB15 /* WallpaperItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBA37D052AC2D95E0018AB15 /* WallpaperItemCell.xib */; };
+		CBAB0E032ACFF9F200C2602C /* NoDataCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBAB0E012ACFF9F200C2602C /* NoDataCell.swift */; };
+		CBAB0E042ACFF9F200C2602C /* NoDataCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBAB0E022ACFF9F200C2602C /* NoDataCell.xib */; };
 		CBAB89122ABBE3730047F3A3 /* MyFileItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBAB89102ABBE3730047F3A3 /* MyFileItemCell.swift */; };
 		CBAB89132ABBE3730047F3A3 /* MyFileItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBAB89112ABBE3730047F3A3 /* MyFileItemCell.xib */; };
 		CBB6737E2A77A7EE00DE477E /* GenerateVideoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB6737C2A77A7EE00DE477E /* GenerateVideoVC.swift */; };
@@ -52,6 +54,21 @@
 		CBB673942A77B96E00DE477E /* PhotoSelectedCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBB673922A77B96E00DE477E /* PhotoSelectedCell.xib */; };
 		CBB673972A77BF9A00DE477E /* PhotoItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB673952A77BF9A00DE477E /* PhotoItemCell.swift */; };
 		CBB673982A77BF9A00DE477E /* PhotoItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBB673962A77BF9A00DE477E /* PhotoItemCell.xib */; };
+		CBBDC0DE2ABADC0700E9270F /* AddAudioCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBBDC0DC2ABADC0700E9270F /* AddAudioCell.swift */; };
+		CBBDC0DF2ABADC0700E9270F /* AddAudioCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBBDC0DD2ABADC0700E9270F /* AddAudioCell.xib */; };
+		CBBDC0E22ABADDC900E9270F /* AudioCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBBDC0E02ABADDC900E9270F /* AudioCell.swift */; };
+		CBBDC0E32ABADDC900E9270F /* AudioCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBBDC0E12ABADDC900E9270F /* AudioCell.xib */; };
+		CBBDC0EA2ABAE75500E9270F /* AudioVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBBDC0E82ABAE75500E9270F /* AudioVC.xib */; };
+		CBBDC0EB2ABAE75500E9270F /* AudioVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBBDC0E92ABAE75500E9270F /* AudioVC.swift */; };
+		CBBDC0EE2ABAE7B800E9270F /* AudioItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBBDC0EC2ABAE7B800E9270F /* AudioItemCell.swift */; };
+		CBBDC0EF2ABAE7B800E9270F /* AudioItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBBDC0ED2ABAE7B800E9270F /* AudioItemCell.xib */; };
+		CBBDC0F92ABAF58900E9270F /* VideoGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBBDC0F32ABAF58900E9270F /* VideoGenerator.swift */; };
+		CBBDC0FA2ABAF58900E9270F /* AVAssetExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBBDC0F52ABAF58900E9270F /* AVAssetExtension.swift */; };
+		CBBDC0FB2ABAF58900E9270F /* ImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBBDC0F62ABAF58900E9270F /* ImageExtension.swift */; };
+		CBBDC0FC2ABAF58900E9270F /* VideoGeneratorError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBBDC0F82ABAF58900E9270F /* VideoGeneratorError.swift */; };
+		CBBDC0FF2ABAF5CC00E9270F /* LoadingAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBBDC0FE2ABAF5CC00E9270F /* LoadingAnimationView.swift */; };
+		CBD47F882AC3DD1200CD4CE7 /* WallpaperDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD47F862AC3DD1200CD4CE7 /* WallpaperDetailVC.swift */; };
+		CBD47F892AC3DD1200CD4CE7 /* WallpaperDetailVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBD47F872AC3DD1200CD4CE7 /* WallpaperDetailVC.xib */; };
 		CBD47F8C2AC41FF300CD4CE7 /* MusicCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD47F8A2AC41FF300CD4CE7 /* MusicCollectionCell.swift */; };
 		CBD47F8D2AC41FF300CD4CE7 /* MusicCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBD47F8B2AC41FF300CD4CE7 /* MusicCollectionCell.xib */; };
 		FA912F052A8A66000036CECD /* SongMusicPlayCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA912F032A8A66000036CECD /* SongMusicPlayCell.swift */; };
@@ -85,21 +102,6 @@
 		FAE21AD92A7EBC1000469717 /* PlayMusicVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAE21AD72A7EBC1000469717 /* PlayMusicVC.xib */; };
 		FAF826FF2A9665D200A54645 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF826FE2A9665D200A54645 /* File.swift */; };
 		FAFA9C362A7F52D600966DA9 /* PlayerMusic.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFA9C352A7F52D600966DA9 /* PlayerMusic.swift */; };
-		CBBDC0DE2ABADC0700E9270F /* AddAudioCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBBDC0DC2ABADC0700E9270F /* AddAudioCell.swift */; };
-		CBBDC0DF2ABADC0700E9270F /* AddAudioCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBBDC0DD2ABADC0700E9270F /* AddAudioCell.xib */; };
-		CBBDC0E22ABADDC900E9270F /* AudioCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBBDC0E02ABADDC900E9270F /* AudioCell.swift */; };
-		CBBDC0E32ABADDC900E9270F /* AudioCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBBDC0E12ABADDC900E9270F /* AudioCell.xib */; };
-		CBBDC0EA2ABAE75500E9270F /* AudioVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBBDC0E82ABAE75500E9270F /* AudioVC.xib */; };
-		CBBDC0EB2ABAE75500E9270F /* AudioVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBBDC0E92ABAE75500E9270F /* AudioVC.swift */; };
-		CBBDC0EE2ABAE7B800E9270F /* AudioItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBBDC0EC2ABAE7B800E9270F /* AudioItemCell.swift */; };
-		CBBDC0EF2ABAE7B800E9270F /* AudioItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBBDC0ED2ABAE7B800E9270F /* AudioItemCell.xib */; };
-		CBBDC0F92ABAF58900E9270F /* VideoGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBBDC0F32ABAF58900E9270F /* VideoGenerator.swift */; };
-		CBBDC0FA2ABAF58900E9270F /* AVAssetExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBBDC0F52ABAF58900E9270F /* AVAssetExtension.swift */; };
-		CBBDC0FB2ABAF58900E9270F /* ImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBBDC0F62ABAF58900E9270F /* ImageExtension.swift */; };
-		CBBDC0FC2ABAF58900E9270F /* VideoGeneratorError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBBDC0F82ABAF58900E9270F /* VideoGeneratorError.swift */; };
-		CBBDC0FF2ABAF5CC00E9270F /* LoadingAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBBDC0FE2ABAF5CC00E9270F /* LoadingAnimationView.swift */; };
-		CBD47F882AC3DD1200CD4CE7 /* WallpaperDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD47F862AC3DD1200CD4CE7 /* WallpaperDetailVC.swift */; };
-		CBD47F892AC3DD1200CD4CE7 /* WallpaperDetailVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBD47F872AC3DD1200CD4CE7 /* WallpaperDetailVC.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -158,6 +160,8 @@
 		CBA37D012AC2D2E60018AB15 /* CategoryItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryItemCell.xib; sourceTree = "<group>"; };
 		CBA37D042AC2D95E0018AB15 /* WallpaperItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WallpaperItemCell.swift; sourceTree = "<group>"; };
 		CBA37D052AC2D95E0018AB15 /* WallpaperItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WallpaperItemCell.xib; sourceTree = "<group>"; };
+		CBAB0E012ACFF9F200C2602C /* NoDataCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoDataCell.swift; sourceTree = "<group>"; };
+		CBAB0E022ACFF9F200C2602C /* NoDataCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NoDataCell.xib; sourceTree = "<group>"; };
 		CBAB89102ABBE3730047F3A3 /* MyFileItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFileItemCell.swift; sourceTree = "<group>"; };
 		CBAB89112ABBE3730047F3A3 /* MyFileItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyFileItemCell.xib; sourceTree = "<group>"; };
 		CBB6737C2A77A7EE00DE477E /* GenerateVideoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenerateVideoVC.swift; sourceTree = "<group>"; };
@@ -172,8 +176,6 @@
 		CBB673922A77B96E00DE477E /* PhotoSelectedCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotoSelectedCell.xib; sourceTree = "<group>"; };
 		CBB673952A77BF9A00DE477E /* PhotoItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoItemCell.swift; sourceTree = "<group>"; };
 		CBB673962A77BF9A00DE477E /* PhotoItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotoItemCell.xib; sourceTree = "<group>"; };
-		CBD47F8A2AC41FF300CD4CE7 /* MusicCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicCollectionCell.swift; sourceTree = "<group>"; };
-		CBD47F8B2AC41FF300CD4CE7 /* MusicCollectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MusicCollectionCell.xib; sourceTree = "<group>"; };
 		CBBDC0DC2ABADC0700E9270F /* AddAudioCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAudioCell.swift; sourceTree = "<group>"; };
 		CBBDC0DD2ABADC0700E9270F /* AddAudioCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddAudioCell.xib; sourceTree = "<group>"; };
 		CBBDC0E02ABADDC900E9270F /* AudioCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioCell.swift; sourceTree = "<group>"; };
@@ -189,6 +191,8 @@
 		CBBDC0FE2ABAF5CC00E9270F /* LoadingAnimationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingAnimationView.swift; sourceTree = "<group>"; };
 		CBD47F862AC3DD1200CD4CE7 /* WallpaperDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WallpaperDetailVC.swift; sourceTree = "<group>"; };
 		CBD47F872AC3DD1200CD4CE7 /* WallpaperDetailVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WallpaperDetailVC.xib; sourceTree = "<group>"; };
+		CBD47F8A2AC41FF300CD4CE7 /* MusicCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicCollectionCell.swift; sourceTree = "<group>"; };
+		CBD47F8B2AC41FF300CD4CE7 /* MusicCollectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MusicCollectionCell.xib; sourceTree = "<group>"; };
 		EA6CB02A2AEC0A48ED154F78 /* Pods-LAS_SAMPLE_018-LAS_SAMPLE_018UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LAS_SAMPLE_018-LAS_SAMPLE_018UITests.debug.xcconfig"; path = "Target Support Files/Pods-LAS_SAMPLE_018-LAS_SAMPLE_018UITests/Pods-LAS_SAMPLE_018-LAS_SAMPLE_018UITests.debug.xcconfig"; sourceTree = "<group>"; };
 		EF53C95D09BA9DCFD56FB68A /* Pods-LAS_SAMPLE_018.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LAS_SAMPLE_018.debug.xcconfig"; path = "Target Support Files/Pods-LAS_SAMPLE_018/Pods-LAS_SAMPLE_018.debug.xcconfig"; sourceTree = "<group>"; };
 		F757E88880DB035302F6D0B3 /* Pods-LAS_SAMPLE_018Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LAS_SAMPLE_018Tests.release.xcconfig"; path = "Target Support Files/Pods-LAS_SAMPLE_018Tests/Pods-LAS_SAMPLE_018Tests.release.xcconfig"; sourceTree = "<group>"; };
@@ -510,6 +514,8 @@
 				FAA3D65C2A7018B100EF18E0 /* PopularCell.xib */,
 				FAA3D65F2A701DE700EF18E0 /* ArtistCell.swift */,
 				FAA3D6602A701DE700EF18E0 /* ArtistCell.xib */,
+				CBAB0E012ACFF9F200C2602C /* NoDataCell.swift */,
+				CBAB0E022ACFF9F200C2602C /* NoDataCell.xib */,
 			);
 			path = CellPopular;
 			sourceTree = "<group>";
@@ -673,6 +679,7 @@
 				CBB673842A77A84000DE477E /* NoVideoCell.xib in Resources */,
 				844F16102A63A2D300D4B197 /* WallpaperVC.xib in Resources */,
 				FAC4089A2A716D99008AB062 /* MusicCell.xib in Resources */,
+				CBAB0E042ACFF9F200C2602C /* NoDataCell.xib in Resources */,
 				CB8F8B2C2ACC02E50037B032 /* MiniPlayer.xib in Resources */,
 				FAC9771D2A83E7F5008A280E /* SearchVC.xib in Resources */,
 				FAE1C40C2A7941AD005120CE /* AlbumCell.xib in Resources */,
@@ -818,23 +825,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		F44BF14D0F8144E01CA08C05 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-LAS_SAMPLE_018-LAS_SAMPLE_018UITests/Pods-LAS_SAMPLE_018-LAS_SAMPLE_018UITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-LAS_SAMPLE_018-LAS_SAMPLE_018UITests/Pods-LAS_SAMPLE_018-LAS_SAMPLE_018UITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LAS_SAMPLE_018-LAS_SAMPLE_018UITests/Pods-LAS_SAMPLE_018-LAS_SAMPLE_018UITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -878,6 +868,7 @@
 				FAC8477A2A8BC31500C93481 /* RealService.swift in Sources */,
 				FAC408A22A717B15008AB062 /* MusicPlaylistCell.swift in Sources */,
 				844F161D2A63DFC800D4B197 /* HomeItemCell.swift in Sources */,
+				CBAB0E032ACFF9F200C2602C /* NoDataCell.swift in Sources */,
 				CBBDC0EE2ABAE7B800E9270F /* AudioItemCell.swift in Sources */,
 				844F15D42A63949700D4B197 /* SceneDelegate.swift in Sources */,
 				FAE21AD82A7EBC1000469717 /* PlayMusicVC.swift in Sources */,

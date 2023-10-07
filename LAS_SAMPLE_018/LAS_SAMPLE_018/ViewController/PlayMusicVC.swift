@@ -42,6 +42,9 @@ class PlayMusicVC: UIViewController {
     @IBOutlet weak var repeartButton: UIButton!
     
     @IBOutlet weak var tableViewSongs: UITableView!
+    @IBOutlet weak var playlistView: UIView!
+    
+    @IBOutlet weak var btnFavourite: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -60,8 +63,12 @@ class PlayMusicVC: UIViewController {
             UIWindow.keyWindow?.tabbar?.showMiniPlayerIfNeed()
         }
     }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        
+        isSelectFavourite = self.checkFavourite(songID: currentItem)
+        
         tableViewSongs.reloadData()
     }
     
@@ -92,6 +99,9 @@ class PlayMusicVC: UIViewController {
     func setupUI() {
         defaultImageView.roundCorners(corners: [.topLeft,.topRight], radius: 20)
         playerView.roundCorners(corners: [.topLeft,.topRight], radius: 20)
+        
+        playlistView.roundCorners(corners: [.topLeft,.topRight], radius: 20)
+        playlistView.backgroundColor = UIColor(rgb: 0xF3F8FF)
         nameSong.text = ""
         nameArtist.text = ""
         
@@ -104,8 +114,8 @@ class PlayMusicVC: UIViewController {
         
         shuffleButton.isSelected = false
         
-        let thumbImage = UIImage(named: "ic_slider")
-        seekSlider.minimumTrackTintColor = UIColor(rgb: 0x8B5CE6)
+        let thumbImage = UIImage(named: "ic_seek")
+        seekSlider.minimumTrackTintColor = UIColor(rgb: 0x329CFF)
         seekSlider.maximumTrackTintColor = UIColor(rgb: 0xD8D8D8)
         seekSlider.thumbTintColor = UIColor(rgb: 0x8B5CE6)
         seekSlider.setThumbImage(thumbImage, for: .normal)
@@ -122,6 +132,50 @@ class PlayMusicVC: UIViewController {
 
     }
     
+    var isSelectFavourite: Bool = false {
+        didSet {
+            if isSelectFavourite {
+                btnFavourite.setImage(UIImage(named: "ic_favourite_black"), for: .normal)
+            }
+            else  {
+                btnFavourite.setImage(UIImage(named: "ico_heart"), for: .normal)
+            }
+        }
+    }
+    
+    private func addSongToF (songID: String) {
+        guard let realm = RealmService.shared.realmObj() else { return }
+        
+        
+        guard let favouriteFolder = RealmService.shared.favouriteFolder() else { return }
+        
+        
+        if let index = favouriteFolder.musicIDs.firstIndex(where: { $0 == songID }) {
+            try? realm.write({
+                favouriteFolder.musicIDs.remove(at: index)
+            })
+        }
+        else {
+            try? realm.write({
+                favouriteFolder.musicIDs.append(songID)
+            })
+        }
+        
+        isSelectFavourite = favouriteFolder.musicIDs.contains(where: { $0 == songID })
+    }
+    
+    
+    private func checkFavourite (songID: String) -> Bool{
+        guard let favouriteFolder = RealmService.shared.favouriteFolder() else { return false}
+        
+        if  favouriteFolder.musicIDs.contains(where: { $0 == songID }){
+            return true
+        }
+        else {
+            return false
+        }
+    }
+    
     private func setupObservers() {
         NotificationCenter.default.addObserver(forName: .show_main_player, object: nil, queue: .main) { _ in
             self.isShowing = true
@@ -129,9 +183,19 @@ class PlayMusicVC: UIViewController {
             
         }
     }
+    @IBAction func favouriteClick(_ sender: Any) {
+        addSongToF(songID: currentItem)
+    }
     
-    @IBAction func shareBtnAction(_ sender: UIBarButtonItem) {
-       
+    @IBAction func shareBtnAction(_ sender: UIButton) {
+        let textToShare = "Music just for you 🎧\nListen and download free music 🎧\nEnjoy top pop songs of all time 📀📀📀"
+        
+        guard let url = URL(string: "https://apps.apple.com/us/app/id") else { return }
+        
+        let objectsToShare: [Any] = [textToShare, url]
+        let activityVC = UIActivityViewController(activityItems: objectsToShare, applicationActivities: nil)
+        activityVC.popoverPresentationController?.sourceView = sender
+        self.present(activityVC, animated: true, completion: nil)
     }
     
     @IBAction func backAction(_ sender: UIButton) {
@@ -319,6 +383,7 @@ extension PlayMusicVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: SongMusicPlayCell.cellId) as! SongMusicPlayCell
         cell.songID = playlist[indexPath.row]
+        cell.selectionStyle = .none
         if cell.nameOfSong.text == nameSong.text && isPlay {
             cell.viewPlay.isHidden = false
         } else {

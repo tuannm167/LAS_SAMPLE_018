@@ -9,14 +9,9 @@ import UIKit
 import AVFAudio
 import AVFoundation
 import MediaPlayer
+import KRProgressHUD
 
-class HomeVC: BaseVC, TypeMusicCellDelegate {
-    
-    func typeMusicAction(number: Int) {
-        numbers = number
-        homeTableView.reloadData()
-    }
-    
+class HomeVC: BaseVC {
     
     //MARK: - properties
     var albums: [AlbumModel] = []
@@ -29,11 +24,11 @@ class HomeVC: BaseVC, TypeMusicCellDelegate {
     
     fileprivate var heightMiniPlayer: CGFloat = 0
     
-    var numbers = 0
+    var categorySelected: HomeCategoryType = .playlist
     fileprivate var currentItem: String!
     let heightPlaylist = 100
     let heightAlbum = 250
-    var data = [HomeSection.HomeTop, HomeSection.HomeSearch, HomeSection.HomeTopArtist,
+    var data = [HomeSection.HomeTop, HomeSection.HomePopular, HomeSection.HomeTypeMusic,
                 HomeSection.HomeCate]
     //MARK: - outlets
     @IBOutlet weak var homeTableView: UITableView!
@@ -47,12 +42,8 @@ class HomeVC: BaseVC, TypeMusicCellDelegate {
         // Do any additional setup after loading the view.
         setupUI()
         setupObserver()
-        
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
         loadData()
+        
     }
     
     //MARK: - private
@@ -62,6 +53,7 @@ class HomeVC: BaseVC, TypeMusicCellDelegate {
         homeTableView.register(UINib(nibName: HomePopularCell.cellId, bundle: nil), forCellReuseIdentifier: HomePopularCell.cellId)
         homeTableView.register(UINib(nibName: TypeMusicCell.cellId, bundle: nil), forCellReuseIdentifier: TypeMusicCell.cellId)
         homeTableView.register(UINib(nibName: HomeMusicCell.cellId, bundle: nil), forCellReuseIdentifier: HomeMusicCell.cellId)
+        homeTableView.separatorStyle = .none
         homeTableView.delegate = self
         homeTableView.dataSource = self
     }
@@ -84,11 +76,18 @@ class HomeVC: BaseVC, TypeMusicCellDelegate {
         //load music local
         MPMediaLibrary.requestAuthorization { (status) in
             if status == .authorized {
-                self.albums = self.musicService.getAlbum(songCategory: .album)
-                self.artists = self.musicService.getAlbum(songCategory: .artist)
-                self.playlists = self.musicService.getAlbum(songCategory: .playlist)
-                self.musics = self.musicService.getAllMusic()
                 DispatchQueue.main.async {
+                    KRProgressHUD.show()
+                }
+                
+                DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
+                    
+                    KRProgressHUD.dismiss()
+                    self.albums = self.musicService.getAlbum(songCategory: .album)
+                    self.artists = self.musicService.getAlbum(songCategory: .artist)
+                    self.playlists = self.musicService.getAlbum(songCategory: .playlist)
+                    self.musics = self.musicService.getAllMusic()
+                    
                     print("albums: \(self.albums.count)")
                     print("artists: \(self.artists.count)")
                     print("playlists: \(self.playlists.count)")
@@ -152,9 +151,9 @@ extension HomeVC: UITableViewDataSource {
         switch data[section] {
         case .HomeTop:
             return 1
-        case .HomeSearch:
+        case .HomePopular:
             return 1
-        case .HomeTopArtist:
+        case .HomeTypeMusic:
             return 1
         case .HomeCate:
             return 1
@@ -165,26 +164,32 @@ extension HomeVC: UITableViewDataSource {
         switch data[indexPath.section] {
         case .HomeTop:
             let cell = tableView.dequeueReusableCell(withIdentifier: HomeSearchCell.cellId) as! HomeSearchCell
+            cell.selectionStyle = .none
             cell.tappedHideKeyboard(view: self.view)
             return cell
-        case .HomeSearch:
+        case .HomePopular:
             let cell = tableView.dequeueReusableCell(withIdentifier: HomePopularCell.cellId) as! HomePopularCell
+            cell.selectionStyle = .none
             cell.source = artists
             cell.selectItem = { album in
                 self.openAllSong(album: album)
             }
             return cell
-        case .HomeTopArtist:
+        case .HomeTypeMusic:
             let cell = tableView.dequeueReusableCell(withIdentifier: TypeMusicCell.cellId) as! TypeMusicCell
+            cell.selectionStyle = .none
             cell.delegate = self
             return cell
         case .HomeCate:
             let cell = tableView.dequeueReusableCell(withIdentifier: HomeMusicCell.cellId) as! HomeMusicCell
-            cell.source = playlists
+            cell.selectionStyle = .none
+            cell.playlists = playlists
             cell.sourceSongs = musics
             cell.sourceAlbum = albums
+            cell.categorySelected = categorySelected
+            
             cell.selectItem = { album in
-                if self.numbers == 0 || self.numbers == 1 {
+                if self.categorySelected == .playlist || self.categorySelected == .album {
                     self.openAllSong(album: album)
                 }
             }
@@ -192,8 +197,7 @@ extension HomeVC: UITableViewDataSource {
                 AppDelegate.shared.mainPlayer.setPlaylist(self.musics, currentItem: songId)
                 UIWindow.keyWindow?.navigationTopMost?.present(AppDelegate.shared.mainPlayer, animated: true)
             }
-            cell.count = numbers
-            cell.collectionView.reloadData()
+            
             return cell
         }
     }
@@ -204,19 +208,35 @@ extension HomeVC: UITableViewDelegate {
             return 200
         } else if indexPath.section == 3 {
             var hei = 0
-            if numbers == 0 {
-                hei = heightPlaylist * playlists.count
-                return CGFloat(hei)
-            } else if numbers == 1 {
-                let numbes = (Double(albums.count) / 2) + 0.5
-                hei = heightAlbum * Int(numbes)
-                return CGFloat(hei + 10)
-            } else {
-                hei = heightPlaylist * musics.count
-                return CGFloat(hei)
+            switch categorySelected {
+            case .playlist:
+                if playlists.count == 0 {
+                    return 250
+                }
+                else {
+                    hei = heightPlaylist * (playlists.count + 1)
+                    return CGFloat(hei)
+                }
+            case .album:
+                if albums.count == 0 {
+                    return 250
+                }
+                else {
+                    let numbes = (Double(albums.count) / 2) + 0.5
+                    hei = heightAlbum * Int(numbes)
+                    return CGFloat(hei + 10)
+                }
+            case .allSong:
+                if musics.count == 0 {
+                    return 250
+                } else {
+                    hei = heightPlaylist * (musics.count + 1)
+                    return CGFloat(hei)
+                }
             }
+            
         } else if indexPath.section == 2 {
-            return 70
+            return TypeMusicCell.height
         }
         return UITableView.automaticDimension
     }
@@ -224,7 +244,15 @@ extension HomeVC: UITableViewDelegate {
 
 enum HomeSection {
     case HomeTop
-    case HomeSearch
-    case HomeTopArtist
+    case HomePopular
+    case HomeTypeMusic
     case HomeCate
+}
+
+extension HomeVC : TypeMusicCellDelegate {
+    func homeCategoryType(type: HomeCategoryType) {
+        categorySelected = type
+        homeTableView.reloadData()
+    }
+    
 }

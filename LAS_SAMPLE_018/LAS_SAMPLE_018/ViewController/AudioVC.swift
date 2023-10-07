@@ -47,7 +47,7 @@ class AudioVC: BaseVC {
         //load music local
         MPMediaLibrary.requestAuthorization { (status) in
             if status == .authorized {
-                self.musics = self.musicService.getAllMusic()
+                self.musics = self.musicService.getAudio()
                 DispatchQueue.main.async {
 
                     self.audioTBView.reloadData()

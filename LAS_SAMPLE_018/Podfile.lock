@@ -1,22 +1,40 @@
 PODS:
-  - Realm (10.42.0):
-    - Realm/Headers (= 10.42.0)
-  - Realm/Headers (10.42.0)
-  - RealmSwift (10.42.0):
-    - Realm (= 10.42.0)
+  - KRActivityIndicatorView (3.0.7)
+  - KRProgressHUD (3.4.7):
+    - KRActivityIndicatorView (= 3.0.7)
+  - Realm (10.43.0):
+    - Realm/Headers (= 10.43.0)
+  - Realm/Headers (10.43.0)
+  - RealmSwift (10.43.0):
+    - Realm (= 10.43.0)
+  - SDWebImage (5.18.2):
+    - SDWebImage/Core (= 5.18.2)
+  - SDWebImage/Core (5.18.2)
+  - Toast-Swift (5.0.1)
 
 DEPENDENCIES:
+  - KRProgressHUD
   - RealmSwift
+  - SDWebImage (~> 5.0)
+  - Toast-Swift (~> 5.0.1)
 
 SPEC REPOS:
   trunk:
+    - KRActivityIndicatorView
+    - KRProgressHUD
     - Realm
     - RealmSwift
+    - SDWebImage
+    - Toast-Swift
 
 SPEC CHECKSUMS:
-  Realm: 490aad28f1360e58fc22256d5d686d3a36525346
-  RealmSwift: f6a9b56d747bbdd7931de1835896c5f024b6898a
+  KRActivityIndicatorView: ad69e89c4ce40c986cf580595be4829dcad0e35a
+  KRProgressHUD: a248f0bc6c9c2aed40a37b76e03ffecc7f85c887
+  Realm: fc65bea3f5c3da2ecdc76324f180e054e7cf4eb0
+  RealmSwift: a7d48361c585769690c175428cc2bf15e1074444
+  SDWebImage: c0de394d7cf7f9838aed1fd6bb6037654a4572e4
+  Toast-Swift: 9b6a70f28b3bf0b96c40d46c0c4b9d6639846711
 
-PODFILE CHECKSUM: 45838414dc2701eb0743a8cc4938452e80fc81a3
+PODFILE CHECKSUM: 58825f7a4161c61fa1c56b988d384d6ce6b6004c
 
 COCOAPODS: 1.12.1

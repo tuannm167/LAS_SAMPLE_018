@@ -17,6 +17,7 @@ class AlbumCell: UICollectionViewCell {
         // Initialization code
         avatarAlbum.layer.cornerRadius = 20
         viewAlbum.layer.cornerRadius = 20
+      //  viewAlbum.backgroundColor = UIColor(rgb: 0xF3F8FF)
     }
     
     var nameAlbums: String?  {
